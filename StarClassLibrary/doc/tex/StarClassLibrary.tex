@@ -2,16 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.15 2000/02/28 19:38:43 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.16 2000/03/06 19:23:40 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.15  2000/02/28 19:38:43  ullrich
-% Added the hyperref package to add bookmarks and hyperlinks
-% to pdf output files.
+% Revision 1.16  2000/03/06 19:23:40  ullrich
+% Added description of convention h=+1 for case B=0.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -163,8 +162,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.15 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2000/02/28 19:38:43 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.16 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2000/03/06 19:23:40 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -6266,6 +6265,9 @@ The only non-numerical limitations of this parametrization are:
 \begin{eqnarray}
     -\pi/2 < \lambda  & < & \pi/2 \\
     x(s) & = & x_0 - s \cos\lambda \sin\Phi_0 \\
+    y(s) & = & y_0 + s \cos\lambda \cos\Phi_0 \\
+
+\subsection{Case $\mathbf{B = 0}$}
 \textbf{Important:} For $B = 0$ the sense of rotation is ill defined. Here
 we arbitrarily set $h = +1$. This implies that $\Phi_0 = \Psi - \pi/2$.
 calculation of the parametrization because of the singularity in
