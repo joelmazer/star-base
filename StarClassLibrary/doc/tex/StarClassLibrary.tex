@@ -2,15 +2,16 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.14 1999/12/21 16:41:13 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.15 2000/02/28 19:38:43 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.14  1999/12/21 16:41:13  ullrich
-% Added StFastCircleFitter docu.
+% Revision 1.15  2000/02/28 19:38:43  ullrich
+% Added the hyperref package to add bookmarks and hyperlinks
+% to pdf output files.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -77,6 +78,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[twoside]{article}
 
+\parindent 0pt
 \parskip 6pt
 \advance\textwidth by 80pt%
 \advance\evensidemargin by -80pt%
@@ -161,8 +163,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.14 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 1999/12/21 16:41:13 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.15 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2000/02/28 19:38:43 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
