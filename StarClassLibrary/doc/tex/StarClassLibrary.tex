@@ -2,16 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.8 1999/06/04 18:07:09 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.9 1999/09/23 12:09:44 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.8  1999/06/04 18:07:09  ullrich
-% Added description of new class StMemoryInfo.
-% Update of StThreeVector and StLorentzVector.
+% Revision 1.9  1999/09/23 12:09:44  ullrich
+% New section on the question of helix parameters
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -162,8 +161,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.8 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 1999/06/04 18:07:09 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.9 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 1999/09/23 12:09:44 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -5718,6 +5717,7 @@ gaussNumber = -0.498471
 
 Numbers from an Exponential Distribution:
 exponentialNumber = 1.6481
+exponentialNumber = 0.0081336
 exponentialNumber = 0.814686
 exponentialNumber = 1.13064
 exponentialNumber = 6.33225
@@ -6037,6 +6037,61 @@ is that $\Phi_0 = \Psi - h \pi/2$ is done correctly, i.e.~with the same arbitrar
 In the following we assume $h = +1$ for convenience.
 
 Eq.~\ref{eq:dist} then reads as:
+\begin{eqnarray}
+  s^\prime = \frac{1}{\cos\lambda} \left[(y_i-y_0)\cos\Phi_0 - (x_i-x_0) \sin\Phi_0 \right]
+\end{eqnarray}
+Eq.~\ref{eq:dsolve} can now be solved analytically;
+\begin{eqnarray}
+\frac{\mathrm{d}M_i^{dca}}{\mathrm{d}s} = 0
+\end{eqnarray}
+gives:
+\begin{eqnarray}
+s^{dca}   & = & \cos\lambda \cos\Phi_0 (y_i-y_0) - \nonumber \\
+          &   & \cos\lambda \sin\Phi_0 (x_i-x_0) + \nonumber \\
+          &   & \sin\lambda (z_i-z_0)
+\end{eqnarray}
+
+The solution for the intersection with a cylinder (eq.~\ref{eq:rsolve}) now reads:
+\begin{eqnarray}
+s_{1/2}   & = & \left[x_0\,\cos\lambda\,\sin\Phi_0\,- y_0\,\cos\lambda\,\cos\Phi_0 \, \pm  \right. \\
+   & & \left.
+\left[-\cos^2\lambda\,\left(2\,x_0\,\cos\Phi_0\, y_0
+\,\sin\Phi_0\,-\rho^2\, + \right. \right. \right.  \\
+& & \left. \left.  \left.
+y_0^2-y_0^2 \,\cos^2\Phi_0\,
++ x_0^2  \cos^2\Phi_0 \right )\right]^{1/2} \right]\, \cos^2\lambda 
+\end{eqnarray}
+
+
+The same holds for the intersection of a helix with a plane where in case
+of zero curvature eq.~\ref{eq:inter} can be solved analytically.
+\begin{eqnarray}
+s^{\prime} = \frac{ \vec{r} \cdot \vec{n} - \vec{o} \cdot \vec{n} }
+                  {- n_x \cos \lambda \sin \Phi_0
+                   + n_y \cos \lambda \cos \Phi_0
+                   + n_z \sin \lambda}
+\end{eqnarray}
+
+\subsection{Why are there only 5 independent helix parameters?}
+\label{sec:hparam}
+    
+    Imagine an arbitrary helix sitting in 3D space.  What is required
+    to completely specify it ?
+    \begin{enumerate}
+    \item the line coinciding with the axis - if its oriented in any arbitrary
+        direction, then this requires 4 parameters, or 2 direction angles
+        (theta and phi in usual spherical coordinates) plus 2 more coordinates
+        to locate the line in a plane perpendicular to this direction.
+       
+        For the special case in STAR we always fix the direction 
+        parallel to the z-axis so this reduces the number of this subset
+        of parameters from 4 to 2.
+
+        So these are the (x,y) coordinates of the center of the circular
+        projection onto the x-y plane.
+
+    \item Then we must give the radius of the circular projection - 1 more param,
+                 
     \item Next we must specify the pitch and the handedness. - 2 more params.
 
     \item  Finally, we have to give a phase angle or some single number that
