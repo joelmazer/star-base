@@ -2,15 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.18 2000/03/16 16:31:48 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.19 2000/04/06 23:01:45 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.18  2000/03/16 16:31:48  ullrich
-% Added description of StRandom.
+% Revision 1.19  2000/04/06 23:01:45  ullrich
+% Added reference section for StMath. Particle section updated.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -162,8 +162,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.18 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2000/03/16 16:31:48 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.19 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2000/04/06 23:01:45 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -631,6 +631,7 @@ inline StDouble sqr(T a)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %   SystemOfUnits
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{SystemOfUnits} \index{System of units}
 \label{SystemOfUnits}
@@ -1559,6 +1560,7 @@ columns are:
     \comp{St}\args{ClassName}\comp{::instance()} to get a pointer to
     the referring particle definition.
 \item[Derived From:] Name of the base class. This defines also the
+    type of the particle.
 \end{description}
 
 \index{leptons}
@@ -1582,6 +1584,7 @@ columns are:
     \end{tabular}            
     \caption{List of defined leptons}
     \label{tab:leptons}
+    \end{center}
 \end{table}
 
 \index{ions}
@@ -1597,7 +1600,7 @@ columns are:
     \end{tabular}            
     \caption{List of defined ions}
     \label{tab:ions}
-
+    \end{center}
 \end{table}
 
 \index{bosons}
@@ -1611,15 +1614,16 @@ columns are:
     \end{tabular}            
     \caption{List of defined bosons}
     \label{tab:bosons}
+    \end{center}
 \end{table}
 
 \index{mesons}
 \begin{table}[htb]
     \begin{center}
-       anti\_B0  & -511  & N/A   &     StAntiBMesonZero  & StMeson        \\ \hline
-      anti\_Bs0  & -531  & N/A   &    StAntiBsMesonZero  & StMeson        \\ \hline
-       anti\_D0  & -421  & 38    &     StAntiDMesonZero  & StMeson        \\ \hline
-    anti\_kaon0  & -311  & N/A   &       StAntiKaonZero  & StMeson        \\ \hline
+    \begin{tabular}{|l|r|r|l| l |}
+        \hline
+        \textbf{Particle Name} & \textbf{PDG Encoding} & \textbf{GEANT3 Ids}  & \textbf{Class Name} & \textbf{Derived From} \\ \hline
+       anti\_B0  & -511  & N/A  &     StAntiBMesonZero  & StMeson        \\ \hline
       anti\_Bs0  & -531  & N/A  &    StAntiBsMesonZero  & StMeson        \\ \hline
        anti\_D0  & -421  & 38   &     StAntiDMesonZero  & StMeson        \\ \hline
     anti\_kaon0  & -311  & 156  &       StAntiKaonZero  & StMeson        \\ \hline
@@ -1630,25 +1634,28 @@ columns are:
             D+  & 411   & 35    &         StDMesonPlus  & StMeson        \\ \hline
             D-  & -411  & 36    &        StDMesonMinus  & StMeson        \\ \hline
             D0  & 421   & 37    &         StDMesonZero  & StMeson        \\ \hline
-     eta\_prime  & 331   & N/A   &           StEtaPrime  & StMeson        \\ \hline
+           Ds+  & 431   & 39    &        StDsMesonPlus  & StMeson        \\ \hline
            Ds-  & -431  & 40    &       StDsMesonMinus  & StMeson        \\ \hline
            eta  & 221   & 17    &                StEta  & StMeson        \\ \hline
      eta\_prime  & 331   & N/A  &           StEtaPrime  & StMeson        \\ \hline
-         kaon0  & 311   & N/A   &           StKaonZero  & StMeson        \\ \hline
+         J/psi  & 443   & N/A   &               StJPsi  & StMeson        \\ \hline
          kaon+  & 321   & 11    &           StKaonPlus  & StMeson        \\ \hline
          kaon-  & -321  & 12    &          StKaonMinus  & StMeson        \\ \hline
+         kaon0  & 311   & 155   &           StKaonZero  & StMeson        \\ \hline
+        kaon0L  & 130   & 10    &       StKaonZeroLong  & StMeson        \\ \hline
         kaon0S  & 310   & 16    &      StKaonZeroShort  & StMeson        \\ \hline
          omega  & 223   & 150   &         StOmegaMeson  & StMeson        \\ \hline
            phi  & 333   & 151   &                StPhi  & StMeson        \\ \hline
-          rho+  & 213   & N/A   &            StRhoPlus  & StMeson        \\ \hline
-          rho-  & -213  & N/A   &           StRhoMinus  & StMeson        \\ \hline
-          rho0  & 113   & N/A   &            StRhoZero  & StMeson        \\ \hline
+           pi+  & 211   & 8     &           StPionPlus  & StMeson        \\ \hline
+           pi-  & -211  & 9     &          StPionMinus  & StMeson        \\ \hline
+           pi0  & 111   & 7     &           StPionZero  & StMeson        \\ \hline
           rho+  & 213   & 153   &            StRhoPlus  & StMeson        \\ \hline
           rho-  & -213  & 154   &           StRhoMinus  & StMeson        \\ \hline
           rho0  & 113   & 152   &            StRhoZero  & StMeson        \\ \hline
     \end{tabular}            
     \caption{List of defined mesons}
     \label{tab:mesons}
+    \end{center}
 \end{table}
 
 \index{baryons}
@@ -3302,6 +3309,35 @@ cross-check: reconstructed parent
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+%    Reference: StMath
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{StMath \index{StMath}} \label{StMath} \index{math functions}
+\begin{Entry}
+\item[Summary]
+    \texttt{StMath.hh} is header file which contains declaration of various
+    math function which are not defined in the standard math library
+    \verb+<cmath>+ (\verb+<math.h>+) but are useful for STAR offline
+    purposes.
+    
+\item[Synopsis]
+    \verb+#include "StMath.hh"+ \\
+    
+    
+\item[Functions]
+    \verb+double probChiSquared(double chi2, unsigned int n)+\\
+    Computes the probability that a random variable, having a
+    $\chi^2$-distribution with \texttt{n} $ \ge 1$ degrees of freedom,
+    assumes a value which is larger than a given value $\chi^2 \ge 0$.\\
+    The algorithm was taken from the FORTRAN function \texttt{prob()}
+    (CERNLIB G100).
+
+\end{Entry}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %    Reference: StMatrix
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4098,6 +4134,10 @@ default operators new/delete will be called.
     \verb+StPhysicalHelix(const StThreeVector<double>& p, + \\
     \verb+                const StThreeVector<double>& o, + \\
     \verb+                double B, double q);+ \\
+    Constructs a helix with for a given momentum \comp{p},
+    origin \comp{o}, magnetic field \comp{B}, and charge \comp{q}.
+
+    Don't forget to multiply the arguments with the units there are
     in. The units are defines in \texttt{SystemOfUnits.h}
     (see \ref{SystemOfUnits}).
     
@@ -4106,17 +4146,26 @@ default operators new/delete will be called.
             
 \item[Public Member\\ Functions]
     \verb+StThreeVector<double> momentum(double B) const;+\\
-    \comp{origin()} member function.
-    
+    Returns the momentum at the origin of the helix for a given magnetic
+    field \comp{B}. The sign of \comp{B} is relevant.
+    Note that the actual origin can be obtained from the 
+    \comp{origin()} member function.\\
+    Don't forget to provide the units when you pass the field. For example
     \texttt{0.5*tesla}. The units are defines in \texttt{SystemOfUnits.h}
     (see \ref{SystemOfUnits}).
 
     \verb+StThreeVector<double> momentumAt(double s, double B);+\\
-    obtained from the \comp{at()} member function.
+    Returns the momentum at pathlength \comp{s} for a given magnetic
+    field \comp{B}. Note that the sign of \comp{B} is relevant.
+    Note that the actual position at pathlength \comp{s} can be
+    obtained from the \comp{at()} member function.\\
     Don't forget to provide the units when you pass the field. For example
     \texttt{0.5*tesla}. The units are defines in \texttt{SystemOfUnits.h}
     (see \ref{SystemOfUnits}).
     
+    \verb+int charge(double B) const;+\\
+    Returns the charge of the trajectory for a given magnetic
+    field \comp{B}. Note that the sign of \comp{B} is relevant.
     Don't forget to provide the units when you pass the field. For example
     \texttt{0.5*tesla}. The units are defines in \texttt{SystemOfUnits.h}
     (see \ref{SystemOfUnits}).
