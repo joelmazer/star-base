@@ -2,15 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.11 1999/10/06 13:40:30 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.12 1999/11/10 12:37:11 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.11  1999/10/06 13:40:30  ullrich
-% Corrected explanation of MACROs.
+% Revision 1.12  1999/11/10 12:37:11  ullrich
+% Added description of StMemoryPool.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -161,8 +161,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.11 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 1999/10/06 13:40:30 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.12 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 1999/11/10 12:37:11 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -3812,6 +3812,81 @@ top-most, releasable space               2744 (+0)
 
 ---------- Memory Status (snapshot #2) ----------
 total space allocated from system        15120 (+12288) 
+number of non-inuse chunks               1 (+0) 
+number of mmapped regions                0 (+0) 
+total space in mmapped regions           0 (+0) 
+total allocated space                    10096 (+10008) 
+total non-inuse space                    5024 (+2280) 
+top-most, releasable space               5024 (+2280) 
+
+===>  10000 bytes allocated
+
+---------- Memory Status (snapshot #3) ----------
+total space allocated from system        27408 (+12288) 
+number of non-inuse chunks               1 (+0) 
+number of mmapped regions                0 (+0) 
+total space in mmapped regions           0 (+0) 
+total allocated space                    20104 (+10008) 
+total non-inuse space                    7304 (+2280) 
+top-most, releasable space               7304 (+2280) 
+\end{verbatim}
+} %footnotesize
+\end{Entry}
+
+%End of StMemoryInfo
+    B. Stroustrup, The C++ Programmin Language, 2nd edition,
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    Reference: StMemoryPool
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{StMemoryPool}
+\index{StMemoryPool}
+\index{memory allocation}
+\index{pool}
+\label{StMemoryPool}
+\begin{Entry}
+\item[Summary]
+  Utility class which can be used to allocate a large number of
+  small objects efficiently.
+
+\item[Synopsis]
+    \verb+#include "StMemoryPool.hh"+\\
+    \verb+class StMemoryPool(size_t);+
+    
+\item[Description]   
+    The idea is taken from:
+    B. Stroustrup, The C++ Programming Language, third edition,
+    Chapter 19.4.2 (page 570).
+
+    The class should be used if a large number of small objects
+    has to be frequently allocated from heap. It is much more efficient and
+    faster than the standard new/delete mechanism.
+    Memory gets allocated in larger chunks and partitioned according to
+    the size of the objects. The class manages the memory itself avoiding
+    too frequent usage of new/delete (malloc/free).
+    On order to use \texttt{StMemoryPool} the referring class
+    (here called \texttt{X}) must be modified by adding the following lines:
+\begin{verbatim}
+// in the header file X.h
+class X {
+public:
+    void* operator new(size_t) { return mPool.alloc(); }
+    void  operator delete(void* p)  { mPool.free(p); }
+    // ...
+private:
+    static StMemoryPool mPool;
+    ...
+}
+
+// in the source file X.cc (X.cxx)
+StMemoryPool X::mPool(sizeof(X));
+\end{verbatim}
+
+Note, that the size of the class X does not increase
+sonce the pool is contained as a static member.
+
 Only single objects may be created,
 i.e, new X[100] will not work; however, in these cases the
 default operators new/delete will be called.
