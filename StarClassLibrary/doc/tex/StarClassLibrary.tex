@@ -2,15 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.19 2000/04/06 23:01:45 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.20 2000/09/25 19:52:14 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.19  2000/04/06 23:01:45  ullrich
-% Added reference section for StMath. Particle section updated.
+% Revision 1.20  2000/09/25 19:52:14  ullrich
+% Inheritance from TObject removed in most classes.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -162,8 +162,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.19 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2000/04/06 23:01:45 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.20 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2000/09/25 19:52:14 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -3259,8 +3259,9 @@ cross-check: reconstructed parent
     \verb+StLorentzVector<T>+ should be preferred where possible.
 
 \item[Related Classes]
-    StLorentzVectorD inherits from TObject \index{TObject}
-    if the SCL was compiled with the \name{\_\_ROOT\_\_} flag set.
+    StLorentzVectorD is similar to the templated version but
+    is persistent capable in ROOT. It does, however, not inherit
+    from \texttt{TObject}.
     
 \item[Persistence]
     Within the ROOT framework.
@@ -3297,8 +3298,9 @@ cross-check: reconstructed parent
     \verb+StLorentzVector<T>+ should be preferred where possible.
 
 \item[Related Classes]
-    StLorentzVectorF inherits from TObject \index{TObject}
-    if the SCL was compiled with the \name{\_\_ROOT\_\_} flag set.
+    StLorentzVectorF is similar to the templated version but
+    is persistent capable in ROOT. It does, however, not inherit
+    from \texttt{TObject}.
     
 \item[Persistence]
     Within the ROOT framework.
@@ -3850,8 +3852,9 @@ StMatrix<double>::dot() Incompatible matrix sizes
     \verb+StMatrix<T>+ should be preferred where possible.
 
 \item[Related Classes]
-    StMatrixD inherits from TObject \index{TObject}
-    if the SCL was compiled with the \name{\_\_ROOT\_\_} flag set.
+    StMatrixD is similar to the templated version but
+    is persistent capable in ROOT. It does, however, not inherit
+    from \texttt{TObject}.
 
 \item[Persistence]
     Within the ROOT framework.
@@ -3890,8 +3893,9 @@ StMatrix<double>::dot() Incompatible matrix sizes
     \verb+StMatrix<T>+ should be preferred where possible.
     
 \item[Related Classes]
-    StMatrixF inherits from TObject \index{TObject}
-    if the SCL was compiled with the \name{\_\_ROOT\_\_} flag set.
+    StMatrixF is similar to the templated version but
+    is persistent capable in ROOT. It does, however, not inherit
+    from \texttt{TObject}.
 
 \item[Persistence]
     Within the ROOT framework.
@@ -5007,8 +5011,9 @@ pseudo rapidity(c) = 0.364012
     The templated version should be preferred where possible.
     
 \item[Related Classes]
-    StThreeVectorD inherits from TObject \index{TObject}
-    if the SCL was compiled with the \name{\_\_ROOT\_\_} flag set.
+    StThreeVectorD is similar to the templated version but
+    is persistent capable in ROOT. It does, however, not inherit
+    from \texttt{TObject}.
 
 \item[Persistence]
     Within the ROOT framework.
@@ -5041,8 +5046,9 @@ pseudo rapidity(c) = 0.364012
     The templated version should be preferred where possible.
 
 \item[Related Classes]
-    StThreeVectorF inherits from TObject \index{TObject}
-    if the SCL was compiled with the \name{\_\_ROOT\_\_} flag set.
+    StThreeVectorF is similar to the templated version but
+    is persistent capable in ROOT. It does, however, not inherit
+    from \texttt{TObject}.
 
 \item[Persistence]
     Within the ROOT framework.
