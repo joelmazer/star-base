@@ -2,15 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.9 1999/09/23 12:09:44 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.10 1999/09/29 16:54:46 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.9  1999/09/23 12:09:44  ullrich
-% New section on the question of helix parameters
+% Revision 1.10  1999/09/29 16:54:46  ullrich
+% Added graphics to explain StThreeVector.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -161,8 +161,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.9 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 1999/09/23 12:09:44 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.10 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 1999/09/29 16:54:46 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -4103,10 +4103,21 @@ bye
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Reference: StTemplates
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{StTemplates \index{StTemplates|textbf}}
+\begin{Entry}
+\item[Summary]
+    StTemplates is a header file needed on old cfront compilers to
+    avoid unresolved symbols when linking with the SCL library.
+    
+\item[Synopsis]
+    \verb+#include "StTemplates.hh"+
+    
   
 \item[Description]   
     If you are using an old \texttt{cfront} compiler \index{cfront compiler}
-    vectors in three dimension.
+    who still uses template databases
     or repositories you might encounter unresolved symbols when linking with the SCL library.
     In order to avoid this problem one has to include \comp{StTemplates.hh}\index{StTemplates}
     once somewhere in the application. The only known platform where this is necessary is
@@ -4134,7 +4145,7 @@ bye
         \label{fig:StThreeVector}
     \end{center}    
 \end{figure}
-    
+
 \begin{Entry}
 \item[Summary]
     StThreeVector is a templated general 3-vector class defining
