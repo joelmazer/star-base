@@ -1,6 +1,9 @@
 //*-- Author :    Valery Fine(fine@bnl.gov)   25/12/98 
-// $Id: St_NodeView.h,v 1.16 1999/06/14 09:30:31 fine Exp $
+// $Id: St_NodeView.h,v 1.17 1999/06/21 22:16:55 fine Exp $
 // $Log: St_NodeView.h,v $
+// Revision 1.17  1999/06/21 22:16:55  fine
+// Some clean up
+//
 // Revision 1.16  1999/06/14 09:30:31  fine
 //   default ctor clean
 //
@@ -65,7 +68,7 @@ public:
   virtual void     Add(St_NodeView *node);
   virtual void     Add(TShape *shape, Bool_t IsMaster=kFALSE);
   virtual void     Browse(TBrowser *b);
-  virtual void     Draw(Option_t *option); // *MENU* 
+  virtual void     Draw(Option_t *option=""); // *MENU* 
   virtual Int_t    DistancetoPrimitive(Int_t px, Int_t py);
   virtual St_NodePosition *GetPosition() const { return (St_NodePosition *)GetObject();}
   virtual St_Node *GetNode() const ;
