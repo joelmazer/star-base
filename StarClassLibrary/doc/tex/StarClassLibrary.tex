@@ -2,15 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.10 1999/09/29 16:54:46 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.11 1999/10/06 13:40:30 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.10  1999/09/29 16:54:46  ullrich
-% Added graphics to explain StThreeVector.
+% Revision 1.11  1999/10/06 13:40:30  ullrich
+% Corrected explanation of MACROs.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -161,8 +161,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.10 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 1999/09/29 16:54:46 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.11 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 1999/10/06 13:40:30 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -280,8 +280,12 @@ Further tests on AIX are not foreseen unless there is sufficient user demand. \i
 \item Solaris 2.4--2.6: \index{Solaris}
 templated member functions and a broken overloading mechanism.
     \item CC 5.0 or higher
-    demonstrate most the features of every classes. There is currently no
-    makefile provided to compile and link the examples.
+  \end{itemize}
+\end{enumerate}
+Tests with Visual C++ 5.0 fail because of the lack of support of \index{Visual C++}
+templated member functions and a broken overloading mechanism. Visual C++ 6.0 is not
+tested yet.
+Further tests on AIX and IRIX are not foreseen unless there is sufficient user demand.
 \index{Irix} \index{AIX}
 
 \section{Organization of the SCL}
@@ -318,24 +322,33 @@ and the referring source code (extension \name{.cc}),
 
 The SCL is part of the official STAR software distribution
 and is therefore present in the actual STAR software releases.
-\item[\comp{ST\_NO\_MEMBER\_TEMPLATES}:] defined if the compiler does not support template
-    member functions. \index{ST\_NO\_MEMBER\_TEMPLATES}
-\item[\comp{ST\_NO\_EXCEPTIONS}:] defined  if the compiler does not support exception
-    handling. \index{ST\_NO\_EXCEPTIONS}
-\item[\comp{ST\_NO\_NUMERIC\_LIMITS}:] defined if the STL class \name{numeric\_limits}
-    is not available (it is usually located in the $<$\comp{limits}$>$ header file).
-    \comp{cvs checkout StRoot/StarClassLibrary}
-\item[\comp{ST\_NO\_TEMPLATE\_DEF\_ARGS}:] defined if the compiler does not support
-    template default arguments
 
-\item[\comp{ST\_NO\_NAMESPACES}:] defined if the compiler does not support
-  multiple namespaces.\index{ST\_NO\_NAMESPACES}
-\item[\comp{ST\_OLD\_CLHEP\_SYSTEM\_OF\_UNITS}:] user defined if one must use units as
-  defined in CLHEP v1.2 (use of this macro is strongly discouraged).\index{ST\_OLD\_CLHEP\_SYSTEM\_OF\_UNITS}
-\item[\comp{NO\_HBOOK\_INIT}:] restricts the automatic initialization of HBOOK
-  memory.
-\item[\comp{ST\_SOLVE\_TEMPLATES}:] force the instantiation of SCL templates when using
-    \texttt{StTemplates.hh} (see reference section for more).
+The {\em StarClassLibrary} is under {\bf CVS} control at BNL.  It can
+be accessed via \name{afs}: \index{afs} \index{CVS} \index{CVSROOT}
+\begin{enumerate}
+  \item Obtain an \name{afs} token: \comp{klog -cell rhic}.
+  \item Make sure \comp{\$CVSROOT} is set properly:\\
+    (i.e.~\comp{CVSROOT = /afs/rhic/star/packages/repository})
+  \item Check-out package into your current working directory:\\
+    \comp{cvs checkout StRoot/StarClassLibrary}
+\end{enumerate}
+
+
+\section{Macros} \index{macros} \label{Macros}
+
+The \name{StarClassLibrary} is coded under the assumption that all
+ANSI features are available. If the used compiler is fully ANSI
+compliant the SCL will compile without any modifications.\\
+Because the new C++ ANSI standard pushes the limits of current \index{ANSI} 
+compiler technology, a number of compiler and Standard C++ Library \index{Standard C++ Library}
+features are often missing or implemented in a way that differs from
+the ANSI standard.\\
+In order to use the SCL also on those systems various macros were defined
+which either disable certain features, e.g. exception handling, or use
+slightly modified (and less elegant) code.
+The following macros are used throughout the SCL.
+If the STAR environment is installed properly they should be defined
+according to your platform/compiler. 
 
 \begin{description}
 \item[\comp{ST\_NO\_MEMBER\_TEMPLATES}:] defined if the compiler does
@@ -601,26 +614,29 @@ typedef unsigned long  StSizeType
 
 {\bf Global templates} \\ \index{sign()} \index{sqr()}
 \begin{verbatim}
-  \verb+#define  ST_ADD_OLD_CLHEP_SYSTEM_OF_UNITS // if necessary+
+template<class T>
 inline StInt sign(T a)
 { return a < 0 ? -1 : 1; }
 
-\item[Description]
-  SystemOfUnits differs from version 1.2 of CLHEP\index{CLHEP} by using
-  the complete name of the unit.  In this manner there is no
-  pollution of the global namespace with single character
-  constants like 'm' for meter, 's' for second, etc.  The previous
-  units from CLHEP are still available but the user must define
-  a flag \texttt{ST\_ADD\_OLD\_CLHEP\_SYSTEM\_OF\_UNITS} before
-  including \texttt{SystemOfUnits.h}.  One other important difference is
-  that the constants as defined in the header file are contained in
-  a namespace {\bf namespace units}. \index{namespace}  If your compiler
-  does not support namespaces, the macro \texttt{ST\_NO\_NAMESPACES} must
-  be defined and the constants will reside in the global namespace!
+template<class T>
+inline StDouble sqr(T a)
+{ return a*a; }
+\end{verbatim}
 
-  Note, that the base units are currently mapped to the ones in GEANT3\index{GEANT3} (cm, GeV, s).
-  This is likely to change in future. Any changes to the base units, however, do not effect
-  your code at all as long as you use \texttt{SystemOfUnits} consistently.
+{\bf Macros for debugging and testing} \\ \index{PR()}
+\begin{verbatim}
+#define PR(x) cout << (#x) << " = " << (x) << endl;
+\end{verbatim}
+\end{Entry}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   SystemOfUnits
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{SystemOfUnits} \index{System of units}
+\label{SystemOfUnits}
+\begin{Entry}
 \item[Summary]
     SystemOfUnits defines a set of consistent SI units.
     All are defined as \comp{static const HepDouble}.
@@ -790,13 +806,13 @@ inline StInt sign(T a)
   \verb+kg     = joule*s*s/(m*m)+ \\
   \verb+g      = 1.e-3*kg+ \\
   \verb+mg     = 1.e-3*g+ \\
-    cout << "1 kHz =        " << (1*kHz)     << endl;
+  \verb+#endif+ \\ \\
 
-    cout << "1 newton =    " << (1*newton)     << endl;
-    cout << "1 joule =     " << (1*joule)     << endl;
+\item[Examples]
+  {\footnotesize
     {\bf Program Code:}  
-    cout << "1 GeV =        " << (1*GeV)     << endl;
-    cout << "1 Gigaelectronvolt = " << (1*Gigaelectronvolt)     << endl;
+\begin{verbatim}
+#define ST_ADD_OLD_CLHEP_SYSTEM_OF_UNITS
 #include "SystemOfUnits.h"
 
 using namespace units;
@@ -1271,7 +1287,7 @@ particles in GEANT3. They are taken into account.
     
 \item[Public\\ Constructors]
     None.\\
-    \verb+StParticleDefinition* findParticle(const string& pname)  const;+\\
+    All constructors, including the copy constructor
     and the assignment operator are private to ensure that
     no second copy can be created.
     
@@ -1835,7 +1851,7 @@ xfoo = 3.14
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-  the macro \texttt{NO\_HBOOK\_INIT} in case it is initialized
+%    Reference: StHbook
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{StHbook \index{StHbook|textbf}} \label{StHbook}
@@ -2473,7 +2489,7 @@ Crosscheck point = (-10.9531, 57.2299, -10.2747), delta = 162.174
 \end{Entry}
 
 \clearpage
-    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Reference: StHelixD
@@ -3065,7 +3081,7 @@ cross-check: reconstructed parent
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+%    Reference: StLorentzVectorD
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{StLorentzVectorD \index{StLorentzVectorD}} \label{StLorentzVectorD}
@@ -3103,7 +3119,7 @@ cross-check: reconstructed parent
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+%    Reference: StLorentzVectorF
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{StLorentzVectorF \index{StLorentzVectorF}} \label{StLorentzVectorF}
@@ -3627,7 +3643,7 @@ StMatrix<double>::dot() Incompatible matrix sizes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Reference: StMatrixD
-    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{StMatrixD \index{StMatrixD}} \label{StMatrixD}
 \begin{Entry}
@@ -3667,7 +3683,7 @@ StMatrix<double>::dot() Incompatible matrix sizes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Reference: StMatrixF
-    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{StMatrixF \index{StMatrixF}} \label{StMatrixF}
 \begin{Entry}
@@ -3945,7 +3961,7 @@ s=2000 mm -> p = (752.792, 1368.69, 30) MeV   |p| = 1562.34
 \end{Entry}
 
 \clearpage
-    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Reference: StPhysicalHelixD
@@ -4522,7 +4538,7 @@ pseudo rapidity(c) = 0.364012
 \end{Entry}
 
 \clearpage
-    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Reference: StThreeVectorD
@@ -4556,7 +4572,7 @@ pseudo rapidity(c) = 0.364012
 \item[Persistence]
     Within the ROOT framework.
 
-    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+\end{Entry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
