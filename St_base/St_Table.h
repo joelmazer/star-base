@@ -1,6 +1,9 @@
 //*-- Author :    Valery Fine   24/03/98
-// $Id: St_Table.h,v 1.26 1999/02/24 17:10:58 fine Exp $
+// $Id: St_Table.h,v 1.27 1999/06/25 01:35:54 fine Exp $
 // $Log: St_Table.h,v $
+// Revision 1.27  1999/06/25 01:35:54  fine
+// New streamers for St_Tables
+//
 // Revision 1.26  1999/02/24 17:10:58  fine
 //  St_Table  New and Purge method have been introdiced, some clean up for St_module as well
 //
@@ -103,6 +106,8 @@ protected:
    int        PointerToPointer(G__DataMemberInfo &m);
    void       SetTableName(const Char_t *name);
    void       SetTableType(const Char_t *type);
+   void       StreamerTable(TBuffer &b);
+   TList     *GetTableDescriptors();
 
    Long_t    *s_MaxIndex;   // The used capacity of this array
 
@@ -129,6 +134,7 @@ public:
    virtual     TClass    *GetRowClass() const ;
    virtual     Long_t     GetNRows() const;
    virtual     Long_t     GetRowSize() const;
+   virtual     TList     *GetRowDescritors();
    virtual     Long_t     GetTableSize() const;
    virtual     const Char_t *GetType() const;
    virtual     Long_t     HasData() const { return 1; }
