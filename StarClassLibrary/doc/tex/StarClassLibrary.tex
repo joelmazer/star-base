@@ -2,13 +2,16 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.21 2001/04/20 22:18:57 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.22 2001/05/09 05:10:42 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
+% Revision 1.22  2001/05/09 05:10:42  ullrich
+% Added Pitfall section to StAngle.
+%
 % Revision 1.21  2001/04/20 22:18:57  ullrich
 % Added description of StAngle.
 %
@@ -165,8 +168,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.21 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2001/04/20 22:18:57 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.22 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2001/05/09 05:10:42 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -1816,7 +1819,33 @@ BNL CVS repository are described in alphabetic order.
     scale and divide angles by a scalar. The results always will
     be a \texttt{StAngle} with a value in the range $[-\pi, \pi]$.
     
- 
+\item[Pitfalls]
+
+    \texttt{StAngle} will always try to stay within its
+    range ($[-\pi, \pi]$).  This way you can scale angles. The pitfall
+    here is if you for example want to calculate its value in degree
+    without using the \texttt{degree()} method.
+    
+    \verb+StAngle a = 2.7;+\\
+    \verb+cout << a*180/pi << endl;  // doesn't work+\\
+    
+    will \textbf{not} work. The expression \texttt{a*180/pi} consist
+    of a StAngle times a double which matches the overloaded operator
+    \texttt{StAngle operator* (StAngle alpha, double c)} that returns
+    type \texttt{StAngle} which of course never gets larger than
+    $\pi$.
+    
+    The correct way is:
+    \verb+StAngle a = 2.7;+\\
+    \verb+cout << a*degree() << endl;  // works +\\
+    or
+    \verb+cout << static_cast<double>(a)*180/pi << endl;  // also works +\\
+    
+    Whenever you need the result of the multiplication of a
+    \texttt{double} and a \texttt{StAngle} to be of type
+    \texttt{double} you have to use the type cast.
+    
+
 \end{Entry}
 
 \clearpage
