@@ -2,15 +2,16 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.16 2000/03/06 19:23:40 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.17 2000/03/06 20:25:49 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.16  2000/03/06 19:23:40  ullrich
-% Added description of convention h=+1 for case B=0.
+% Revision 1.17  2000/03/06 20:25:49  ullrich
+% Added text to StHelix reference. More details on the
+% case B=0 (concerning parameter h and the phase).
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -162,8 +163,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.16 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2000/03/06 19:23:40 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.17 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2000/03/06 20:25:49 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -2381,10 +2382,13 @@ hbookFile status: (1) is good 1
         clockwise or counter clockwise.
     \end{itemize}
     A more detailed description of the underlying parametrization and
-    the helix.\\
-    the absence of a magnetic field as well.  The origin of the helix
-    No equivalent class exists in CLHEP.
+    several formulas used for the implementation can be found in
+    appendix \ref{app:helix}.
 
+    A special case of the helix occurs when the curvature is set to
+    zero.  This represents a straight line \index{straight line}
+    and so the StHelix class can be used to represent tracks in
+    the absence of a magnetic field as well.  The origin of the helix
     is specified by an \comp{StThreeVector} and may be set
     individually as may all other components of the parametrization.
     The interface provides access functions for all parameters that define
@@ -2398,6 +2402,10 @@ hbookFile status: (1) is good 1
 \item[Persistence]
     None
 
+\item[Related Classes]
+    Class {\bf StPhysicalHelix} is derived from StHelix\index{StPhysicalHelix}
+    which defines a helix by specifying the 3 momentum, the charge, and
+    the origin of a particle.
 
 \item[Public\\ Constructors]
     \verb+StHelix(double c, double dip, double phase,+\\
@@ -2406,8 +2414,8 @@ hbookFile status: (1) is good 1
     origin=o, and charge=-h.
     Note that for $B = 0$ (\texttt{c} = 0) the sense of rotation is ill defined.
     All what matters is that $\Phi_0 = \Psi - h \pi/2$ is done correctly,
-  It is possible to set and access the data members within the class
-  via the names associated with a space-time vector:
+    i.e.~with the same arbitrary $h$ as passed to the constructor as last
+    argument. 
     
     \verb+StHelix(const StHelix& hlx)+\\
     Copy Constructor. Constructs a helix with the content of \comp{hlx}.
@@ -6250,7 +6258,7 @@ following equation has to be solved:
     + n_y \sin S
     + \kappa n_z s \sin \lambda &=& 0 \label{eq:inter}
 \end{eqnarray}
-
+where:
 \begin{eqnarray}
     A &=& \kappa (\vec{o} \cdot \vec{n} - \vec{r} \cdot \vec{n}) - n_x \cos \Phi_0 - n_y \sin \Phi_0 \\
     S &=& h s \kappa \cos \lambda + \Phi_0  
@@ -6264,12 +6272,13 @@ suitable numerical method (Newton).
 The only non-numerical limitations of this parametrization are:
 \begin{eqnarray}
     -\pi/2 < \lambda  & < & \pi/2 \\
-    x(s) & = & x_0 - s \cos\lambda \sin\Phi_0 \\
-    y(s) & = & y_0 + s \cos\lambda \cos\Phi_0 \\
+    \kappa & > & 0
+\end{eqnarray}
 
 \subsection{Case $\mathbf{B = 0}$}
-\textbf{Important:} For $B = 0$ the sense of rotation is ill defined. Here
-we arbitrarily set $h = +1$. This implies that $\Phi_0 = \Psi - \pi/2$.
+
+For the special case $B = 0$ the trajectory becomes a straight line,
+i.e. $\kappa = 0$ and $R = \infty$.  Care must be taken in the numerical
 calculation of the parametrization because of the singularity in
 eq.~\ref{eq:xs} and \ref{eq:ys}. The correct form is:
 \begin{eqnarray}
