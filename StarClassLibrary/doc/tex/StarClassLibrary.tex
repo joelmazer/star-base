@@ -2,15 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.6 1999/04/28 16:14:13 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.7 1999/05/17 11:10:00 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.6  1999/04/28 16:14:13  ullrich
-% Added more examples
+% Revision 1.7  1999/05/17 11:10:00  ullrich
+% Added documentation on particle definitions
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -40,6 +40,8 @@
 %
 % Revision 1.11  1999/10/06 13:40:30  ullrich
 % Corrected explanation of MACROs.
+%
+% Revision 1.10  1999/09/29 16:54:46  ullrich
 % Added graphics to explain StThreeVector.
 %
 % Revision 1.9  1999/09/23 12:09:44  ullrich
@@ -159,8 +161,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.6 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 1999/04/28 16:14:13 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.7 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 1999/05/17 11:10:00 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -838,8 +840,821 @@ int main()
 #else
     cout << "\nTo use the old CLHEP definitions the flag:" << endl;
     cout << "    ST_ADD_OLD_CLHEP_SYSTEM_OF_UNITS" << endl;
+    cout << "must be defined" << endl;
+    cout << "**This is an obsolete file and should NOT be used**" << endl;
+#endif
+    
+    return 0;
+}
+
+\end{verbatim}
+}
+
+ {\footnotesize
+{\bf Program Output:}  
+\begin{verbatim}
+This program illustrates the use of SystemOfUnits
+ and PhysicalConstants
+-------------------------------------------------
+ ---------------------
+1 millimeter = 0.1
+1 meter =      100
+1 centimeter = 1
+1 fermi =      1e-13
+1 barn =       1e-24
+1 degree =     0.0174533
+1 second =     1
+1 nanosecond = 1e-09
+1 kHz =        1000
+1 newton =    6.24151e+07
+1 joule =     6.24151e+09
+1 GeV =        1
+1 Gigaelectronvolt = 1
+The old CLHEP definitions are also supported:
+---------------------------------------------
+1 mm = 0.1
+1 m  = 100
+1 cm = 1
+1 s  = 1
+1 ns = 1e-09
+\end{verbatim}
+}
+\end{Entry}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Particle Definitions
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Definition of Particles}
+\index{particles}
+\index{PDG encoding}
+\index{Geant3 Id}
+\index{StBMesonPlus}
+\index{StBMesonMinus}
+\index{StBMesonZero}
+\index{StBsMesonZero}
+\index{StDMesonPlus}
+\index{StDMesonMinus}
+\index{StDMesonZero}
+\index{StDsMesonPlus}
+\index{StDsMesonMinus}
+\index{StHe3}
+\index{StJPsi}
+\index{StAlpha}
+\index{StAntiBMesonZero}
+\index{StAntiBsMesonZero}
+\index{StAntiDMesonZero}
+\index{StAntiKaonZero}
+\index{StAntiLambda}
+\index{StAntiLambdacPlus}
+\index{StAntiNeutron}
+\index{StAntiNeutrinoE}
+\index{StAntiNeutrinoMu}
+\index{StAntiNeutrinoTau}
+\index{StAntiOmegaMinus}
+\index{StAntiOmegacZero}
+\index{StAntiProton}
+\index{StAntiSigmaPlus}
+\index{StAntiSigmaMinus}
+\index{StAntiSigmaZero}
+\index{StAntiSigmacPlus}
+\index{StAntiSigmacPlusPlus}
+\index{StAntiSigmacZero}
+\index{StAntiXiMinus}
+\index{StAntiXiZero}
+\index{StAntiXicPlus}
+\index{StAntiXicZero}
+\index{StDeuteron}
+\index{StPositron}
+\index{StElectron}
+\index{StEta}
+\index{StEtaPrime}
+\index{StGamma}
+\index{StKaonPlus}
+\index{StKaonMinus}
+\index{StKaonZero}
+\index{StKaonZeroLong}
+\index{StKaonZeroShort}
+\index{StLambda}
+\index{StLambdacPlus}
+\index{StMuonPlus}
+\index{StMuonMinus}
+\index{StNeutron}
+\index{StNeutrinoE}
+\index{StNeutrinoMu}
+\index{StNeutrinoTau}
+\index{StOmegaMinus}
+\index{StOmegacZero}
+\index{StOpticalPhoton}
+\index{StPionPlus}
+\index{StPionMinus}
+\index{StPionZero}
+\index{StProton}
+\index{StRhoPlus}
+\index{StRhoMinus}
+\index{StRhoZero}
+\index{StSigmaPlus}
+\index{StSigmaMinus}
+\index{StSigmaZero}
+\index{StSigmacPlus}
+\index{StSigmacPlusPlus}
+\index{StSigmacZero}
+\index{StTauPlus}
+\index{StTauMinus}
+\index{StTriton}
+\index{StXiMinus}
+\index{StXiZero}
+\index{StXicPlus}
+\index{StXicZero}
+
+
+
+\subsubsection{Basic Concept}
+
+There are essentially two base classes which  define the interface
+to STARs "Definition of Particles": \comp{StParticleDefinition} and
+\comp{StParticleTable}.
+
+\comp{StParticleDefinition} aggregates information to characterize
+particles property such as name, mass, spin and life time, while
+\comp{StParticleTable} is a container class which holds a list of all
+available particle definitions and allows to query for particle definitions
+if only the name or the numeric identifier (GEANT3 or PDG) of a particle is known.
+ 
+The StarClassLibrary provides the \comp{StParticleDefinition} class to
+represent particles. Various particles such as electron, proton, and
+gamma have their own classes derived from \comp{StParticleDefinition}. 
+These concrete pre-defined particles, however, do not directly inherit
+from \comp{StParticleDefinition} but indirectly through a layer of abstract
+classes which determins the particle "type".  The following types are defined:
+\comp{StMeson}, \comp{StBaryon}, \comp{StLepton}, \comp{StIon} and \comp{StBoson}.
+The UML diagrams for the underlying design are depicted in Fig.~\ref{fig:umlPart}
+in section \ref{sec:umlPart}.
+
+\subsubsection{Implementation of Particles}
+
+The idea and design of the \comp{StParticleDefinition} class and all
+concrete particle classes derived from it is largely based on the
+design of the \comp{G4ParticleDefinition} class from Geant4
+(RD44)\index{Geant4}.  Although the code is in large parts different
+(modified or rewritten) and adapted to the STAR framework the basic
+idea stays the same.
+
+An individual class is defined for each predefined particle. The
+object in each class is unique and defined as a static object (so-called
+singleton).  Users can get pointers to such objects by using static
+methods in these classes.
+
+\subsubsection{StParticleDefinition}
+\index{StParticleDefinition}
+
+The \comp{StParticleDefinition} class has "read-only" properties which
+characterize the individual particle such as name, mass, charge, spin, and
+so on. These properties are set during initialization of each particle.
+Operators and methods to get these properties are listed below. Note,
+that the class itself is not a singleton but all derived concrete
+classes are.
+
+\begin{Entry}
+\item[Synopsis]
+    \verb+#include "StParticleDefinition.hh"+\\    
+    
+\item[Public\\ Constructors]
+    \verb+StParticleDefinition(const string  &  aName,+\\  
+    \verb+                     double           mass,+\\      
+    \verb+                     double           width,+\\ 
+    \verb+                     double           charge,+\\    
+    \verb+                     int              iSpin,+\\ 
+    \verb+                     int              iParity,+\\ 
+    \verb+                     int              iConjugation,+\\ 
+    \verb+                     int              iIsospin,+\\    
+    \verb+                     int              iIsospinZ,+\\  
+    \verb+                     int              gParity,+\\ 
+    \verb+                     const string  &  pType,+\\ 
+    \verb+                     int              lepton,+\\ 
+    \verb+                     int              baryon,+\\ 
+    \verb+                     int              encoding,+\\ 
+    \verb+                     bool             stable,+\\ 
+    \verb+                     double           lifetime);+\\ 
+    Constructor for a particle with given parameters. For meaning and units
+    of the arguments check the public member functions below.
+    
+\item[Public Member\\ Functions]
+   
+    \verb+string   name() const;+\\
+    Name of the particle.
+    
+    \verb+double   mass() const;+\\
+    Mass of the particle, in units of equivalent energy [GeV/$c^2$].
+    
+    \verb+double   width() const;+\\
+    Decay width of the particle, usually the width of a
+    Breit-Wigner function, assuming that you are near the
+    mass center anyway (in units of equivalent energy, i.e. [GeV/$c^2$]).
+    
+    \verb+double   charge() const;+\\
+    Charge of the particle (in units of Coulomb). Divide by \comp{eplus}
+    from \comp{PhysicalConstants.h} to get the charge in units of +e.
+    
+    \verb+double   spin() const;+\\
+    Total spin of the particle, in units of 1.
+    
+    \verb+int      iSpin() const;+\\
+    Total spin of the particle, also often denoted as
+    capital J, in units of 1/2.
+    
+    \verb+int      iParity() const;+\\ 
+    Parity quantum number, in units of 1.
+    If the parity is not defined for this particle,
+    we will set this to 0.
+    
+    \verb+int      iConjugation() const;+\\
+    Charge conjugation quantum number in units of 1.
+    
+    \verb+double   isospin() const;+\\
+    Isospin in units of 1/2.
+    
+    \verb+double   isospin3() const;+\\ 
+    3rd-component of isospin in units of 1/2.
+    
+    \verb+int      iIsospin() const;+\\
+    Isospin in units of 1.
+    
+    \verb+int      iIsospin3() const;+\\ 
+    3rd-component of isospin in units of 1.
+    
+    \verb+int      iGParity() const;+\\
+    Value of the G-parity quantum number.
+    
+    \verb+string   type() const;+\\
+    General textual type description of the particle.
+    
+    \verb+int      leptonNumber() const;+\\
+    Lepton quantum number.
+    
+    \verb+int      baryonNumber() const;+\\
+    Baryon quantum number.
+    
+    \verb+int      pdgEncoding() const;+\\
+    Particle Data Group integer identifier of this particle
+
+    \verb+int      antiPdgEncoding() const;+\\
+    Particle Data Group integer identifier of the corresponding
+    anti-particle.
+    
+    \verb+bool     stable() const;+\\
+    True if particle is stable.
+    
+    \verb+double   lifeTime() const;+\\ 
+    Related to the decay width of the particle.
+    The mean life time is given in seconds.
+    
+    \verb+StParticleTable* particleTable() const+\\ 
+    Returns pointer to the particle table.
+    
+\item[Public Member\\ Operators]
+    \verb+int operator==(const StParticleDefinition &) const;+\\
+    Test two particles for identity.
+    Note, that the concrete particles are implemented as singletons.
+    In this case also the values of the pointers are identical.
+    
+    \verb+int operator!=(const StParticleDefinition &) const;+\\ 
+    True if two particles are not identical.
+    
+\item[Global Operators]
+    \verb+ostream& +\\
+    \verb+operator<<(ostream& os, const StParticleDefinition& p);+\\ 
+    Prints the particle defined by \args{p} to output
+    stream \comp{os}.
+\end{Entry}
+
+\subsubsection{Predefined Particles}
+
+The StarClassLibrary provide currently 77 predefined particles. They are listed in
+table \ref{tab:leptons}-\ref{tab:baryons} in section \ref{sec:predefpart}.
+Note that the PDG encoding is  defined for elementary particles only
+and not for ions. GEANT3 IDs are listed for completeness only. They are not
+part of a particle definition. See section \ref{sec:partTable} on how to
+get a particle definition for a given GEANT3 ID.
+
+Each concrete
+particle class is defined in one header file. The name of the header file is simply
+the name of the class plus the .hh extension.
+As mentioned above all particles are implemented as singletons, i.e. only one instance
+(a static object) exist. This minimizes the memory usage and ensures coherent definitions.
+
+Each of the predefined classes has a member function \comp{instance()} which returns
+a pointer to the only existing object. All constructors, including the copy constructor
+and the assignment operator are private to ensure that no second copy can be created.
+The following code demonstrates how to obtain a $\pi^-$.
+
+{\footnotesize
+\begin{verbatim}
+#include "StPionMinus.hh"
+
+void example1()
+{
+     StPionMinus *pim = StPionMinus::instance();
+     cout << *pim << endl; 
+}
+\end{verbatim}
+}
+
+Please remember that no copy of an instance can be made. The following code
+does not compile.
+
+{\footnotesize
+\begin{verbatim}
+      StPionMinus pim = *(StPionMinus::instance()); // ERROR, assignment operator is private 
+\end{verbatim}
+}
+
+As already mentioned above there is an additional layer of abstract classes
+between \comp{StParticleDefinition} and the concrete classes (see also Fig.~\ref{fig:umlPart}).
+This layer allows to distinguish particles according to their type (baryon, meson, etc).
+They do not add any data member or overwrite any functions; with other words there's no overhead involved.
+The idea behind this is best illustrated in the following example: 
+
+{\footnotesize
+\begin{verbatim}
+void fillHistos(StMeson*);    // version 1 
+void fillHistos(StBaryon*);   // version 2 
+
+void MyMCAnalysis(StParticleDefinition* particle) 
+{ 
+    cout << "Got a " << particle->name() << endl; 
+    cout << "The pdg mass of this guy is: " << particle->mass() << endl; 
+    fillHisto(particle);   // calls version 1 if particle is a meson, 2 if its a baryon 
+} 
+\end{verbatim}
+}
+
+\subsubsection{Header Files}
+
+Each particle is defined in a separate header file.
+This results in an enormous amount of header files and include statements
+one has to deal with. To make life easier there is one header file which contains
+them all: \comp{StParticleTypes.hh}. Note that you still have to include
+\comp{StParticleTable.hh} if you want to use the particle table.
+
+
+But remember that in many situations the header files of the pre-defined particles
+do not necessarily have to be included. Since the base class already defines the
+entire interface it is often sufficient to include \comp{StParticleDefinition.hh} only. This
+reduces the dependencies of your code and therefore the compile time.
+Here are two example where you don't need the header of the specific particles: 
+
+{\footnotesize
+\begin{verbatim}
+#include "StParticleDefinition.hh"
+#include "StParticleTable.hh"
+
+void example2(StParticleDefinition* p)
+{
+     if (p == StParticleTable::instance()->findParticle("pi+")) {
+           cout << "Got pi+" << endl;
+           cout << "Mass is: " << p->mass() << endl;
+     }
+}
+
+void example3(StParticleDefinition* p)
+{
+      if (p->baryonNumber() != 0 && p->type() == "meson") {
+          cout << "Oops, this cannot be ..." << endl;
+          cout << "Check this funny particle:" << endl;
+          cout << *p << endl;
+      }
+}
+\end{verbatim}
+}
+
+\subsubsection{How to Define a New Particle}
+
+This is easy. All you need is the data to define the particle: mass,
+lifetime, spin, etc.  The safest (and fastest) way to proceed is to
+use one of the existing particle classes of the \emph{same} type (ion,
+meson, baryon, lepton, boson) as a template. All you have to do is to
+replace all occurrences of the old class name with the new name in the
+header (.hh) and source (.cc) file.  All what is left now is to
+replace the arguments passed to the constructor of the static data
+member with the new ones.
+
+There's no need to register the new particle definition in the
+particle table. The constructor of the base class
+(\comp{StParticleDefinition}) does this automatically for you.
+
+\subsubsection{The Particle Table}
+\label{sec:partTable}
+
+All particles are automatically registered in the particle table. The
+particle table is also a singleton, i.e., only one instance can be
+created. To obtain an pointer to the one and only instance one has to
+use the \comp{instance()} member function or obtain the pointer
+through any predefined particle using its
+\comp{StParticleDefinition::particleTable()} member function.\\
+The class actually holds several maps which allow fast access to
+available particle definitions by name, PDG encoding, or GEANT3 Id.
+Remember that some particles have no corresponding GEANT3 Id and
+PDG encoding does not exist for ions.  STAR extended the list of
+particle IDs in GSTAR to overcome the limited coverage of elementary
+particles in GEANT3. They are taken into account.
+
+\subsubsection{StParticleTable}
+\index{StParticleTable}   
+\begin{Entry}
+\item[Synopsis]
+    \verb+#include "StParticleTable.hh"+\\    
+    \verb+typedef vector<StParticleDefinition*> StVecPtrParticleDefinition;+\\  
+    
+\item[Public\\ Constructors]
+    None.\\
+    \verb+StParticleDefinition* findParticle(const string& pname)  const;+\\
+    and the assignment operator are private to ensure that
+    no second copy can be created.
+    
+\item[Public Member\\ Functions]
+    \verb+static StParticleTable* instance();+\\ 
+    Returns pointer to the only existing instance of self.
+
+    \verb+static StParticleTable* particleTable();+\\
+    Returns pointer to the only existing instance of self.
+    Same as \comp{instance()}.
+    
+    \verb+unsigned int entries() const;+\\
+    Number of entries in the table, i.e. number of
+    defined particles.
+    
+    \verb+unsigned int size() const;+\\ 
+    Number of entries in the table, i.e. number of
+    defined particles. Same as \comp{entries()}.
+    
+    \verb+bool contains(const string & pname) const;  +\\
+    Returns true if particle with name \args{pname} is defined.
+    
+    \verb+bool contains(int pdgId) const;   +\\           
+    Returns true if particle with PDG encoding \args{pdgId} is defined.
+    
+    \verb+bool containsGeantId(int gId) const; +\\      
+    Returns true if particle with GEANT3 ID \args{gId} is defined.
+    
+    \verb+StParticleDefinition* findParticle(const string& pname) const;+\\
+    Returns pointer to particle with name \args{pname} or a null
+    pointer if the particle is not defined.
+    
+    \verb+StParticleDefinition* findParticle(int pdgId)  const; +\\          
+    Returns pointer to particle with PDG encoding \args{pdgId} or a null
+    pointer if the particle is not defined.
+    
+    \verb+StParticleDefinition* findParticleByGeantId(int gId) const;+\\   
+    Returns pointer to particle with GEANT3 ID encoding \args{gId} or a null
+    pointer if the particle is not defined.
+    
+    \verb+void insert(StParticleDefinition* part);+\\
+    Insert new particle definition \args{part} "by hand".
+    Note, that this is not necessary
+    since each defined particle is automatically registered
+    (using this member function).
+    
+    \verb+void erase(StParticleDefinition* part);+\\
+    Removes given particle definition \args{part} from the table.
+    
+    \verb+void dump(ostream& os = cout);+\\ 
+    Dumps (prints) all particles defined in the table to ostream 
+    \args{os}. Note, that \args{os} defaults to cout (stdout).
+    
+    \verb+StVecPtrParticleDefinition allParticles() const;+\\
+    Returns a vector of pointers to all particle definitions stored
+    in the table.
+
+\item[Warnings]
+    The order of the particles in the table is arbitrary and
+    system dependent. Adding new particles might alter
+    the order as well. Do not write code that relies on indices
+    into a vector obtained from \comp{allParticles()}
+\end{Entry}
+
+\subsubsection{Examples}
+\label{sec:pex}
+What follows is a list of simple programs which should help to get familiar
+with the particle definition classes. In some cases the shown
+output of the program is shortened (marked by [ ... ]) to save space.
+
+{\footnotesize
+{\bf Example1 -- Program Code:}  
+\begin{verbatim}
+#include <iostream.h>
+#include "StParticleTable.hh"
+#include "StParticleTypes.hh"
+
+int main()
+{
+    //
+    //  Write all particle definitions to stdout
+    //
+    StParticleTable::instance()->dump();
+    return 0;
+}
+\end{verbatim}
+{\bf Programs Output:}
+\begin{verbatim}
+Particle Name :         B+
+PDG particle code :     521
+Mass [GeV/c2] :         5.2789
+Width [GeV/c2] :        0
+Lifetime [nsec] :       0.00162
+Charge [e] :            1
+Spin :                  0/2
+Parity :                -1
+Charge conjugation :    0
+Isospin : (I,Iz):       (1/2 , 1/2 ) 
+GParity :               0
+Lepton number :         0
+Baryon number :         0
+Particle type :         meson
+Is stable :             no
+
+[ ... ]
+
+Particle Name :         xi_c0
+PDG particle code :     4132
+Mass [GeV/c2] :         2.4703
+Width [GeV/c2] :        0
+Lifetime [nsec] :       9.8e-05
+Charge [e] :            0
+Spin :                  1/2
+Parity :                1
+Charge conjugation :    0
+Isospin : (I,Iz):       (1/2 , -1/2 ) 
+GParity :               0
+Lepton number :         0
+Baryon number :         1
+Particle type :         baryon
+Is stable :             no
+\end{verbatim}
+{\bf Example2 -- Program Code:}  
+\begin{verbatim}
+#include <iostream.h>
+#include "StParticleTable.hh"
+#include "StParticleTypes.hh"
+
+int main()
+{
+     //
+     //  Print all particles without PDG encoding
+     //
+     cout << "The following particles have no PDG encoding:" << endl;
+     StParticleTable &table = *(StParticleTable::instance());
+     StVecPtrParticleDefinition vec = table.allParticles();
+     for (int i=0; i<vec.size(); i++) {
+          if (vec[i]->pdgEncoding() == 0)
+          cout << vec[i]->name().c_str() << endl;
+     }
+     return 0;
+}
+\end{verbatim}
+{\bf Programs Output:}
+\begin{verbatim}
+The following particles have no PDG encoding:
+He3
+alpha
+deuteron
+opticalphoton
+triton
+\end{verbatim}
+{\bf Example3 -- Program Code:}  
+\begin{verbatim}
+#include <iostream.h>
+#include "StParticleTable.hh"
+#include "StParticleTypes.hh"
+
+int main()
+{
+     //
+     //  Check consistency of GEANT3 lookup table
+     //
+     StParticleTable *table = StParticleTable::instance();
+     StParticleDefinition *p1, *p2;
+     for (int i=0; i<100; i++)
+          p1 = table->findParticleByGeantId(14);
+          if (p1) {
+              p2 = table->findParticle(p1->name());
+              if (*p1 != *p2)
+                    cerr << "WARNING: inconsistency in lookup table" << endl;
+          }
+     }
+     return 0;  
+}
+\end{verbatim}
+{\bf Programs Output:}\\
+None
+
+{\bf Example4 -- Program Code:}  
+\begin{verbatim}
+#include <iostream.h>
+#include <iomanip.h>
+#include <typeinfo>
+#include "StParticleTable.hh"
+#include "StParticleTypes.hh"
+
+int main()
+    //
+    //  This is a small program which I used to create the
+    //  the TeX tables of all defined particles in the next
+    //  section. It saves a lot of typing and prevents typos.
+    //  In order to get the class name I had to use
+    //  the typeid() function which is only available
+    //  if RTTI is switched on. 
+    // 
+    StParticleTable &table = *(StParticleTable::instance());
+    StVecPtrParticleDefinition vec = table.allParticles();
+
+    for (int i=0; i<vec.size(); i++) {
+        cout << setw(14) << vec[i]->name() << "\t& ";
+        if (vec[i]->pdgEncoding() == 0)
+            cout << "N/A" << "\t& ";
+        else
+            cout << vec[i]->pdgEncoding() << "\t& ";
+        int k = 0;
+        for (int j=0; j<100; j++) {
+            if (vec[i] == table.findParticleByGeantId(j)) {
+                k = j;
+                break;
+            }
+        }
+        if (k != 0) 
+            cout << j << "\t& ";
+        else
+            cout << "N/A" << "\t& ";
+
+        cout << setw(20) << typeid(*vec[i]).name() << "\t& ";
+
+        if (dynamic_cast<StMeson*>(vec[i]))
+            cout << "StMeson " << "\t";
+        else if (dynamic_cast<StBoson*>(vec[i]))
+            cout << "StBoson " << "\t";
+        else if (dynamic_cast<StLepton*>(vec[i]))
+            cout << "StLepton" << "\t";
+        else if (dynamic_cast<StBaryon*>(vec[i]))
+            cout << "StBaryon" << "\t";
+        else if (dynamic_cast<StIon*>(vec[i]))
+            cout << "StIon   " << "\t";
+        else {
+            cout << "ERROR: unknown base class" << endl;
+            return 2;
+        }
+        cout << " \\\\ \\hline" << endl;
+    }    
+    return 0;
+}
+\end{verbatim}
+{\bf Programs Output:}
+\begin{verbatim}
+            B+  & 521   & N/A   &         StBMesonPlus  & StMeson        \\ \hline
+            B-  & -521  & N/A   &        StBMesonMinus  & StMeson        \\ \hline
+            B0  & 511   & N/A   &         StBMesonZero  & StMeson        \\ \hline
+           Bs0  & 531   & N/A   &        StBsMesonZero  & StMeson        \\ \hline
+            D+  & 411   & 35    &         StDMesonPlus  & StMeson        \\ \hline
+            D-  & -411  & 36    &        StDMesonMinus  & StMeson        \\ \hline
+            D0  & 421   & 37    &         StDMesonZero  & StMeson        \\ \hline
+           Ds+  & 431   & 39    &        StDsMesonPlus  & StMeson        \\ \hline
+           Ds-  & -431  & 40    &       StDsMesonMinus  & StMeson        \\ \hline
+           [ ... ]
+\end{verbatim}
+}
+
+\subsubsection{List of Predefined Particle Definitions}
+\label{sec:predefpart}
+
+Tables \ref{tab:leptons} to \ref{tab:baryons} list\footnote{See
+    example 3 in section \ref{sec:pex} on how this list was created.}
+all predefined particle definitions. The meaning of the different
+columns are:
+\begin{description}
+\item[Particle Name:] An unique, descriptive name assigned to each
+    particle.  This name can be used in \comp{StParticleTable} to
+    obtain a pointer to the actual particle definition.
+\item[PDG Encoding:] The number assigned to this particle by the
+    Particle Data Group.
+\item[GEANT3 Ids:] The number GEANT3 uses to reference this type of
+    particle.  The table also includes IDs defined for GSTAR (STAR
+    specific).
+\item[Class Name:] Name of the class. Use
+    \comp{St}\args{ClassName}\comp{::instance()} to get a pointer to
+    the referring particle definition.
+\item[Derived From:] Name of the base class. This defines also the
+\end{description}
+
+\index{leptons}
+\begin{table}[htb]
+    \begin{center}
+    \begin{tabular}{|l|r|r|l| l |}
+        \hline
+        \textbf{Particle Name} & \textbf{PDG Encoding} & \textbf{GEANT3 Ids}  & \textbf{Class Name} & \textbf{Derived From} \\ \hline
+     anti\_nu\_e  & -12   & N/A   &      StAntiNeutrinoE  & StLepton       \\ \hline
+    anti\_nu\_mu  & -14   & N/A   &     StAntiNeutrinoMu  & StLepton       \\ \hline
+   anti\_nu\_tau  & -16   & N/A   &    StAntiNeutrinoTau  & StLepton       \\ \hline
+            e+  & -11   & 2     &           StPositron  & StLepton       \\ \hline
+            e-  & 11    & 3     &           StElectron  & StLepton       \\ \hline
+           mu+  & -13   & 5     &           StMuonPlus  & StLepton       \\ \hline
+           mu-  & 13    & 6     &          StMuonMinus  & StLepton       \\ \hline
+          nu\_e  & 12    & 4     &          StNeutrinoE  & StLepton       \\ \hline
+         nu\_mu  & 14    & N/A   &         StNeutrinoMu  & StLepton       \\ \hline
+        nu\_tau  & 16    & N/A   &        StNeutrinoTau  & StLepton       \\ \hline
+          tau+  & -15   & 33    &            StTauPlus  & StLepton       \\ \hline
+          tau-  & 15    & 34    &           StTauMinus  & StLepton       \\ \hline
+    \end{tabular}            
+    \caption{List of defined leptons}
+    \label{tab:leptons}
+\end{table}
+
+\index{ions}
+\begin{table}[htb]
+    \begin{center}
+    \begin{tabular}{|l|r|r|l| l |}
+        \hline
+        \textbf{Particle Name} & \textbf{PDG Encoding} & \textbf{GEANT3 Ids}  & \textbf{Class Name} & \textbf{Derived From} \\ \hline
+         alpha  & N/A   & 47    &              StAlpha  & StIon          \\ \hline
+      deuteron  & N/A   & 45    &           StDeuteron  & StIon          \\ \hline
+           He3  & N/A   & 49    &                StHe3  & StIon          \\ \hline
+        triton  & N/A   & 46    &             StTriton  & StIon          \\ \hline
+    \end{tabular}            
+    \caption{List of defined ions}
+    \label{tab:ions}
+
+\end{table}
+
+\index{bosons}
+\begin{table}[htb]
+    \begin{center}
+    \begin{tabular}{|l|r|r|l| l |}
+        \hline
+        \textbf{Particle Name} & \textbf{PDG Encoding} & \textbf{GEANT3 Ids}  & \textbf{Class Name} & \textbf{Derived From} \\ \hline
+         gamma  & 22    & 1     &              StGamma  & StBoson        \\ \hline
+ opticalphoton  & N/A   & 50    &      StOpticalPhoton  & StBoson        \\ \hline
+    \end{tabular}            
+    \caption{List of defined bosons}
+    \label{tab:bosons}
+\end{table}
+
+\index{mesons}
+\begin{table}[htb]
+    \begin{center}
+       anti\_B0  & -511  & N/A   &     StAntiBMesonZero  & StMeson        \\ \hline
+      anti\_Bs0  & -531  & N/A   &    StAntiBsMesonZero  & StMeson        \\ \hline
+       anti\_D0  & -421  & 38    &     StAntiDMesonZero  & StMeson        \\ \hline
+    anti\_kaon0  & -311  & N/A   &       StAntiKaonZero  & StMeson        \\ \hline
+      anti\_Bs0  & -531  & N/A  &    StAntiBsMesonZero  & StMeson        \\ \hline
+       anti\_D0  & -421  & 38   &     StAntiDMesonZero  & StMeson        \\ \hline
+    anti\_kaon0  & -311  & 156  &       StAntiKaonZero  & StMeson        \\ \hline
+            B+  & 521   & N/A   &         StBMesonPlus  & StMeson        \\ \hline
+            B-  & -521  & N/A   &        StBMesonMinus  & StMeson        \\ \hline
+            B0  & 511   & N/A   &         StBMesonZero  & StMeson        \\ \hline
+           Bs0  & 531   & N/A   &        StBsMesonZero  & StMeson        \\ \hline
+            D+  & 411   & 35    &         StDMesonPlus  & StMeson        \\ \hline
+            D-  & -411  & 36    &        StDMesonMinus  & StMeson        \\ \hline
+            D0  & 421   & 37    &         StDMesonZero  & StMeson        \\ \hline
+     eta\_prime  & 331   & N/A   &           StEtaPrime  & StMeson        \\ \hline
+           Ds-  & -431  & 40    &       StDsMesonMinus  & StMeson        \\ \hline
+           eta  & 221   & 17    &                StEta  & StMeson        \\ \hline
+     eta\_prime  & 331   & N/A  &           StEtaPrime  & StMeson        \\ \hline
+         kaon0  & 311   & N/A   &           StKaonZero  & StMeson        \\ \hline
+         kaon+  & 321   & 11    &           StKaonPlus  & StMeson        \\ \hline
+         kaon-  & -321  & 12    &          StKaonMinus  & StMeson        \\ \hline
+        kaon0S  & 310   & 16    &      StKaonZeroShort  & StMeson        \\ \hline
+         omega  & 223   & 150   &         StOmegaMeson  & StMeson        \\ \hline
+           phi  & 333   & 151   &                StPhi  & StMeson        \\ \hline
+          rho+  & 213   & N/A   &            StRhoPlus  & StMeson        \\ \hline
+          rho-  & -213  & N/A   &           StRhoMinus  & StMeson        \\ \hline
+          rho0  & 113   & N/A   &            StRhoZero  & StMeson        \\ \hline
+          rho+  & 213   & 153   &            StRhoPlus  & StMeson        \\ \hline
+          rho-  & -213  & 154   &           StRhoMinus  & StMeson        \\ \hline
+          rho0  & 113   & 152   &            StRhoZero  & StMeson        \\ \hline
+    \end{tabular}            
+    \caption{List of defined mesons}
+    \label{tab:mesons}
+\end{table}
+
+\index{baryons}
+\begin{table}[htb]
+    \begin{center}
+    \begin{tabular}{|l|r|r|l| l |}
+        \hline
+        \textbf{Particle Name} & \textbf{PDG Encoding} & \textbf{GEANT3 Ids}  & \textbf{Class Name} & \textbf{Derived From} \\ \hline
+  anti\_lambda  & -3122 & 26    &         StAntiLambda  & StBaryon       \\ \hline
+anti\_lambda\_c+  & -4122 & N/A   &    StAntiLambdacPlus  & StBaryon       \\ \hline
+  anti\_neutron  & -2112 & 25    &        StAntiNeutron  & StBaryon       \\ \hline
+   anti\_omega-  & -3334 & 32    &     StAntiOmegaMinus  & StBaryon       \\ \hline
+ anti\_omega\_c0  & -4332 & N/A   &     StAntiOmegacZero  & StBaryon       \\ \hline
+   anti\_proton  & -2212 & 15    &         StAntiProton  & StBaryon       \\ \hline
+   anti\_sigma+  & -3222 & 27    &      StAntiSigmaPlus  & StBaryon       \\ \hline
+   anti\_sigma-  & -3112 & 29    &     StAntiSigmaMinus  & StBaryon       \\ \hline
+   anti\_sigma0  & -3212 & 28    &      StAntiSigmaZero  & StBaryon       \\ \hline
  anti\_sigma\_c+  & -4212 & N/A   &     StAntiSigmacPlus  & StBaryon       \\ \hline
 anti\_sigma\_c++  & -4222 & N/A   & StAntiSigmacPlusPlus  & StBaryon       \\ \hline
+ anti\_sigma\_c0  & -4112 & N/A   &     StAntiSigmacZero  & StBaryon       \\ \hline
       anti\_xi-  & -3312 & 31    &        StAntiXiMinus  & StBaryon       \\ \hline
       anti\_xi0  & -3322 & 30    &         StAntiXiZero  & StBaryon       \\ \hline
     anti\_xi\_c+  & -4232 & N/A   &        StAntiXicPlus  & StBaryon       \\ \hline
