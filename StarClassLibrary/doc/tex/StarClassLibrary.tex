@@ -2,16 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.17 2000/03/06 20:25:49 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.18 2000/03/16 16:31:48 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.17  2000/03/06 20:25:49  ullrich
-% Added text to StHelix reference. More details on the
-% case B=0 (concerning parameter h and the phase).
+% Revision 1.18  2000/03/16 16:31:48  ullrich
+% Added description of StRandom.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -163,8 +162,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.17 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2000/03/06 20:25:49 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.18 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2000/03/16 16:31:48 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -264,11 +263,11 @@ make any comments, good or bad to the collaboration and developers.
 \section{Platforms and Compilers} \index{compiler} \index{platform}
 \label{platformsAndCompilers}
 
-    \item g++ 2.8.1.
+The \name{StarClassLibrary} (SCL) \index{SCL} is currently tested on the
 following platforms and compilers.
-\item Red Hat Linux 5.1 to Red Hat Linux 6.0: \index{Linux}
+\begin{enumerate}
 \item HP-UX 10.20: \index{HP-UX}
-    \item egcs 1.0.2 (g++) or higher. 
+  \begin{itemize}
     \item aCC A.01.06 or higher versions. \index{aCC (HP compiler)}
     \item gcc/g++ 2.9.5.
   \end{itemize}
@@ -277,7 +276,8 @@ following platforms and compilers.
     \item gcc/g++ 2.91.66 or higher. 
   \end{itemize}
 \item Solaris 2.4--2.6: \index{Solaris}
-templated member functions and a broken overloading mechanism.
+  \begin{itemize}
+    \item CC 4.2 and modified Object Space 2.0.2 Standard Library. \index{Object Space}
     \item CC 5.0 or higher
   \end{itemize}
 \end{enumerate}
@@ -375,23 +375,18 @@ according to your platform/compiler.
 \item[\comp{\_\_ROOT\_\_}:] This macro is automatically set if the
     header files are processed in a ROOT environment. If you want to
     use the SCL in a standalone mode you can either use the templated
-The SCL documentation consists of the {\em User Guide and
-    Reference Manual} located in \name{StarClassLibrary/doc/tex}, i.e.
-this document, and a \name{HTML} class browser in
-\name{StarClassLibrary/doc/html}.
-The class index and all other \name{HTML} pages referenced therein are generated
-automatically from the current code. 
+    versions of the classes or undefine this flag in order to
+    eliminate any ROOT dependencies. \index{\_\_ROOT\_\_}
+\end{description}
 
-Load the file \comp{index.html} in your browser first.
-The index gives an alphabetical listing of all of the classes, algorithms,
-and function objects provided by the Star C++ Class Library.
-The pages for the individual classes begin with a synopsis, which indicates the
-header file(s) and the signature of the class object followed by the \name{C++}
-code that describes the public interface. Please note, that the interface is
-displayed in its pure ANSI form. In a few rare cases and depending on your
-platform the actual code might differ slightly. 
-This browser only shows the interfaces, i.e., the prototypes of the classes and
-function objects.
+\section{Documentation} \index{documentation} \index{class browser} \index{HTML}
+
+The SCL documentation consists of the {\em User Guide and Reference
+    Manual} located in \name{StarClassLibrary/doc/tex}, i.e.  this
+document. This directory contains a Makefile which allows to create
+either a PS version (\texttt{make}) or a PDF version (\texttt{make
+    pdf}). The latter also includes bookmarks and allows to follow
+references in the text via hyperlinks. PDF is certainly the preferred
 format since it combines the advantages of HTML (links) and PostScript
 (printing) in one version. If you have trouble creating either the PS
 or the PDF version because of missing applications (LaTeX, dvips,
@@ -4335,7 +4330,181 @@ more questions [true]: n<CR>
 bye
 \end{verbatim}
 }
-%    Reference: StPrompt
+   
+\end{Entry}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    Reference: StRandom
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{StRandom \index{StRandom|textbf}} \label{StRandom}
+\index{random numbers}
+\begin{Entry}
+    
+\item[Summary]
+    
+    \texttt{StRandom} is an interface to the various random generators
+    provided by CLHEP (see \ref{Random}).  It eases their use and
+    avoids common problems. It is not intended not provide the full
+    functionality of all the related CLHEP classes but the most common
+    ones.
+    
+\item[Synopsis]
+    \verb+#include "StRandom.hh"+\\
+    \verb+class StRandom;+    
+    
+\item[Description]   
+    
+    CLHEP provides a rich set of random generators and random engines
+    which can be mixed freely (see \ref{Random}). However, their use
+    is sometimes cumbersome and error-prone. The aim of
+    \texttt{StRandom} is to provide an interface\footnote{In terms of
+        ``Design Patterns'' \texttt{StRandom} is a ``Facade''.} which
+    is simple to use and appropriate for most standard applications.
+    No new algorithm is added; all methods are simple access
+    functions. Only the most commonly used methods are interfaced. For
+    example the generation of arrays of random numbers is omitted. If
+    you need these features you have to use the original classes
+    directly.
+    
+    \texttt{StRandom} allows to generate all kinds of distributions
+    (flat, Gaussian, Poissonian, exponential, and Breit-Wigner)
+    without switching classes as one has to do with in CLHEP.
+    
+    All internal engines and generators used in \texttt{StRandom} are
+    kept as static data members and so are all methods. This allows
+    their use without explicitly creating an instance of
+    \texttt{StRandom}.  For example, to generate a flat and a Gaussian
+    random number you can either use:
+\begin{verbatim}
+    StRandom rndm;
+    cout << rndm.flat() << endl;
+    cout << rndm.gauss(1, 0.3) << endl;
+\end{verbatim}
+    or without creating an instance explicitly:
+\begin{verbatim}
+    cout << StRandom::flat() << endl;
+    cout << StRandom::gauss(1.7,0.3) << endl;
+\end{verbatim}
+    
+    \texttt{StRandom} uses internally the most advanced random engine
+    available, the RanluxEngine.
+    
+    Note, that you are able to use StRandom everywhere in your code
+    withour having to worry about getting the same series of random
+    numbers.  This happens if you create an instances of the CLHEP
+    'engines' locally, e.g.~in a function which you invoke several
+    times. The proper way to deal with CLHEP random generators is to
+    have the engine in global scope and then create instances of the
+    generators with the global engine as arguments.
+    
+\item[Persistence]
+    None
+    
+\item[Related Classes]
+        \texttt{StRandom} uses internally the following classes:
+    \texttt{RanluxEngine}, \texttt{RandFlat},
+    \texttt{RandBreitWigner}, \texttt{RandExponential},
+    \texttt{RandGauss}, and \texttt{RandPoisson}.
+
+    
+\item[Public\\ Constructors]
+    \verb+StRandom();+ \\
+    Constructor. Not needed (see example) unless you don't
+    like the \texttt{StRandom::flat()} syntax.
+    
+\item[Public Member\\ Functions]
+    \verb+static void setSeed(long seed);+ \\
+    Set the seed for the Ranlux engine. Ranlux internally
+    translates this to a 24 words seed. Note that, since
+    the engine is a static member, the seed is set for
+    all instances used in the application.
+
+    \verb+static double flat();+ \\
+    \verb+static double flat(double w);+ \\
+    \verb+static double flat(double a, double b);+ \\
+    \verb+static long flatInt(long n);+ \\
+    \verb+static long flatInt(long m, long n);+ \\
+    \verb+static double exponential();+ \\
+    \verb+static double exponential(double mean);+ \\
+    \verb+static double gauss();+ \\
+    \verb+static double gauss(double mean, double stdDev);+ \\
+    \verb+static long   poisson(double mean);+ \\
+    \verb+static double breitWigner(double a=1.0, double b=0.2);+ \\
+    \verb+static double breitWigner(double a, double b, double c);+ \\
+    \verb+static double breitWignerM2(double a=1.0, double b=0.2);+ \\
+    \verb+static double breitWignerM2(double a, double b, double c);+ \\
+    Static methods to generate random numbers according to various
+    distributions. All are implemented as inline functions and
+    simply call the referring CLHEP methods.
+    
+\item[Examples]
+{\footnotesize
+\begin{verbatim}
+#include <iostream.h>
+#include "StRandom.hh"
+#include "StGlobals.hh" // for PR() macro
+
+int main()
+{
+    StRandom  rndm;
+    int       i;
+    const int n = 1;
+
+    rndm.setSeed(101);
+    for (i=0; i<n; i++)         PR(rndm.flat());
+    for (i=0; i<n; i++)         PR(rndm.flat(2));
+    for (i=0; i<n; i++)         PR(rndm.flatInt(10));
+    for (i=0; i<n; i++)         PR(rndm.flatInt(20,30));
+    for (i=0; i<n; i++)         PR(rndm.flat(1, 2));
+    for (i=0; i<n; i++)         PR(rndm.exponential());
+    for (i=0; i<n; i++)         PR(rndm.exponential(123.));
+    for (i=0; i<n; i++)         PR(rndm.gauss());
+    for (i=0; i<n; i++)         PR(rndm.gauss(10, 1.67));
+    for (i=0; i<n; i++)         PR(rndm.poisson(6.4));
+    
+    StRandom::setSeed(1001);
+    for (i=0; i<n; i++)         PR(StRandom::flat());
+    for (i=0; i<n; i++)         PR(StRandom::flat(2));
+    for (i=0; i<n; i++)         PR(StRandom::flat(1, 2));
+    for (i=0; i<n; i++)         PR(StRandom::flatInt(10));
+    for (i=0; i<n; i++)         PR(StRandom::flatInt(20,30));
+    for (i=0; i<n; i++)         PR(StRandom::exponential());
+    for (i=0; i<n; i++)         PR(StRandom::exponential(123.));
+    for (i=0; i<n; i++)         PR(StRandom::gauss());
+    for (i=0; i<n; i++)         PR(StRandom::gauss(10, 1.67));
+    for (i=0; i<n; i++)         PR(StRandom::poisson(6.4));
+    
+    return 0;
+}
+\end{verbatim}
+}%footnotesize    
+{\bf Programs Output:}
+{\footnotesize
+\begin{verbatim}
+rndm.flat() = 0.995292
+rndm.flat(2) = 0.727757
+rndm.flatInt(10) = 6
+rndm.flatInt(20,30) = 20
+rndm.flat(1, 2) = 1.12937
+rndm.exponential() = 0.80462
+rndm.exponential(123.) = 21.5562
+rndm.gauss() = 0.499951
+rndm.gauss(10, 1.67) = 9.49933
+rndm.poisson(6.4) = 9
+StRandom::flat() = 0.0506576
+StRandom::flat(2) = 1.71778
+StRandom::flat(1, 2) = 1.87986
+StRandom::flatInt(10) = 4
+StRandom::flatInt(20,30) = 24
+StRandom::exponential() = 0.614351
+StRandom::exponential(123.) = 17.5155
+StRandom::gauss() = -0.12305
+StRandom::gauss(10, 1.67) = 11.2643
+StRandom::poisson(6.4) = 4
+\end{verbatim}
 } %footnotesize
 \end{Entry}
 
