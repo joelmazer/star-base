@@ -2,13 +2,16 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.20 2000/09/25 19:52:14 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.21 2001/04/20 22:18:57 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
+% Revision 1.21  2001/04/20 22:18:57  ullrich
+% Added description of StAngle.
+%
 % Revision 1.20  2000/09/25 19:52:14  ullrich
 % Inheritance from TObject removed in most classes.
 %
@@ -162,8 +165,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.20 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2000/09/25 19:52:14 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.21 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2001/04/20 22:18:57 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -1725,10 +1728,107 @@ BNL CVS repository are described in alphabetic order.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+%    Reference: StAngle
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{StAngle} \index{StAngle} \label{StAngle}
+\index{angles}
+\begin{Entry}
+\item[Summary]
+     The StAngle class represents an angle in radians and provide
+     all essential operation in an unambigious way.
+     
+\item[Synopsis]
+  \verb+#include "StAngle.hh"+ \\
+  \verb+class StAngle;+\\
+    
+\item[Description]   
+  This class represents an angle in units of radians. It behaves
+  pretty much like a \texttt{double} but ensures that its value
+  always stay in the range $[-\pi, \pi]$. Essentially all operations
+  as multiplication, addition, subtraction, or scaling are overloaded.
+  This class is especially useful if you deal with azimuthal symmetric
+  problems since it handles differences between angles correctly and avoids
+  the usual problems related to the $0 \rightarrow 2 \pi$ transition.
+  This saves a lot of checks within the code as compared to using
+  simple \texttt{float}s or \texttt{double}s to represent angles.
+
+  However, this class should not be used when speed is crucial since
+  it carries quite some overhead. Use it when reliability and safety
+  are major issues.
+
+\item[Public\\ Constructors]
+    \verb+StAngle();+\\
+    Default constructor. 
+    
+    \verb+StAngle(const StAngle&);+\\
+    Copy constructor. 
+    
+    \verb+StAngle(double alpha);+\\
+    Create angle with \texttt{alpha} radians. \texttt{alpha} is automatically
+    adjusted to fall in the range $[-\pi, \pi]$.
+
+    
+\item[Public Member\\ Functions]
+    \verb+double degree();+\\
+    Returns the angle in degree. The return value is always in the range
+    $[0^\circ - 360^\circ]$. Please note that this is the only safe method
+    to obtain the angle in degree. See ``pitfalls'' below.
+
+\item[Public Member\\ Operators]
+    \verb+operator double() const;+\\
+    Transforms a \texttt{StAngle} into a \texttt{double} (type cast operator).
+    Since this operator is defined one can use an StAngle everywhere where a
+    \texttt{double} or \texttt{float} can be used.
+    Essentially one can ignore this operator. It works for you in the background.
+
+    \verb+StAngle operator= (double angle);+\\
+    Assignement operator. Initiate self with an angle (in radian)
+    keeping self in the range $[-\pi, \pi]$.
+
+    \verb#StAngle operator+= (StAngle angle);#\\
+    Add another \texttt{angle} to self, keeping self in the range $[-\pi, \pi]$
+
+    \verb+StAngle operator-= (StAngle angle);+\\
+    Subtract \texttt{angle} from self. The difference will always be the
+    smallest possible difference. To give an example (for simplicity in degrees):
+    $380^\circ - 10^\circ$ is $10^\circ$ not $370^\circ$.
+
+    \verb+StAngle operator*= (double angle);+\\
+    \verb+StAngle operator/= (double angle);+\\
+    Multiply (divide) self by \texttt{angle}. Self stays in the range $[-\pi, \pi]$.
+  
+    \verb+int operator== (const StAngle& angle);+\\
+    Comparison operator. Note that $x$ equals $x + n 2 \pi$.
+
+\item[Global Functions]
+    \verb+StAngle average(StAngle alpha, StAngle beta);+\\
+    Returns the average of two angles \texttt{alpha} and \texttt{beta}.
+    To give an example (for simplicity in degrees):
+    the average of $380^\circ$ and $10^\circ$ is $15^\circ$ not $195^\circ$.    
+    
+\item[Global Operators]
+    \verb#StAngle operator+ (StAngle alpha, StAngle beta);#\\
+    \verb+StAngle operator- (StAngle alpha, StAngle beta);+\\
+    \verb+StAngle operator* (StAngle alpha, double c);+\\
+    \verb+StAngle operator/ (StAngle alpha, double c);+\\
+    Operators to allow to add, subtract two angles as well as
+    scale and divide angles by a scalar. The results always will
+    be a \texttt{StAngle} with a value in the range $[-\pi, \pi]$.
+    
+ 
+\end{Entry}
+
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %    Reference: StFastCircleFitter
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{StFastCircleFitter \index{StFastCircleFitter}} \label{StFastCircleFitter}
+\subsection{StFastCircleFitter \index{StFastCircleFitter}}
+\label{StFastCircleFitter}
 \index{circle fit}
 \begin{Entry}
 \item[Summary]
@@ -6271,9 +6371,9 @@ The meaning of the different parameters is visualized in Fig.~\ref{fig:helix}.
 
 The circle fit in the $xy$-plane gives the center of the fitted circle $(x_c, y_c)$
 and the curvature $\kappa = 1/R$ while the linear fit gives $z_0$ and $\tan \lambda$.
-The phase of the helix is defined as follows:
+The phase of the helix (see Fig.~\ref{fig:helix}) is defined as follows:
 \begin{eqnarray}
-  \Phi_0 = \arctan \left( \frac{y_1 - y_c}{x_1 - x_c} \right)
+  \Phi_0 = \arctan \left( \frac{y_0 - y_c}{x_0 - x_c} \right)
 \end{eqnarray}
 The reference point $(x_0, y_0)$ is then calculated as follows:
 \begin{eqnarray}
