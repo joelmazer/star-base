@@ -2,15 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.13 1999/11/18 17:57:24 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.14 1999/12/21 16:41:13 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.13  1999/11/18 17:57:24  ullrich
-% Fixed some typos
+% Revision 1.14  1999/12/21 16:41:13  ullrich
+% Added StFastCircleFitter docu.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -161,8 +161,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.13 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 1999/11/18 17:57:24 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.14 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 1999/12/21 16:41:13 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -250,23 +250,20 @@ giving the user access to the header files and source code is foreseen
 in the near future.
 
 These developments have been made in consultation with the CERN LHC++
-\item Red Hat Linux 5.1, Red Hat Linux 5.2: \index{Linux}
+group who maintain the official version of CLHEP and they have
 expressed interest in perhaps incorporating some of this library
 in a future release.  This is also by no means a complete library and as
 more and more people get involved with development, it is expected to
 expand.  So look through the manual and feel free to
 make any comments, good or bad to the collaboration and developers.
 
-  \end{itemize}
-\item IRIX 6.4: \index{IRIX}
-  \begin{itemize}
-    \item CC 7.1 and Object Space 2.0.2 for IRIX 6.3 modified.
-and compiled with -n32 flag. \index{Object Space}
+
 
 \section{Platforms and Compilers} \index{compiler} \index{platform}
 \label{platformsAndCompilers}
 
-Further tests on AIX are not foreseen unless there is sufficient user demand. \index{Irix} \index{AIX}
+    \item g++ 2.8.1.
+following platforms and compilers.
 \item Red Hat Linux 5.1 to Red Hat Linux 6.0: \index{Linux}
 \item HP-UX 10.20: \index{HP-UX}
     \item egcs 1.0.2 (g++) or higher. 
@@ -384,34 +381,38 @@ The class index and all other \name{HTML} pages referenced therein are generated
 automatically from the current code. 
 
 Load the file \comp{index.html} in your browser first.
-    \name{Sun} \index{Sun} platforms due to shortcomings of the native
-    compiler. 
-\item The \name{Sun} compiler does not provide the Boolean data type
-    \comp{bool}. \index{bool} Therefore \comp{bool} is implemented as
-    integer type (\comp{int}).  As a consequence overloading of
-    (member) functions according to \comp{bool/int} types is not
-    possible. Note that the StPrompt \index{StPrompt} class is
-    affected (see section \ref{ref:StPrompt}).
+The index gives an alphabetical listing of all of the classes, algorithms,
+and function objects provided by the Star C++ Class Library.
+The pages for the individual classes begin with a synopsis, which indicates the
+header file(s) and the signature of the class object followed by the \name{C++}
+code that describes the public interface. Please note, that the interface is
+displayed in its pure ANSI form. In a few rare cases and depending on your
+platform the actual code might differ slightly. 
+This browser only shows the interfaces, i.e., the prototypes of the classes and
 function objects.
-    SCL and standard library on Sun platforms, it is necessary to
-    define an environment variable, \comp{LD\_LIBRARY\_PATH}, \index{LD LIBRARY PATH}to
-    indicate the directory containing the shared library.
-\item If you are using an old \texttt{cfront} compiler \index{cfront compiler}
-    who still uses template databases
-    or repositories you might encounter unresolved symbols when linking with the SCL library.
-    In order to avoid this problem one has to include \comp{StTemplates.hh}\index{StTemplates}
-    once somewhere in the application. The only known platform where this is necessary is
-    SUN with the CC4 compiler. Note, that one also has to set the \comp{ST\_SOLVE\_TEMPLATES}
-    flag in order to enable the template instantiation.  By setting or omitting this macro
-    in the referring Makefile
-    one can selectively switch the forced instantiation on and off.
-\item The SCL uses heavily the Standard C++ Library and thus templates. In certain cases
-    such as the CINT \index{CINT} interpreter used by ROOT \index{ROOT} the use of the
-    template SCL classes (or classes using templates) is not possible.
-    Here one has to
-    use the equivalent non-template version. Table~\ref{tab:templates} gives an overview
-    of the available non-template/non-STL classes. Please
-    note that the template versions should be used whenever possible.
+format since it combines the advantages of HTML (links) and PostScript
+(printing) in one version. If you have trouble creating either the PS
+or the PDF version because of missing applications (LaTeX, dvips,
+dvipdf) you can get the current ``\texttt{dev}'' versions at the
+following URL:
+\texttt{http://www.star.bnl.gov/STARAFS/comp/root/special\_docs.html}.
+                         
+\section{Known Problems} \index{limitations}
+
+\begin{itemize}
+\item The SCL should compile without any compiler warnings except on
+    \name{Sun} \index{Sun} platforms with CC4.2 due to shortcomings of
+    the compiler.
+\item The \name{Sun} compiler verion CC4.2 does not provide the
+    Boolean data type \comp{bool}. \index{bool} Therefore \comp{bool}
+    is implemented as integer type (\comp{int}).  As a consequence
+    overloading of (member) functions according to \comp{bool/int}
+    types is not possible. Note that the StPrompt \index{StPrompt}
+    class is affected (see section \ref{ref:StPrompt}).
+\item In order to run programs built with the shared version of the
+    SCL and standard library on Sun platforms with CC4.2, it is
+    necessary to define an environment variable,
+    \comp{LD\_LIBRARY\_PATH}, \index{LD LIBRARY PATH}to indicate the
     directory containing the shared library.
 \item If you are using an old \texttt{cfront} compiler \index{cfront
         compiler} who still uses template databases or repositories
@@ -1696,6 +1697,144 @@ anti\_sigma\_c++  & -4222 & N/A   & StAntiSigmacPlusPlus  & StBaryon       \\ \h
     \label{tab:baryons}
     \end{center}
 \end{table}
+\clearpage
+
+\subsubsection{UML Diagrams}
+\label{sec:umlPart}
+\begin{center}
+    \includegraphics[height=0.85\textheight]{umlParticles.eps}
+\end{center}
+\begin{figure}[h]    
+    \caption{UML diagram for particle definitions}
+    \label{fig:umlPart}
+\end{figure}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+\section{Class Reference}
+The classes which are currently implemented and available from the
+BNL CVS repository are described in alphabetic order.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    Reference: StFastCircleFitter
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{StFastCircleFitter \index{StFastCircleFitter}} \label{StFastCircleFitter}
+\index{circle fit}
+\begin{Entry}
+\item[Summary]
+     Fast circle fitting functor.
+     
+\item[Synopsis]
+  \verb+#include "StFastCircleFitter.hh"+ \\
+  \verb+class StFastCircleFitter;+
+  
+    
+\item[Description]   
+  Fast fitting functor using a iterational linear regression 
+  method (ILRM).\\
+  Reference: \textit{N.Chernov, G.A.Ososkov, Computer  
+  Physics Communication 33 (1984) 329-333.}              
+
+  The functor fits the origin (x, y) and the radius. No stored
+  point is excluded from the fit, i.e.~ all points are used.
+  
+  Return codes:
+  \begin{description}
+      \item[0]    fit ok 
+      \item[1-4]  error occured, no results
+  \end{description}
+  \texttt{StFastCircleFitter::fit()} returns true only if rc = 0
+
+\item[Public\\ Constructors]
+    \verb+StFastCircleFitter();+\\
+    Default constructor. 
+    
+\item[Public Member\\ Functions]
+    \verb+void addPoint(double x, double y);+\\
+    Add point with coordinates \texttt{x}, \texttt{y}.
+
+    \verb+void clear();+\\
+    Reset all fit results. Deletes all points stored so far.
+
+    \verb+unsigned int numberOfPoints() const;+\\
+    Returns number of points stored and used in the fit.
+    
+    \verb+bool fit();+\\
+    Performs the fit.
+    
+    \verb+double radius() const;+\\
+    Returns fitted radius.
+    
+    \verb+double xcenter() const;+\\
+    Returns x of fitted center.
+    
+    \verb+double ycenter() const;+\\
+    Returns y of fitted center.
+    
+    \verb+double variance() const;+\\
+    Returns variance estimate.
+    See reference for more on the validity of the variance.
+    
+    \verb+int rc() const;+\\
+    Return code of fit. Returns 0 in case of success
+    else values between 1--4.
+  
+\item[Examples]
+{\footnotesize
+\begin{verbatim}
+#include "StFastCircleFitter.hh"
+#include <iostream.h>
+#include <cstdlib>
+
+int main()
+{
+    StFastCircleFitter fitter;
+
+    const unsigned int nPoints = 42;
+    const double x0 = 10.23;
+    const double y0 = 0.018;
+    const double r  = 19.91;
+    double phi;
+    int i;
+
+    cout << "Input:    x0 = " << x0 << endl;
+    cout << "          y0 = " << y0 << endl;
+    cout << "          r  = " << r << endl;
+    cout << "          n  = " << nPoints << endl;
+    
+    for (i=0; i<nPoints; i++) {
+        phi = drand48();
+        fitter.addPoint(r*cos(phi)+x0, r*sin(phi)+y0);
+    }
+
+    fitter.fit();
+    cout << "Fit 1:    x0 = " << fitter.xcenter() << endl;
+    cout << "          y0 = " << fitter.ycenter() << endl;
+    cout << "          r  = " << fitter.radius() << endl;
+    cout << "          n  = " << fitter.numberOfPoints() << endl;
+
+    fitter.clear();
+    
+    for (i=0; i<nPoints; i++) {
+        phi = drand48();
+        fitter.addPoint(r*cos(phi)+x0, r*sin(phi)+y0);
+    }
+
+    fitter.fit();
+    cout << "Fit 2:    x0 = " << fitter.xcenter() << endl;
+    cout << "          y0 = " << fitter.ycenter() << endl;
+    cout << "          r  = " << fitter.radius() << endl;
+    cout << "          n  = " << fitter.numberOfPoints() << endl;
+
+    return 0;
+}
+\end{verbatim}
 }%footnotesize    
 {\bf Programs Output:}
 {\footnotesize
