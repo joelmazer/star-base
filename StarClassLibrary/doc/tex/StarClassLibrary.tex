@@ -2,15 +2,16 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.7 1999/05/17 11:10:00 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.8 1999/06/04 18:07:09 ullrich Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.7  1999/05/17 11:10:00  ullrich
-% Added documentation on particle definitions
+% Revision 1.8  1999/06/04 18:07:09  ullrich
+% Added description of new class StMemoryInfo.
+% Update of StThreeVector and StLorentzVector.
 %
 % Revision 1.19  2000/04/06 23:01:45  ullrich
 % Added reference section for StMath. Particle section updated.
@@ -161,8 +162,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.7 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 1999/05/17 11:10:00 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.8 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 1999/06/04 18:07:09 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -2161,7 +2162,8 @@ HBOOK file is: hbook.ntp
 
 Available information regarding the histogram
 ---------------------------------------------
-    \verb+#include "StHelix.hh"+
+Histogram ID:      2
+Histogram entries: 100
 Histogram max:     14
 Histogram min:     0
 Histogram sum:     100
@@ -2564,13 +2566,15 @@ Crosscheck point = (-10.9531, 57.2299, -10.2747), delta = 162.174
 
 \item[Related Classes]
     Class StLorentzVector uses {\bf StThreeVector}\index{StThreeVector}
+    as data member.
 
-    Returns components by index. Note that the first index (the
-    x-component) has index 0 while the time component has index 3.
-    The result for indices $> 3$ is platform
-    dependent. If the compiler supports exception handling an
-    \comp{out\_of\_range} exception is thrown.
+\item[Public\\ Constructors]
+    \verb+StLorentzVector<T>();+ \\
+    Constructs a 4-vector with all components initialized to 0.
+    
+    \verb+StLorentzVector<T>(T x, T y, T z, T t);+ \\
     Constructs a 4-vector with given
+    components x (p$_{x}$), y (p$_{y}$), z (p$_{z}$),
     and t (E).
 
     \verb+StLorentzVector<T>(StThreeVector<T> v, T t);+ \\
@@ -3661,8 +3665,122 @@ StMatrix<double>::dot() Incompatible matrix sizes
 
 \end{Entry}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    Reference: StMatrixF
+    if the SCL was compiled without the \name{SCL\_WITHOUT\_ROOT} flag set.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{StMatrixF \index{StMatrixF}} \label{StMatrixF}
+\begin{Entry}
+\item[Summary]
+    StMatrixF is a non-template version of \verb+StMatrix<float>+
+    (see \ref{StMatrix}). The code does not contain templates nor
+    does it make use of the Standard C++ library. All data member are of
+    type \texttt{float}.
+    
+\item[Synopsis]
+    \verb+#include "StMatrixF.hh"+ \\
+    \verb+StMatrixF;+
+    
+    
+\item[Description]       
+    The member functions, operators and non-member functions are almost identical
+    to those of StMatrix but might be slightly slower in execution speed
+    since the inline mechanism cannot be used as extensive as for the template
+    version. Operations can be mixed with the non-template double precision version
+    \texttt{StMatrixD} and with \texttt{StThreeVectorF}, \texttt{StThreeVectorD},
+    \texttt{StLorentzVectorF}, and \texttt{StLorentzVectorD}
+    but not with any instance of \verb+StMatrix<T>+, \verb+StThreeVector<T>+ or
+    \verb+StLorentzVector<T>+..
+    Operations with STL based containers are not implemented.
+    \verb+StMatrix<T>+ should be preferred where possible.
+    
+\item[Related Classes]
+    StMatrixF inherits from TObject \index{TObject}
+    if the SCL was compiled with the \name{\_\_ROOT\_\_} flag set.
+
 \item[Persistence]
-%\clearpage
+    Within the ROOT framework.
+
+\end{Entry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    Reference: StMemoryInfo
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{StMemoryInfo}
+\index{StMemoryInfo}
+\index{memory info}
+\label{StMemoryInfo}
+\begin{Entry}
+\item[Summary]
+    Provides information on the memory allocator.
+
+\item[Synopsis]
+    \verb+#include "StMemoryInfo.hh"+\\
+    \verb+class StMemoryInfo;+
+    
+\item[Description]   
+    Provides instrumentation describing space (memory) usage.
+    The class is implemented as a singleton. The obtained information
+    is platform dependent because of the different ways memory is
+    allocated and managed by the different compilers and architectures.
+    All memory information is obtained through a \comp{mallinfo()} system
+    call (usually in malloc.h). 
+    
+    The class is not functional on SUN (CC4.2). It will nevertheless
+    compile and link but will provide no memory statistics.
+        
+\item[Public\\ Constructors]
+    StMemoryInfo is a singleton and therefore has no
+    public constructor. The only way to obtain an instance,
+    (or better an pointer to the only instance)
+    of StMemoryInfo is through the static member function
+    instance().
+
+    \verb+static StMemoryInfo* instance();+\\
+    Returns pointer to the only instance of StMemoryInfo.
+    
+\item[Public Member\\ Functions]
+    \verb+void snapshot();+\\
+    Take a snapshot of the current memory usage.
+    
+    \verb+void print(ostream& = cout);+\\
+    Prints the memory usage as recorded by the snapshot()
+    member function. The output is platform dependent. In any
+    case the difference to the previous snapshot is printed
+    as well.
+    
+\item[Example]
+{\footnotesize
+\begin{verbatim}
+#include "StMemoryInfo.hh"
+
+int main()
+{
+    char *buf[2];
+    StMemoryInfo *info = StMemoryInfo::instance();
+    
+    info->snapshot();
+    info->print();
+
+    buf[0] = new char[10000];
+    cout << "\n===> 10000 bytes allocated\n" << endl;
+
+    info->snapshot();
+    info->print();
+
+    buf[1] = new char[10000];
+    cout << "\n===>  10000 bytes allocated\n" << endl;
+
+    info->snapshot();
+    info->print();
+
+    return 0;
+}
+\end{verbatim}
+}%footnotesize    
 {\bf Programs Output (Linux):}
 {\footnotesize
 \begin{verbatim}
@@ -3679,8 +3797,8 @@ top-most, releasable space               2744 (+0)
 
 ---------- Memory Status (snapshot #2) ----------
 total space allocated from system        15120 (+12288) 
-    \verb+#include "StPhysicalHelix.hh"+
-    
+Only single objects may be created,
+i.e, new X[100] will not work; however, in these cases the
 default operators new/delete will be called.
 
 
@@ -4036,6 +4154,16 @@ bye
     which allow to multiply, subtract and add vectors with other
     vectors or scalar variables, calculate cross products and angles
     between vectors, and much more. Once defined its coordinates can
+    be obtained in Cartesian, cylindrical and spherical
+    representation.  Its interface is essentially the same as
+    \comp{ThreeVector} in CLHEP \index{CLHEP} with two significant differences:
+    (i) it is templated vector and (ii) it is a concrete class, i.e.
+    it is not derived from any other class.  It offers essentially the
+    same functionality as the CLHEP version but is more flexible in
+    terms of precision and storage optimisation; i.e. in order to
+    minimize for memory and storage volume a \comp{StThreeVector}'s
+    with type argument \comp{float} can be used but easily
+    transformed into a double precision version for computation when
     higher accuracy is needed.  In addition to the CLHEP version there
     are a few member functions added which are useful in the context
     of Heavy-Ion Physics such as \comp{pseudoRapidity()}.
@@ -4054,12 +4182,15 @@ bye
 
 \item[Related Classes]
     Class {\bf StLorentzVector} \index{StLorentzVector}
-    \verb+T operator() (size_t i) const;+\\
-    Returns components by index. Note that the first index (the
-    x-component) has index 0. The result for indices $> 2$ is platform
-    dependent. If the compiler supports exception handling an
-    \comp{out\_of\_range} exception is thrown.
+    is derived from StThreeVector
+    defining a 4-dimensional Lorentz vector. 
+
+\item[Public\\ Constructors]
+    \verb+StThreeVector<T>();+ \\
+    Constructs a 3-vector with all components initialized to 0.
+    
     \verb+StThreeVector<T>(T x, T y, T z);+ \\
+    Constructs a 3-vector with given components x, y and z.
     
     \verb+template<class X>+\\
     \verb+StThreeVector<T>(const X *avec)+\\
