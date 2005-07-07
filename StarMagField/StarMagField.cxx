@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * $Id: StarMagField.cxx,v 1.1 2005/07/07 14:13:55 fisyak Exp $
+ * $Id: StarMagField.cxx,v 1.1.1.1 2005/07/07 14:13:55 fisyak Exp $
  *
  * Author: Jim Thomas   11/1/2000
  *
@@ -11,8 +11,8 @@
  ***********************************************************************
  *
  * $Log: StarMagField.cxx,v $
- * Revision 1.1  2005/07/07 14:13:55  fisyak
- * Initial revision
+ * Revision 1.1.1.1  2005/07/07 14:13:55  fisyak
+ * The version of STAR mag. field extracted from StDbUtilities/StMagUtilities to be used in Simulation and Reconstruction instead of agufld
  *
  * Revision 1.2  2005/07/07 14:07:55  fisyak
  * Final version before moving to official repository
