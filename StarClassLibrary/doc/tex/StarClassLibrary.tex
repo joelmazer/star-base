@@ -2,13 +2,16 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.22 2001/05/09 05:10:42 ullrich Exp $
+% $Id: StarClassLibrary.tex,v 1.23 2006/08/15 21:42:22 jeromel Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
+% Revision 1.23  2006/08/15 21:42:22  jeromel
+% Fix rhic -> rhic.bnl.gov
+%
 % Revision 1.22  2001/05/09 05:10:42  ullrich
 % Added Pitfall section to StAngle.
 %
@@ -168,8 +171,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.22 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2001/05/09 05:10:42 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.23 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2006/08/15 21:42:22 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -333,7 +336,7 @@ be accessed via \name{afs}: \index{afs} \index{CVS} \index{CVSROOT}
 \begin{enumerate}
   \item Obtain an \name{afs} token: \comp{klog -cell rhic}.
   \item Make sure \comp{\$CVSROOT} is set properly:\\
-    (i.e.~\comp{CVSROOT = /afs/rhic/star/packages/repository})
+    (i.e.~\comp{CVSROOT = /afs/rhic.bnl.gov/star/packages/repository})
   \item Check-out package into your current working directory:\\
     \comp{cvs checkout StRoot/StarClassLibrary}
 \end{enumerate}
