@@ -232,4 +232,4 @@ inline log4cxx::varia::StarOptionFilterPtr&  StLoggerManager::GetStarOptionFilte
 #endif
 #endif
 
-// $Id: StLoggerManager.h,v 1.11 2007/08/03 21:34:52 fine Exp $
+// $Id: StLoggerManager.h,v 1.6.4.1 2007/08/10 20:55:33 didenko Exp $

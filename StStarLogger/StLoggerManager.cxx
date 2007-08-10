@@ -458,7 +458,7 @@ int StLoggerManager::AddType(const char* type, const char* text) {
 //_____________________________________________________________________________
 void StLoggerManager::PrintInfo() {
    fLogger->info("**************************************************************\n");
-   fLogger->info("* $Id: StLoggerManager.cxx,v 1.28 2007/08/08 20:50:22 fine Exp $\n");
+   fLogger->info("* $Id: StLoggerManager.cxx,v 1.21.4.1 2007/08/10 20:55:30 didenko Exp $\n");
    //  printf("* %s    *\n",m_VersionCVS);
    fLogger->info("**************************************************************\n");
 }
@@ -798,15 +798,6 @@ void StLoggerManager::SetLevel(Int_t level)
       case kInfo:
          fLogger->setLevel(Level::INFO);
          break;
-      case kAll:
-      case kDebug:
-      case kDebug2: 
-         fLogger->setLevel(Level::DEBUG);
-         break;
-      case kDefault:
-         // restore the default level (defined the XML configuration if present)
-         fLogger->setLevel(fDefaultLevel);
-         break;
       default:
          fLogger->setLevel(Level::DEBUG);
          break;            
@@ -816,15 +807,7 @@ void StLoggerManager::SetLevel(Int_t level)
 Int_t StLoggerManager::GetLevel(Int_t) const 
 {
    // Map the current logger level to the STAR one
-#if 0   
-   const LevelPtr &level = fLogger->getLevel();
-        if (level == &Level::DEBUG)  return kDebug; 
-   else if (level == &Level::FATAL)  return kFatal;  
-   else if (level == &Level::ERROR)  return kError;
-   else if (level == &Level::WARN )  return kWarning;
-   else if (level == &Level::INFO )  return kInfo;
-#endif   
-   return kAll;
+   return 1;
 }
 #if 0
 //_____________________________________________________________________________
@@ -842,28 +825,11 @@ const char *GetName()
 // StMessMgr& gMess = *(StMessMgr *)StLoggerManager::Instance();
 
 //_____________________________________________________________________________
-// $Id: StLoggerManager.cxx,v 1.28 2007/08/08 20:50:22 fine Exp $
+// $Id: StLoggerManager.cxx,v 1.21.4.1 2007/08/10 20:55:30 didenko Exp $
 // $Log: StLoggerManager.cxx,v $
-// Revision 1.28  2007/08/08 20:50:22  fine
-//  Fix bug: some messages submitted via the old interface were lost
+// Revision 1.21.4.1  2007/08/10 20:55:30  didenko
+// patches for branch SL06g_2 for SL4.4
 //
-// Revision 1.27  2007/08/03 21:34:51  fine
-// fix StStarLogger for Sl 4.4
-//
-// Revision 1.26  2007/02/13 22:07:26  perev
-// Add the lost part of the ROOT message - location
-//
-// Revision 1.25  2007/01/30 20:48:57  fine
-// Make the deault level for all loggers INFO
-//
-// Revision 1.24  2007/01/30 19:25:51  fine
-// Set the deafult level for QA to b INFO
-//
-// Revision 1.23  2007/01/25 18:36:38  fine
-// Acivate logger level StMaker level run-time adjustment
-//
-// Revision 1.22  2007/01/23 22:27:14  fine
-// Set the dwefault logger level to WARN
 //
 // Revision 1.21  2006/07/01 01:19:17  fine
 // Add new jiob tracking option code
