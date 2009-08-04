@@ -2,15 +2,15 @@
 %
 % STAR Class Library - User Guide and Reference Manual -- LaTeX Source 
 %
-% $Id: StarClassLibrary.tex,v 1.24 2009/08/04 23:16:51 fine Exp $
+% $Id: StarClassLibrary.tex,v 1.25 2009/08/04 23:18:06 fine Exp $
 %
 % Author: LaTeX template by Thomas Ullrich, March 19 1998
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % $Log: StarClassLibrary.tex,v $
-% Revision 1.24  2009/08/04 23:16:51  fine
-% StHelixHelper to convert the helix-based object into the plain array of 3D points. Doc and example is coming
+% Revision 1.25  2009/08/04 23:18:06  fine
+% remove the unfinished yet StHelixHelper doc
 %
 % Revision 1.23  2006/08/15 21:42:22  jeromel
 % Fix rhic -> rhic.bnl.gov
@@ -174,8 +174,8 @@
   \mbox{\includegraphics[width=\textwidth]{StarClassLibraryTitle.eps}}
   \hfill\mbox{}\\[3cm]
   {\LARGE User Guide and Reference Manual}\\[2cm]
-  {\LARGE $ $Revision: 1.24 $ $}  \\[5mm] % replaced by cvs with current revision  
-  {\LARGE $ $Date: 2009/08/04 23:16:51 $ $}  % replaced by cvs with current revision  
+  {\LARGE $ $Revision: 1.25 $ $}  \\[5mm] % replaced by cvs with current revision  
+  {\LARGE $ $Date: 2009/08/04 23:18:06 $ $}  % replaced by cvs with current revision  
   \vfill
 \end{center}
 \cleardoublepage
@@ -2810,117 +2810,6 @@ Crosscheck point = (-10.9531, 57.2299, -10.2747), delta = 162.174
 
 \end{Entry}
 
-\clearpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%    Reference: StHelixHelper
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{StHelixHelper \index{StHelixHelper|textbf}}
-\index{StHelixHelper}
-\index{StHelixHelper}
-\begin{Entry}
-\item[Summary]
-    CPU timer
-    
-\item[Synopsis]
-    \verb+#include "StHelixHelper.h"+ \\
-    \verb+StHelixHelper helper;+
-    
-\item[Description]    
-    This class  is to convert the object represented by  2 \ref{StPhysicalHelixD} 
-    (for example STAR \verb+StTrack+ / \verb+StMuTrack+ objects) into the plain array of the 
-    3D coordinates to satisfy the various plotting / visualization needs.
-        
-    
-\item[Related Classes]
-    None
-    
-\item[Persistence]
-    None
-    
-\item[Public\\ Constructors]
-    \verb+StHelixHelper(const StPhysicalHelix &helix
-        ,const StPhysicalHelix &outerHelix, double length);+ \\
-    Constructs a new helper.
-
-\item[Public Member\\ Functions]
-    \verb+double resolution() const+\\
-    Returns the minimal amount of time in seconds which can be
-    measured by the timer. This value is system dependent.
-    Typical values range from 10 $\mu$s to 10 ms.
-    
-    \verb+ Float_t  *GetPoints(int &npoints)     const+\\
-    Creates the Float_t array of the npoints 3D coordinates
-    The end-use code is repsonsible to destroy the output array 
-    to free the memory via \verb+delete []+\\ C++ statement.
- 
-\item[Example]
-{\footnotesize
-\begin{verbatim}
-#include "StHelixHelper.hh"
-
-int main()
-{   
-    StHelixHelper timer, totalTimer;
-    
-    totalTimer.start();
-    timer.start();
-    
-    // Spend 5 busy sec.
-    time_t begin = time(0);
-    time_t now = begin;
-    while (now - begin < 5) now = time(0);
-    
-    timer.stop();
-    
-    cout << "Test 1:" << endl;
-    cout << "This test should require less than 5 sec CPU time. \n"
-         << "The exact amount depends strongly on the system." << endl;
-    cout << "The measured elapsed CPU time is: "
-         << timer.elapsedTime() << " sec\n" << endl;
-    
-    timer.reset();
-    timer.start();
-    
-    const size_t NumSqrt = 1000000;
-    double x;
-    for (int i=0; i<NumSqrt; i++) x = sqrt(double(i));
-    
-    timer.stop();
-    
-    cout << "Test 2:" << endl;
-    cout << "The CPU time to calculate " << NumSqrt
-         << " square roots is: "
-         << timer.elapsedTime() << " sec\n" << endl;
-    
-    cout << "The total amount of CPU seconds used \n"
-         << "to execute this program is: ";
-    totalTimer.stop();
-    cout << totalTimer.elapsedTime() << " sec." << endl;
-    
-    return 0;
-}
-\end{verbatim}
-
-{\bf Programs Output:}
-
-\begin{verbatim}
-Test 1:
-This test should require less than 5 sec CPU time. 
-The exact amount depends strongly on the system.
-The measured elapsed CPU time is: 4.81 sec
-
-Test 2:
-The CPU time to calculate 1000000 square roots is: 0.25 sec
-
-The total amount of CPU seconds used 
-to execute this program is: 5.06 sec.
-\end{verbatim}
-}
-
-\end{Entry}
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
