@@ -78,7 +78,10 @@
 #pragma link C++ class StMatrix<float>-;
 #pragma link C++ class StMatrix<double>-;
 #pragma link C++ class StHelix+;
+#pragma link C++ class StHelixHelper+;
 #pragma link C++ class StPhysicalHelix+;
+#pragma link C++ class StParticleTable+;
+#pragma link C++ class StParticleDefinition+;
 
 #pragma link C++ function abs(const StThreeVector<float>&);                                      
 #pragma link C++ function abs(const StThreeVector<double>&);                                      

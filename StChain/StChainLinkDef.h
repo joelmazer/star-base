@@ -9,4 +9,12 @@
 #pragma link C++ enum  EChainBits;
 #pragma link C++ class StMkDeb-;
 #pragma link C++ class DbAlias_t;
+
+#pragma link C++ class StIOInterFace+;
+#pragma link C++ class StEvtHddr+;
+#pragma link C++ class StRTSBaseMaker+;
+#pragma link C++ class StRtsTable+;
+#pragma link C++ class StTestMaker+;
+#pragma link C++ class StChainOpt+;
+
 #endif

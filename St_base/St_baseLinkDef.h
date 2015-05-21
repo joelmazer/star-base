@@ -39,4 +39,8 @@
 #pragma link C++ function operator~(StMessMgr&);
  
 
+#pragma link C++ class StFileIter+;
+#pragma link C++ class StVirtualEventFilter+;
+#pragma link C++ class St_table_header+;
+
 #endif

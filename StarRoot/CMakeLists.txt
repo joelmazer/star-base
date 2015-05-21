@@ -2,6 +2,43 @@ include_directories(
 	../StarClassLibrary
 )
 
+root_generate_dictionary(
+	StarRoot_Cint
+	TPolinom.h
+	TRandomVector.h
+	StMemStat.h
+	TNumDeriv.h
+	TTreeHelper.h
+	StDraw3D.h
+	TF1Fitter.h
+	THelixTrack.h
+	TAttr.h
+	TUnixTime.h
+	TRDiagMatrix.h
+	StCloseFileOnTerminate.h
+	TTreeIter.h
+	KFVertex.h
+	TRVector.h
+	TRArray.h
+	KFParticleBase.h
+	TMDFParameters.h
+	TRSymMatrix.h
+	TRMatrix.h
+	StArchInfo.h
+	TCFit.h
+	VVertex.h
+	TH1Helper.h
+	TDirIter.h
+	KFParticle.h
+	THack.h
+	StCheckQtEnv.h
+	StMultiKeyMap.h
+	TPolynomial.h
+	MTrack.h
+	MVertex.h
+	LINKDEF StarRootLinkDef.h
+)
+
 add_library (
 	StarRoot
 	SHARED
@@ -41,6 +78,7 @@ add_library (
 	TUnixTime.cxx
 	VVertex.cxx
 	xTCL.cxx
+	StarRoot_Cint.cxx
 )
 
 install(TARGETS StarRoot DESTINATION ".$ENV{STAR_HOST_SYS}/lib")

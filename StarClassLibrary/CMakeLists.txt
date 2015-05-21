@@ -1,3 +1,25 @@
+root_generate_dictionary(
+	StarClassLibrary_Cint
+	StPhysicalHelix.hh
+	StLorentzVector.hh
+	StMatrix.hh
+	StThreeVector.hh
+	StHelix.hh
+	StHelixHelper.h
+	BetheBloch.h
+	StThreeVectorF.hh
+	StThreeVectorD.hh
+	StLorentzVectorF.hh
+	StLorentzVectorD.hh
+	StMatrixF.hh
+	StMatrixD.hh
+	StPhysicalHelixD.hh
+	StParticleTable.hh
+	StParticleDefinition.hh
+	LINKDEF StarClassLibraryLinkDef.hh
+   OPTIONS -D__ROOT__
+)
+
 add_library (
 	StarClassLibrary
 	SHARED
@@ -140,6 +162,7 @@ add_library (
 	StXicZero.cc
 	StZZeroBoson.cc
 	probChiSquared.cc
+	StarClassLibrary_Cint.cxx
 )
 
 install(TARGETS StarClassLibrary DESTINATION ".$ENV{STAR_HOST_SYS}/lib")
