@@ -1,0 +1,19 @@
+language: cpp
+compiler:
+  - gcc
+before_script:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get -qq update
+  - sudo apt-get -qq install g++-4.8
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+  - g++ --version
+  - wget http://root.cern.ch/download/root_v5.34.30.Linux-ubuntu12-x86_64-gcc4.6.tar.gz -O /tmp/root_v5.34.30.tar.gz
+  - tar -xzf /tmp/root_v5.34.30.tar.gz
+  - source ./root/bin/thisroot.sh
+  - root-config --libs
+  - root-config --cflags
+script:
+  - mkdir build/ && cd build/
+  - cmake -DCMAKE_INSTALL_PREFIX=./ -DFORCE_32BIT=OFF ../
+  - make -j
+  - make install
