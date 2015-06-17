@@ -14,6 +14,6 @@ before_script:
   - root-config --cflags
 script:
   - mkdir build/ && cd build/
-  - cmake -DCMAKE_INSTALL_PREFIX=./ -DFORCE_32BIT=OFF ../
+  - cmake -DCMAKE_INSTALL_PREFIX=./ ../
   - make -j
   - make install
