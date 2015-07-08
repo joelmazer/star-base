@@ -19,11 +19,112 @@ add_definitions(-D__ROOT__)
 include_directories(
 	${ROOT_INCLUDE_DIR}
 	${CMAKE_CURRENT_SOURCE_DIR}
-	St_base
-	StarRoot
 )
 
-add_subdirectory(StChain)
-add_subdirectory(St_base)
-add_subdirectory(StarClassLibrary)
-add_subdirectory(StarRoot)
+# StChain library
+root_generate_dictionary(
+	StChain_Cint
+	StChain/StChain.h
+	StChain/StIOInterFace.h
+	StChain/StEvtHddr.h
+	StChain/StRTSBaseMaker.h
+	StChain/StRtsTable.h
+	StChain/StMaker.h
+	StChain/StChainOpt.h
+	StChain/StMkDeb.h
+	LINKDEF StChain/StChainLinkDef.h
+)
+
+file(GLOB StChain_SOURCES "StChain/*.cxx") 
+add_library(StChain SHARED ${StChain_SOURCES} StChain_Cint.cxx)
+
+# St_base library
+root_generate_dictionary(
+	St_base_Cint
+	St_base/StObject.h
+	St_base/StFileIter.h
+	St_base/StFileI.h
+	St_base/StMem.h
+	St_base/St_Module.h
+	St_base/StArray.h
+	St_base/St_table_header_Table.h
+	St_base/StMessMgr.h
+	St_base/StVirtualEventFilter.h
+	St_base/StTree.h
+	St_base/Stypes.h
+	LINKDEF St_base/St_baseLinkDef.h
+	OPTIONS -D__ROOT__
+)
+
+file(GLOB St_base_SOURCES "St_base/*.cxx") 
+add_library(St_base SHARED ${St_base_SOURCES} St_base_Cint.cxx)
+
+# StarClassLibrary library
+root_generate_dictionary(
+	StarClassLibrary_Cint
+	StarClassLibrary/StPhysicalHelix.hh
+	StarClassLibrary/StLorentzVector.hh
+	StarClassLibrary/StMatrix.hh
+	StarClassLibrary/StThreeVector.hh
+	StarClassLibrary/StHelix.hh
+	StarClassLibrary/StHelixHelper.h
+	StarClassLibrary/BetheBloch.h
+	StarClassLibrary/StThreeVectorF.hh
+	StarClassLibrary/StThreeVectorD.hh
+	StarClassLibrary/StLorentzVectorF.hh
+	StarClassLibrary/StLorentzVectorD.hh
+	StarClassLibrary/StMatrixF.hh
+	StarClassLibrary/StMatrixD.hh
+	StarClassLibrary/StPhysicalHelixD.hh
+	StarClassLibrary/StParticleTable.hh
+	StarClassLibrary/StParticleDefinition.hh
+	LINKDEF StarClassLibrary/StarClassLibraryLinkDef.hh
+   OPTIONS -D__ROOT__
+)
+
+file(GLOB StarClassLibrary_SOURCES "StarClassLibrary/*.cc" "StarClassLibrary/*.cxx") 
+add_library( StarClassLibrary SHARED ${StarClassLibrary_SOURCES} StarClassLibrary_Cint.cxx)
+
+# StarRoot library
+root_generate_dictionary(
+	StarRoot_Cint
+	StarRoot/TPolinom.h
+	StarRoot/TRandomVector.h
+	StarRoot/StMemStat.h
+	StarRoot/TNumDeriv.h
+	StarRoot/TTreeHelper.h
+	StarRoot/StDraw3D.h
+	StarRoot/TF1Fitter.h
+	StarRoot/THelixTrack.h
+	StarRoot/TAttr.h
+	StarRoot/TUnixTime.h
+	StarRoot/TRDiagMatrix.h
+	StarRoot/StCloseFileOnTerminate.h
+	StarRoot/TTreeIter.h
+	StarRoot/KFVertex.h
+	StarRoot/TRVector.h
+	StarRoot/TRArray.h
+	StarRoot/KFParticleBase.h
+	StarRoot/TMDFParameters.h
+	StarRoot/TRSymMatrix.h
+	StarRoot/TRMatrix.h
+	StarRoot/StArchInfo.h
+	StarRoot/TCFit.h
+	StarRoot/VVertex.h
+	StarRoot/TH1Helper.h
+	StarRoot/TDirIter.h
+	StarRoot/KFParticle.h
+	StarRoot/THack.h
+	StarRoot/StCheckQtEnv.h
+	StarRoot/StMultiKeyMap.h
+	StarRoot/TPolynomial.h
+	StarRoot/MTrack.h
+	StarRoot/MVertex.h
+	LINKDEF StarRoot/StarRootLinkDef.h
+)
+
+file(GLOB StarRoot_SOURCES "StarRoot/*.cxx") 
+add_library (StarRoot SHARED ${StarRoot_SOURCES} StarRoot_Cint.cxx)
+
+
+install(TARGETS StarClassLibrary StarRoot St_base StChain DESTINATION "lib")
