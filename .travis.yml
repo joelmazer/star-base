@@ -15,5 +15,6 @@ before_script:
 script:
   - mkdir build/ && cd build/
   - cmake -DCMAKE_INSTALL_PREFIX=./ ../
-  - make -j
+  - make -j4
   - make install
+  - pwd && ls -la . && ls -la lib/
