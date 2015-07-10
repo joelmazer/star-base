@@ -79,7 +79,7 @@ root_generate_dictionary(
 	StarClassLibrary/StParticleTable.hh
 	StarClassLibrary/StParticleDefinition.hh
 	LINKDEF StarClassLibrary/StarClassLibraryLinkDef.hh
-   OPTIONS -D__ROOT__
+	OPTIONS -D__ROOT__
 )
 
 file(GLOB StarClassLibrary_SOURCES "StarClassLibrary/*.cc" "StarClassLibrary/*.cxx") 
@@ -127,4 +127,10 @@ file(GLOB StarRoot_SOURCES "StarRoot/*.cxx")
 add_library (StarRoot SHARED ${StarRoot_SOURCES} StarRoot_Cint.cxx)
 
 
-install(TARGETS StarClassLibrary StarRoot St_base StChain DESTINATION "lib")
+# StarMagField library
+root_generate_dictionary(StarMagField_Cint StarMagField/StarMagField.h LINKDEF StarMagField/StarMagFieldLinkDef.h OPTIONS -D__ROOT__)
+file(GLOB StarMagField_SOURCES "StarMagField/*.cxx")
+add_library (StarMagField SHARED ${StarMagField_SOURCES} StarMagField_Cint.cxx)
+
+
+install(TARGETS StarClassLibrary StarRoot St_base StChain StarMagField DESTINATION "lib")
