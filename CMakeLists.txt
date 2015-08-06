@@ -8,6 +8,9 @@ list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}")
 
 # This project depends on ROOT
 find_package(ROOT)
+find_package(Log4Cxx)
+find_package(MySQL)
+
 
 if(NOT ROOT_FOUND)
 	message(FATAL_ERROR "Fatal error: ROOT package not found")
@@ -19,6 +22,8 @@ add_definitions(-D__ROOT__)
 include_directories(
 	${ROOT_INCLUDE_DIR}
 	${CMAKE_CURRENT_SOURCE_DIR}
+	${LOG4CXX_INCLUDE_DIR}
+	${MYSQL_INCLUDE_DIRS}
 )
 
 # StChain library
