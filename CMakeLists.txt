@@ -21,9 +21,10 @@ add_definitions(-D__ROOT__)
 
 include_directories(
 	${ROOT_INCLUDE_DIR}
-	${CMAKE_CURRENT_SOURCE_DIR}
 	${LOG4CXX_INCLUDE_DIR}
 	${MYSQL_INCLUDE_DIRS}
+	${CMAKE_CURRENT_SOURCE_DIR}
+	${STAR_STDB_DIR}
 )
 
 # StChain library
@@ -138,4 +139,10 @@ file(GLOB StarMagField_SOURCES "StarMagField/*.cxx")
 add_library (StarMagField SHARED ${StarMagField_SOURCES} StarMagField_Cint.cxx)
 
 
-install(TARGETS StarClassLibrary StarRoot St_base StChain StarMagField DESTINATION "lib")
+# StStarLogger library
+file(GLOB StStarLogger_SOURCES "StStarLogger/*.cxx" "StStarLogger/logging/*.cxx" "StStarLogger/logging/*.cpp")
+add_library (StStarLogger SHARED ${StStarLogger_SOURCES})
+set_target_properties(StStarLogger PROPERTIES COMPILE_FLAGS "-D_UCMLOGGER_")
+
+
+install(TARGETS StarClassLibrary StarRoot St_base StChain StarMagField StStarLogger DESTINATION "lib")
