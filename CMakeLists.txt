@@ -140,8 +140,9 @@ add_library (StarMagField SHARED ${StarMagField_SOURCES} StarMagField_Cint.cxx)
 
 
 # StStarLogger library
+root_generate_dictionary(StStarLogger_Cint StStarLogger/StLoggerManager.h LINKDEF StStarLogger/StStarLoggerLinkDef.h OPTIONS -D__ROOT__)
 file(GLOB StStarLogger_SOURCES "StStarLogger/*.cxx" "StStarLogger/logging/*.cxx" "StStarLogger/logging/*.cpp")
-add_library (StStarLogger SHARED ${StStarLogger_SOURCES})
+add_library (StStarLogger SHARED ${StStarLogger_SOURCES} StStarLogger_Cint)
 set_target_properties(StStarLogger PROPERTIES COMPILE_FLAGS "-D_UCMLOGGER_")
 
 
