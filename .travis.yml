@@ -16,8 +16,8 @@ before_script:
   - root-config --cflags
   - git clone --depth=1 https://github.com/star-bnl/star-stdb.git    contrib/star-stdb
 script:
-  - mkdir build/ && cd build/
-  - cmake -D CMAKE_INSTALL_PREFIX=./ -D STAR_STDB_DIR=contrib/star-stdb ../
+  - mkdir build/ && cd build/ && pwd
+  - cmake -D CMAKE_CXX_FLAGS=-std=c++0x -D CMAKE_INSTALL_PREFIX=./ -D STAR_STDB_DIR=contrib/star-stdb ../
   - make -j4
   - make install
-  - pwd && ls -la . && ls -la lib/
+  - ls -la ./ && ls -la lib/
