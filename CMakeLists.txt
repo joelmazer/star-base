@@ -146,4 +146,12 @@ add_library (StStarLogger SHARED ${StStarLogger_SOURCES} StStarLogger_Cint)
 set_target_properties(StStarLogger PROPERTIES COMPILE_FLAGS "-D_UCMLOGGER_")
 
 
-install(TARGETS StarClassLibrary StarRoot St_base StChain StarMagField StStarLogger DESTINATION "lib")
+# Installation section
+set(ADDITIONAL_INSTALL_PREFIX ".")
+
+if(DEFINED ENV{STAR_HOST_SYS})
+   set(ADDITIONAL_INSTALL_PREFIX ".$ENV{STAR_HOST_SYS}")
+endif()
+
+install(TARGETS StarClassLibrary StarRoot St_base StChain StarMagField StStarLogger
+        DESTINATION "${ADDITIONAL_INSTALL_PREFIX}/lib")
