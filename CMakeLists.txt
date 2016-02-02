@@ -4,7 +4,7 @@ project(star-base)
 
 
 # Add to path in order to pick up the FindXXX.cmake files included in this project
-list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/star-cmake")
 
 # This project depends on ROOT
 find_package(ROOT)
