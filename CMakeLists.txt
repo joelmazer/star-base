@@ -16,6 +16,8 @@ if(NOT ROOT_FOUND)
 	message(FATAL_ERROR "Fatal error: ROOT package not found")
 endif()
 
+# Perform some setup standard to STAR experiment environment
+include(StarCommon)
 
 add_definitions(-D__ROOT__)
 
@@ -147,11 +149,5 @@ set_target_properties(StStarLogger PROPERTIES COMPILE_FLAGS "-D_UCMLOGGER_")
 
 
 # Installation section
-set(ADDITIONAL_INSTALL_PREFIX ".")
-
-if(DEFINED ENV{STAR_HOST_SYS})
-   set(ADDITIONAL_INSTALL_PREFIX ".$ENV{STAR_HOST_SYS}")
-endif()
-
 install(TARGETS StarClassLibrary StarRoot St_base StChain StarMagField StStarLogger
-        DESTINATION "${ADDITIONAL_INSTALL_PREFIX}/lib")
+        DESTINATION "${STAR_ADDITIONAL_INSTALL_PREFIX}/lib")
