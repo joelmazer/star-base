@@ -31,6 +31,7 @@ class StTerminateNotified {
     As result this I/O operation can not be completed and no way the file can be close properly.
  */
 class StCloseFileOnTerminate : public TSignalHandler {
+       friend class StTerminateNotified;
  private:
        static StCloseFileOnTerminate *fgCloseFileOnTerminate;
  protected:
