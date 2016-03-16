@@ -95,5 +95,6 @@
 #pragma link C++ class VVertex+;
 #pragma link C++ class TH1Helper+;
 #pragma link C++ class TAttr+;
+#pragma link C++ class TIdTruUtil+;
 
 #endif

@@ -128,6 +128,7 @@ root_generate_dictionary(
 	StarRoot/TPolynomial.h
 	StarRoot/MTrack.h
 	StarRoot/MVertex.h
+	StarRoot/TIdTruUtil.h
 	LINKDEF StarRoot/StarRootLinkDef.h
 )
 
