@@ -46,6 +46,13 @@ root_generate_dictionary(
 file(GLOB StChain_SOURCES "StChain/*.cxx") 
 add_library(StChain SHARED ${StChain_SOURCES} StChain_Cint.cxx)
 
+
+# StIOMaker library
+root_generate_linkdef_and_dictionary(StIOMaker HEADERS StIOMaker/StIOMaker.h)
+
+add_library(StIOMaker SHARED StIOMaker/StIOMaker.cxx StIOMaker_dict.cxx)
+
+
 # St_base library
 root_generate_dictionary(
 	St_base_Cint
@@ -150,5 +157,5 @@ set_target_properties(StStarLogger PROPERTIES COMPILE_FLAGS "-D_UCMLOGGER_")
 
 
 # Installation section
-install(TARGETS StarClassLibrary StarRoot St_base StChain StarMagField StStarLogger
+install(TARGETS StarClassLibrary StarRoot St_base StChain StIOMaker StarMagField StStarLogger
         DESTINATION "${STAR_ADDITIONAL_INSTALL_PREFIX}/lib")
