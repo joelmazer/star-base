@@ -155,7 +155,20 @@ file(GLOB StStarLogger_SOURCES "StStarLogger/*.cxx" "StStarLogger/logging/*.cxx"
 add_library (StStarLogger SHARED ${StStarLogger_SOURCES} StStarLogger_Cint)
 set_target_properties(StStarLogger PROPERTIES COMPILE_FLAGS "-D_UCMLOGGER_")
 
+# StUtilities library
+root_generate_dictionary(StUtilities_dict StUtilities/StMessage.h LINKDEF StUtilities/StUtilitiesLinkDef.h OPTIONS "-D__ROOT__")
+
+add_library(
+	StUtilities
+	SHARED
+	StUtilities/StMessage.cxx
+	StUtilities/StMessageCounter.cxx
+	StUtilities/StMessageManager.cxx
+	StUtilities/StMessTypeList.cxx
+	StUtilities_dict.cxx
+)
+
 
 # Installation section
-install(TARGETS StarClassLibrary StarRoot St_base StChain StIOMaker StarMagField StStarLogger
+install(TARGETS StarClassLibrary StarRoot St_base StChain StIOMaker StarMagField StStarLogger StUtilities
         DESTINATION "${STAR_ADDITIONAL_INSTALL_PREFIX}/lib")
