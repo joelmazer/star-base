@@ -169,6 +169,15 @@ add_library(
 )
 
 
+# A collective target to build all libraries in this project. Can be used to
+# build all specified targets from a parent project
+add_custom_target(star-base DEPENDS
+	StarClassLibrary StarRoot St_base StChain StIOMaker StarMagField StStarLogger StUtilities
+)
+
+
 # Installation section
-install(TARGETS StarClassLibrary StarRoot St_base StChain StIOMaker StarMagField StStarLogger StUtilities
-        DESTINATION "${STAR_ADDITIONAL_INSTALL_PREFIX}/lib")
+install(TARGETS
+	StarClassLibrary StarRoot St_base StChain StIOMaker StarMagField StStarLogger StUtilities
+	DESTINATION "${STAR_ADDITIONAL_INSTALL_PREFIX}/lib" OPTIONAL
+)
