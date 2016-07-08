@@ -26,8 +26,11 @@ include_directories(
 	${LOG4CXX_INCLUDE_DIR}
 	${MYSQL_INCLUDE_DIRS}
 	${CMAKE_CURRENT_SOURCE_DIR}
+	${STAR_STEVENT_DIR}
 	${STAR_STDB_DIR}
+	${STAR_TABLES_DIR}
 )
+
 
 # StChain library
 root_generate_dictionary(
@@ -169,15 +172,36 @@ add_library(
 )
 
 
+# StBichsel library
+root_generate_dictionary(
+	StBichsel_dict
+	StBichsel/StdEdxModel.h
+	StBichsel/Bichsel.h
+	StBichsel/dEdxParameterization.h
+	LINKDEF StBichsel/StBichselLinkDef.h OPTIONS -D__ROOT__
+)
+
+set(StBichsel_SOURCES
+	StBichsel/Bichsel.cxx
+	StBichsel/GetdEdxResolution.cxx
+	StBichsel/PACKAGE
+	StBichsel/StdEdxModel.cxx
+	StBichsel/dEdxParameterization.cxx
+)
+add_library(StBichsel SHARED ${StBichsel_SOURCES} StBichsel_dict.cxx)
+
+
 # A collective target to build all libraries in this project. Can be used to
 # build all specified targets from a parent project
 add_custom_target(star-base DEPENDS
 	StarClassLibrary StarRoot St_base StChain StIOMaker StarMagField StStarLogger StUtilities
+	StBichsel
 )
 
 
 # Installation section
 install(TARGETS
 	StarClassLibrary StarRoot St_base StChain StIOMaker StarMagField StStarLogger StUtilities
+	StBichsel
 	DESTINATION "${STAR_ADDITIONAL_INSTALL_PREFIX}/lib" OPTIONAL
 )
