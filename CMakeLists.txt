@@ -184,7 +184,6 @@ root_generate_linkdef_and_dictionary(
 set(StBichsel_SOURCES
 	StBichsel/Bichsel.cxx
 	StBichsel/GetdEdxResolution.cxx
-	StBichsel/PACKAGE
 	StBichsel/StdEdxModel.cxx
 	StBichsel/dEdxParameterization.cxx
 )
