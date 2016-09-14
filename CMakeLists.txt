@@ -173,12 +173,12 @@ add_library(
 
 
 # StBichsel library
-root_generate_dictionary(
-	StBichsel_dict
-	StBichsel/StdEdxModel.h
+root_generate_linkdef_and_dictionary(
+	StBichsel
+	HEADERS
 	StBichsel/Bichsel.h
+	StBichsel/StdEdxModel.h
 	StBichsel/dEdxParameterization.h
-	LINKDEF StBichsel/StBichselLinkDef.h OPTIONS -D__ROOT__
 )
 
 set(StBichsel_SOURCES
