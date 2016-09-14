@@ -181,13 +181,15 @@ root_generate_linkdef_and_dictionary(
 	StBichsel/dEdxParameterization.h
 )
 
-set(StBichsel_SOURCES
+add_library(
+	StBichsel
+	SHARED
+	StBichsel/dEdxParameterization.cxx
 	StBichsel/Bichsel.cxx
 	StBichsel/GetdEdxResolution.cxx
 	StBichsel/StdEdxModel.cxx
-	StBichsel/dEdxParameterization.cxx
+	StBichsel_dict.cxx
 )
-add_library(StBichsel SHARED ${StBichsel_SOURCES} StBichsel_dict.cxx)
 
 
 # A collective target to build all libraries in this project. Can be used to
