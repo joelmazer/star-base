@@ -34,7 +34,7 @@ include_directories(
 
 # StChain library
 root_generate_dictionary(
-	StChain_Cint
+	StChain_dict
 	StChain/StChain.h
 	StChain/StIOInterFace.h
 	StChain/StEvtHddr.h
@@ -47,7 +47,7 @@ root_generate_dictionary(
 )
 
 file(GLOB StChain_SOURCES "StChain/*.cxx") 
-add_library(StChain SHARED ${StChain_SOURCES} StChain_Cint.cxx)
+add_library(StChain SHARED ${StChain_SOURCES} StChain_dict.cxx)
 
 
 # StIOMaker library
@@ -58,7 +58,7 @@ add_library(StIOMaker SHARED StIOMaker/StIOMaker.cxx StIOMaker_dict.cxx)
 
 # St_base library
 root_generate_dictionary(
-	St_base_Cint
+	St_base_dict
 	St_base/StObject.h
 	St_base/StFileIter.h
 	St_base/StFileI.h
@@ -75,11 +75,11 @@ root_generate_dictionary(
 )
 
 file(GLOB St_base_SOURCES "St_base/*.cxx") 
-add_library(St_base SHARED ${St_base_SOURCES} St_base_Cint.cxx)
+add_library(St_base SHARED ${St_base_SOURCES} St_base_dict.cxx)
 
 # StarClassLibrary library
 root_generate_dictionary(
-	StarClassLibrary_Cint
+	StarClassLibrary_dict
 	StarClassLibrary/StPhysicalHelix.hh
 	StarClassLibrary/StLorentzVector.hh
 	StarClassLibrary/StMatrix.hh
@@ -101,11 +101,11 @@ root_generate_dictionary(
 )
 
 file(GLOB StarClassLibrary_SOURCES "StarClassLibrary/*.cc" "StarClassLibrary/*.cxx") 
-add_library( StarClassLibrary SHARED ${StarClassLibrary_SOURCES} StarClassLibrary_Cint.cxx)
+add_library( StarClassLibrary SHARED ${StarClassLibrary_SOURCES} StarClassLibrary_dict.cxx)
 
 # StarRoot library
 root_generate_dictionary(
-	StarRoot_Cint
+	StarRoot_dict
 	StarRoot/TPolinom.h
 	StarRoot/TRandomVector.h
 	StarRoot/StMemStat.h
@@ -143,19 +143,19 @@ root_generate_dictionary(
 )
 
 file(GLOB StarRoot_SOURCES "StarRoot/*.cxx") 
-add_library (StarRoot SHARED ${StarRoot_SOURCES} StarRoot_Cint.cxx)
+add_library (StarRoot SHARED ${StarRoot_SOURCES} StarRoot_dict.cxx)
 
 
 # StarMagField library
-root_generate_dictionary(StarMagField_Cint StarMagField/StarMagField.h LINKDEF StarMagField/StarMagFieldLinkDef.h OPTIONS -D__ROOT__)
+root_generate_dictionary(StarMagField_dict StarMagField/StarMagField.h LINKDEF StarMagField/StarMagFieldLinkDef.h OPTIONS -D__ROOT__)
 file(GLOB StarMagField_SOURCES "StarMagField/*.cxx")
-add_library (StarMagField SHARED ${StarMagField_SOURCES} StarMagField_Cint.cxx)
+add_library (StarMagField SHARED ${StarMagField_SOURCES} StarMagField_dict.cxx)
 
 
 # StStarLogger library
-root_generate_dictionary(StStarLogger_Cint StStarLogger/StLoggerManager.h LINKDEF StStarLogger/StStarLoggerLinkDef.h OPTIONS -D__ROOT__)
+root_generate_dictionary(StStarLogger_dict StStarLogger/StLoggerManager.h LINKDEF StStarLogger/StStarLoggerLinkDef.h OPTIONS -D__ROOT__)
 file(GLOB StStarLogger_SOURCES "StStarLogger/*.cxx" "StStarLogger/logging/*.cxx" "StStarLogger/logging/*.cpp")
-add_library (StStarLogger SHARED ${StStarLogger_SOURCES} StStarLogger_Cint)
+add_library (StStarLogger SHARED ${StStarLogger_SOURCES} StStarLogger_dict)
 set_target_properties(StStarLogger PROPERTIES COMPILE_FLAGS "-D_UCMLOGGER_")
 
 # StUtilities library
