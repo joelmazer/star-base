@@ -36,8 +36,8 @@
 #include <string>
 #include <vector>
 
-#include "StDbFieldI.h"
-#include "RecordList.h"
+#include "StStarLogger/logging/StDbFieldI.h"
+#include "StStarLogger/logging/RecordList.h"
 namespace TxLogging {
 /**
  * Abstraction for records in memory.

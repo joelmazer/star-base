@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StElectron.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StElectron.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StElectron::StElectron(const string  &  aName,  
 		       double           mass,     

@@ -42,11 +42,11 @@
 #include "TBrowser.h"
 #include "TBenchmark.h"
 #include "TSystem.h"
-#include "StChain.h"
-#include "StEvtHddr.h"
-#include "StMessMgr.h"
-#include "StMemStat.h"
-#include "StCloseFileOnTerminate.h"
+#include "StChain/StChain.h"
+#include "StChain/StEvtHddr.h"
+#include "St_base/StMessMgr.h"
+#include "StarRoot/StMemStat.h"
+#include "StarRoot/StCloseFileOnTerminate.h"
 #include "TApplication.h"
 ClassImp(StChain)
 

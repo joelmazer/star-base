@@ -1,4 +1,4 @@
-#include "StRtsTable.h"
+#include "StChain/StRtsTable.h"
 
 UInt_t StRtsTable::fToken     =0; //< current token
 UInt_t StRtsTable::fTrgcmd    =0; //< current trigger command

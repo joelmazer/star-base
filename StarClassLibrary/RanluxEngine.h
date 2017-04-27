@@ -35,7 +35,7 @@
 #ifndef RanluxEngine_h
 #define RanluxEngine_h 1
 
-#include "RandomEngine.h"
+#include "StarClassLibrary/RandomEngine.h"
 
 class RanluxEngine : public HepRandomEngine {
 

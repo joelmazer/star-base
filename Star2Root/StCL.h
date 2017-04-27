@@ -16,7 +16,7 @@
 // Revision 1.9  1999/12/17 23:28:39  fine
 // clean up for the sake of docs + new class St_Table3DPackedPoints introduced
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include "RVersion.h"
 #if ROOT_VERSION_CODE < 331013
 #include <TCL.h>

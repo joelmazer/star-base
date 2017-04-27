@@ -1,5 +1,5 @@
-#include "StStreamFileFactory.h"
-#include "StStreamFile.h"
+#include "St_base/StStreamFileFactory.h"
+#include "St_base/StStreamFile.h"
 
 StStreamFileFactory *StStreamFileFactory::fgStreamFactory=0;
 //____________________________________________________________________________________

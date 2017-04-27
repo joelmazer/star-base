@@ -17,7 +17,7 @@
 #ifndef _LOG4CXX_DB_MYSQL_APPENDER_H
 #define _LOG4CXX_DB_MYSQL_APPENDER_H
 
-#include "StLoggerConfig.h"
+#include "StStarLogger/StLoggerConfig.h"
 #if 1
 // def HAVE_MYSQL
  

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StProton.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StProton.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StProton::StProton(const string  &  aName,  
 		   double           mass,     

@@ -6,7 +6,7 @@
  */ 
 
 
-#include "StArchInfo.h"
+#include "StarRoot/StArchInfo.h"
 
 #include <iostream>
 using namespace std;

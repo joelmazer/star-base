@@ -17,8 +17,8 @@
 #include "TROOT.h"
 #endif
 
-#include "StMessageManager.h"
-#include "StMessageStream.h"
+#include "StUtilities/StMessageManager.h"
+#include "StUtilities/StMessageStream.h"
 #include <string.h>
 #ifdef __linux__
 #include <math.h>

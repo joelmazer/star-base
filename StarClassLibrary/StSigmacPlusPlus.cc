@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StSigmacPlusPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StSigmacPlusPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StSigmacPlusPlus::StSigmacPlusPlus(const string  &  aName,  
 				   double           mass,     

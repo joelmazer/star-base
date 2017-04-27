@@ -29,19 +29,19 @@
 
 // Including Engines ...
 
-#include "JamesRandom.h"
-#include "DRand48Engine.h"
-#include "RandEngine.h"
-#include "RanluxEngine.h"
-#include "RanecuEngine.h"
+#include "StarClassLibrary/JamesRandom.h"
+#include "StarClassLibrary/DRand48Engine.h"
+#include "StarClassLibrary/RandEngine.h"
+#include "StarClassLibrary/RanluxEngine.h"
+#include "StarClassLibrary/RanecuEngine.h"
 
 // Including distributions ...
 
-#include "RandFlat.h"
-#include "RandExponential.h"
-#include "RandGauss.h"
-#include "RandBreitWigner.h"
-#include "RandPoisson.h"
+#include "StarClassLibrary/RandFlat.h"
+#include "StarClassLibrary/RandExponential.h"
+#include "StarClassLibrary/RandGauss.h"
+#include "StarClassLibrary/RandBreitWigner.h"
+#include "StarClassLibrary/RandPoisson.h"
 
 #define HepUniformRand() RandFlat::shoot()
 

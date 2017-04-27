@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiLambdacPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiLambdacPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiLambdacPlus::StAntiLambdacPlus(const string  &  aName,  
 				     double           mass,     

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StHe3.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StHe3.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StHe3::StHe3(const string  &  aName,  
 	     double           mass,     

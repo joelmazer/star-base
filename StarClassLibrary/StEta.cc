@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StEta.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StEta.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StEta::StEta(const string  &  aName,  
 	     double           mass,     

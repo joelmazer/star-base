@@ -1,7 +1,7 @@
 //*-- Author :    Valery Fine(fine@bnl.gov)   11/07/99  
 // $Id: St_table_header_Table.cxx,v 1.6 2000/07/06 16:33:11 fine Exp $
 //
-#include "St_table_header_Table.h"
+#include "St_base/St_table_header_Table.h"
 /////////////////////////////////////////////////////////////////////////
 //                                                                     //
 //  Class St_table_header creates and fills the STAF "table header"    //
@@ -9,7 +9,7 @@
 //                                                                     //
 /////////////////////////////////////////////////////////////////////////
 
-#include "Stypes.h"
+#include "St_base/Stypes.h"
 
 TTableDescriptor *St_table_header::fgColDescriptors = 0;
 TableClassImp(St_table_header,table_head_st)

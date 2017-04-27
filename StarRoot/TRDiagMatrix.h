@@ -1,6 +1,6 @@
 #ifndef ROOT_TRDiagMatrix
 #define ROOT_TRDiagMatrix
-#include "TRArray.h"
+#include "StarRoot/TRArray.h"
 class TRMatrix;
 class TRVector;
 class TRDiagMatrix : public TRArray {

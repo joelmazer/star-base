@@ -21,7 +21,7 @@
 #ifndef StTriton_hh
 #define StTriton_hh
 
-#include "StIon.hh"
+#include "StarClassLibrary/StIon.hh"
 
 class StTriton : public StIon {
 public:

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StXiMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StXiMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StXiMinus::StXiMinus(const string  &  aName,  
 		     double           mass,     

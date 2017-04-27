@@ -21,7 +21,7 @@
 #ifndef StPositron_hh
 #define StPositron_hh
 
-#include "StLepton.hh"
+#include "StarClassLibrary/StLepton.hh"
 
 class StPositron : public StLepton {
 public:

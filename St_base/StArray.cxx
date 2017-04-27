@@ -1,9 +1,9 @@
 #include <assert.h>
 #include <stdlib.h>
-#include "StArray.h"
+#include "St_base/StArray.h"
 #include "TDatime.h"
 #include "TBrowser.h"
-#include "StMkDeb.h"
+#include "StChain/StMkDeb.h"
 
 enum {kBelongs = BIT(22)};
 //______________________________________________________________________________

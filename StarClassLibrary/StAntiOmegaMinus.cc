@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiOmegaMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiOmegaMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiOmegaMinus::StAntiOmegaMinus(const string  &  aName,  
 				   double           mass,     

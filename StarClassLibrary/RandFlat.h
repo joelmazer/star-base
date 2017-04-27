@@ -37,7 +37,7 @@
 #ifndef RandFlat_h
 #define RandFlat_h 1
 
-#include "Random.h"
+#include "StarClassLibrary/Random.h"
 
 class RandFlat : public HepRandom {
 

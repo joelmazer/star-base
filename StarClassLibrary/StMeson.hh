@@ -24,7 +24,7 @@
 #ifndef StMeson_hh
 #define StMeson_hh
 
-#include "StParticleDefinition.hh"
+#include "StarClassLibrary/StParticleDefinition.hh"
 
 class StMeson : public StParticleDefinition {
 public:

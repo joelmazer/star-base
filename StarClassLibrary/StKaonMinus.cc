@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StKaonMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StKaonMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StKaonMinus::StKaonMinus(const string  &  aName,  
 			 double           mass,     

@@ -21,7 +21,7 @@
 #ifndef StMuonPlus_hh
 #define StMuonPlus_hh
 
-#include "StLepton.hh"
+#include "StarClassLibrary/StLepton.hh"
 
 class StMuonPlus : public StLepton {
 public:

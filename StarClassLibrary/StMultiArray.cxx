@@ -4,7 +4,7 @@
 #include <string.h>
 #include <assert.h>
 #include <stdio.h>
-#include "StMultiArray.h"	
+#include "StarClassLibrary/StMultiArray.h"	
 //______________________________________________________________________________
 StMultiArrayBase::StMultiArrayBase(int n1,int n2)
 {

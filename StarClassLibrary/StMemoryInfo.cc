@@ -26,7 +26,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StMemoryInfo.hh"
+#include "StarClassLibrary/StMemoryInfo.hh"
 
 StMemoryInfo* StMemoryInfo::mMemoryInfo = 0;
 

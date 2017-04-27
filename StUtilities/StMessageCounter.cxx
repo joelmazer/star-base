@@ -8,8 +8,8 @@
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
 
-#include "StMessageCounter.h"
-#include "StMessageStream.h"
+#include "StUtilities/StMessageCounter.h"
+#include "StUtilities/StMessageStream.h"
 #include <cstring>
 using namespace std;
 StMessageCounter* StMessageCounter::mInstance = 0;

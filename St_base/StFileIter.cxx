@@ -116,7 +116,7 @@
 #include "TFile.h"
 #include "TKey.h"
 
-#include "StFileIter.h"
+#include "St_base/StFileIter.h"
 #include "TDsKey.h"
 
 ClassImp(StFileIter)

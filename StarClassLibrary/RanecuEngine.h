@@ -38,7 +38,7 @@
 #ifndef RanecuEngine_h
 #define RanecuEngine_h 1
 
-#include "RandomEngine.h"
+#include "StarClassLibrary/RandomEngine.h"
 
 class RanecuEngine : public HepRandomEngine {
 

@@ -10,7 +10,7 @@
 
 // $Id: St_PointsArray3D.h,v 1.1 2000/02/25 00:48:07 fine Exp $
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TPointsArray3D.h>
 
 // $Log: St_PointsArray3D.h,v $

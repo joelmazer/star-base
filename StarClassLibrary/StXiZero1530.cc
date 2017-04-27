@@ -21,8 +21,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StXiZero1530.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StXiZero1530.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StXiZero1530::StXiZero1530(const string  &  aName,  
 		   double           mass,     

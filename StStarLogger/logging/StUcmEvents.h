@@ -1,7 +1,7 @@
 #ifndef STUCMEVENTS_H
 #define STUCMEVENTS_H
 
-#include "StUcmEvent.h"
+#include "StStarLogger/logging/StUcmEvent.h"
 namespace TxLogging {
 class Iterator;
 class StUcmEvents : public StUcmEvent {

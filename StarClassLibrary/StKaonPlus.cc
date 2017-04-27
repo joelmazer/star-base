@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StKaonPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StKaonPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StKaonPlus::StKaonPlus(const string  &  aName,  
 		       double           mass,     

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StRhoZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StRhoZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StRhoZero::StRhoZero(const string  &  aName,  
 		     double           mass,     

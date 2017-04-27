@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StGamma.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StGamma.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StGamma::StGamma(const string  &  aName,  
 		 double           mass,     

@@ -15,7 +15,7 @@
  */
  
 #include <cstring>
-#include "StarOptionFilter.h"
+#include "StStarLogger/StarOptionFilter.h"
 #include <log4cxx/spi/loggingevent.h>
 #include <log4cxx/helpers/optionconverter.h>
 

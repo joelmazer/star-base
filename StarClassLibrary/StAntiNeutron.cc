@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiNeutron.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiNeutron.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiNeutron::StAntiNeutron(const string  &  aName,  
 			     double           mass,     

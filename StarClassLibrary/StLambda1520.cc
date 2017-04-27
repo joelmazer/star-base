@@ -28,8 +28,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StLambda1520.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StLambda1520.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StLambda1520::StLambda1520(const string  &  aName,  
 		   double           mass,     

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StRhoMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StRhoMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StRhoMinus::StRhoMinus(const string  &  aName,  
 		       double           mass,     

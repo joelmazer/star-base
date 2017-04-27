@@ -1,7 +1,7 @@
-#include "StBiTree.h"
+#include "StarRoot/StBiTree.h"
 #include <iostream>
 #include <cmath>
-#include "StDraw3D.h"
+#include "StarRoot/StDraw3D.h"
 #include "TLine.h"
 #include "TRandom.h"
 using namespace std;

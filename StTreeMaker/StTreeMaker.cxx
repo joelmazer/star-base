@@ -4,11 +4,11 @@
 // StTreeMaker class, Star IO                                      	//
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 #include "TError.h"
-#include "St_DataSetIter.h"
-#include "StTreeMaker.h"
-#include "StObject.h"
+#include "Star2Root/St_DataSetIter.h"
+#include "StTreeMaker/StTreeMaker.h"
+#include "St_base/StObject.h"
 TableImpl(dst_bfc_status);
 
 ClassImp(StTreeMaker)

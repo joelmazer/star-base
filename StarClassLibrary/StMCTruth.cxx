@@ -28,7 +28,7 @@
  *
  **************************************************************************/
 #include "assert.h"
-#include "StMCTruth.h"
+#include "StarClassLibrary/StMCTruth.h"
 #include "TMath.h"
 #include "TExMap.h"
 #include <cassert>

@@ -13,7 +13,7 @@
 #ifndef STAR_St_ObjectSet
 #define STAR_St_ObjectSet
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TObjectSet.h>
 
 #endif

@@ -49,7 +49,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RanecuEngine.h"
+#include "StarClassLibrary/RanecuEngine.h"
 #if __SUNPRO_CC < 0x500
 #include <stdlib.h>
 #else

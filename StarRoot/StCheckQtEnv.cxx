@@ -5,7 +5,7 @@
 // generates the correct ROOT resource ".rootrc" file 
 // also
 
-#include "StCheckQtEnv.h"
+#include "StarRoot/StCheckQtEnv.h"
 #include "TSystem.h"
 #include "TApplication.h"
 #if ROOT_VERSION_CODE >= ROOT_VERSION(5,00,0)

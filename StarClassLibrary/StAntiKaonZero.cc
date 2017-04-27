@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiKaonZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiKaonZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiKaonZero::StAntiKaonZero(const string  &  aName,  
 			       double           mass,     

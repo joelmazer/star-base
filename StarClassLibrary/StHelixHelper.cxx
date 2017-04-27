@@ -8,7 +8,7 @@
  *
  * Author: Valeri Fine, July 2009
  ***************************************************************************/
-#include "StHelixHelper.h"
+#include "StarClassLibrary/StHelixHelper.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -21,9 +21,9 @@
 #include "TVirtualPad.h"
 #include "TView.h"
 
-#include "StObject.h"
-#include "THelixTrack.h"
-#include "StPhysicalHelixD.hh"
+#include "St_base/StObject.h"
+#include "StarRoot/THelixTrack.h"
+#include "StarClassLibrary/StPhysicalHelixD.hh"
 
 /// StHelixHelper is to convert the track object defined 
 /// by 2 StHelix objects and length

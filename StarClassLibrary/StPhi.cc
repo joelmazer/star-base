@@ -21,8 +21,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StPhi.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StPhi.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StPhi::StPhi(const string  &  aName,  
 	     double           mass,     

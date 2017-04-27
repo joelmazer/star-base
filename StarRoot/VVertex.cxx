@@ -19,7 +19,7 @@
 //     Author: A. Dainese
 //-------------------------------------------------------------------------
 
-#include "VVertex.h"
+#include "StarRoot/VVertex.h"
 
 ClassImp(VVertex)
 

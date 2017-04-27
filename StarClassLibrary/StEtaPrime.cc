@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StEtaPrime.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StEtaPrime.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StEtaPrime::StEtaPrime(const string  &  aName,  
 		       double           mass,     

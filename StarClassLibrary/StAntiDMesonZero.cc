@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiDMesonZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiDMesonZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiDMesonZero::StAntiDMesonZero(const string  &  aName,  
 				   double           mass,     

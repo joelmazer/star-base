@@ -16,7 +16,7 @@
  **************************************************************************/
 #include <time.h>
 #include <stdlib.h>
-#include "StTimer.hh"
+#include "StarClassLibrary/StTimer.hh"
 
 StTimer::StTimer() : mStartTime(0), mStopTime(0), mIsStopped(1)
 {/* noop */}

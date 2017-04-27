@@ -9,7 +9,7 @@
  *
  ***************************************************************************/
 
-#include "StMaker.h"
+#include "StChain/StMaker.h"
 
 class StRtsTable;
 

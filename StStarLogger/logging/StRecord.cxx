@@ -34,9 +34,9 @@
 #include <string>
 #include <iostream>
 
-#include "StDbFieldI.h"
-#include "StRecord.h"
-#include "StDataException.h"
+#include "StStarLogger/logging/StDbFieldI.h"
+#include "StStarLogger/logging/StRecord.h"
+#include "StStarLogger/logging/StDataException.h"
 
 using namespace TxLogging;
 using namespace std;

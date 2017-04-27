@@ -43,7 +43,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RandPoisson.h"
+#include "StarClassLibrary/RandPoisson.h"
 
 RandPoisson::~RandPoisson() {
   if ( deleteEngine ) delete localEngine;

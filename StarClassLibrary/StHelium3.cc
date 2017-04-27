@@ -26,8 +26,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StHelium3.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StHelium3.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StHelium3::StHelium3(const string  &  aName,  
 		   double           mass,     

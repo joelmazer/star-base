@@ -33,7 +33,7 @@
 #ifndef __APPLE__
 #include <malloc.h>
 #endif
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 
 class StMemoryInfo {
 public:

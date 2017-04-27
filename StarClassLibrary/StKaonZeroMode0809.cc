@@ -22,8 +22,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StKaonZeroMode0809.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StKaonZeroMode0809.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 // Kaon --> pi+ pi- 100% branching ratio 
 

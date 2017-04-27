@@ -57,8 +57,8 @@
 #ifndef ST_PROMPT_HH
 #define ST_PROMPT_HH
 
-#include <Stiostream.h>
-#include <Stsstream.h>
+#include <St_base/Stiostream.h>
+#include <St_base/Stsstream.h>
 #include <string>
 #include <ctype.h>
 #if !defined(ST_NO_NAMESPACES)

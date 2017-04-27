@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiProton.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiProton.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiProton::StAntiProton(const string  &  aName,  
 			   double           mass,     

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StPositron.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StPositron.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StPositron::StPositron(const string  &  aName,  
 		       double           mass,     

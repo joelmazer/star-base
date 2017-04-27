@@ -21,7 +21,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StFastCircleFitter.hh"
+#include "StarClassLibrary/StFastCircleFitter.hh"
 #include <math.h>
 
 StFastCircleFitter::StFastCircleFitter()

@@ -17,7 +17,7 @@
 #ifndef ST_RANDOM_HH
 #define ST_RANDOM_HH
 
-#include "Randomize.h"
+#include "StarClassLibrary/Randomize.h"
 
 class StRandom {
 public:

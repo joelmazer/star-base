@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StOmegaMeson.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StOmegaMeson.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StOmegaMeson::StOmegaMeson(const string  &  aName,  
 			   double           mass,     

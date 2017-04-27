@@ -1,7 +1,7 @@
 #ifndef StWsLogger_hh                                                                                                                                              
 #define StWsLogger_hh
 
-#include "picojson.h"
+#include "StDbLib/picojson.h"
 
 #include <string>
 #include <vector>

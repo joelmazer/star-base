@@ -14,7 +14,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StRandom.hh"
+#include "StarClassLibrary/StRandom.hh"
 
 RanluxEngine    StRandom::mEngine;
 RandFlat        StRandom::mFlat(mEngine);

@@ -21,9 +21,9 @@
 // There is an overall normalization factor obtained from a fit
 // and there is a relative normalization factor between the simple
 // 1/beta^2 region and the values from the table.
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 #include <vector>
-#include "BetheBloch.h"
+#include "StarClassLibrary/BetheBloch.h"
 #include "TMath.h"
 #ifndef ST_NO_NAMESPACES
 using std::vector;

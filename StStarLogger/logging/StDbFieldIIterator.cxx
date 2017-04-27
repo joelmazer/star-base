@@ -1,5 +1,5 @@
-#include "StDbFieldIIterator.h"
-#include "StDbFieldI.h"
+#include "StStarLogger/logging/StDbFieldIIterator.h"
+#include "StStarLogger/logging/StDbFieldI.h"
 #include <cassert>
 
 using namespace TxLogging;

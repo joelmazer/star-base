@@ -44,7 +44,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RandGauss.h"
+#include "StarClassLibrary/RandGauss.h"
 
 RandGauss::~RandGauss() {
   if ( deleteEngine ) delete localEngine;

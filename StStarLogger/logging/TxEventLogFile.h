@@ -11,7 +11,7 @@
 #ifndef TX_EVENT_LOG_FILE_H
 #define TX_EVENT_LOG_FILE_H
 
-#include "TxEventLog.h"
+#include "StStarLogger/logging/TxEventLog.h"
 
 #include <string>
 #include <cstdlib>
@@ -24,7 +24,7 @@
 #include <fstream>
 #include <map>
 
-#include "TxUCMUtils.h"
+#include "StStarLogger/logging/TxUCMUtils.h"
 
 namespace TxLogging {
   class TxEventLogFile: public TxEventLog {

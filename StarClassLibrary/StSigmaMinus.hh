@@ -21,7 +21,7 @@
 #ifndef StSigmaMinus_hh
 #define StSigmaMinus_hh
 
-#include "StBaryon.hh"
+#include "StarClassLibrary/StBaryon.hh"
 
 class StSigmaMinus : public StBaryon {
 public:

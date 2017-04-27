@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StBMesonPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StBMesonPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StBMesonPlus::StBMesonPlus(const string  &  aName,  
 			   double           mass,     

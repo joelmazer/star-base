@@ -36,7 +36,7 @@
 #ifndef RandExponential_h
 #define RandExponential_h 1
 
-#include "Random.h"
+#include "StarClassLibrary/Random.h"
 
 class RandExponential : public HepRandom {
 

@@ -21,7 +21,7 @@
 #ifndef StAlpha_hh
 #define StAlpha_hh
 
-#include "StIon.hh"
+#include "StarClassLibrary/StIon.hh"
 
 class StAlpha : public StIon {
 public:

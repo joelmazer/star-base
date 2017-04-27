@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "TIdTruUtil.h"
+#include "StarRoot/TIdTruUtil.h"
 ClassImp(TIdTruUtil)
 //______________________________________________________________________________
 TIdTruUtil::TIdTruUtil(const char *name):TNamed(name,"")

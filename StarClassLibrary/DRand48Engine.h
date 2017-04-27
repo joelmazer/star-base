@@ -32,8 +32,8 @@
 #ifndef DRand48Engine_h
 #define DRand48Engine_h 1
 
-#include "StGlobals.hh"
-#include "RandomEngine.h"
+#include "StarClassLibrary/StGlobals.hh"
+#include "StarClassLibrary/RandomEngine.h"
 #include <stdlib.h>        // drand48() etc., tu
 
 #ifdef WIN32

@@ -21,7 +21,7 @@
 #ifndef StHe3_hh
 #define StHe3_hh
 
-#include "StIon.hh"
+#include "StarClassLibrary/StIon.hh"
 
 class StHe3 : public StIon {
 public:

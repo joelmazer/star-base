@@ -8,13 +8,13 @@
  * "Translated" from the original TxUCMCOllector.java version 
  */
 #include "StStarLogger/StLoggerConfig.h"
-#include "TxUCMCollector.h"
-#include "StDbFieldI.h"
-#include "FieldList.h"
-#include "StDbFieldIIterator.h"
-#include "StUcmTasks.h"
-#include "StUcmJobs.h"
-#include "StUcmEvents.h"
+#include "StStarLogger/logging/TxUCMCollector.h"
+#include "StStarLogger/logging/StDbFieldI.h"
+#include "StStarLogger/logging/FieldList.h"
+#include "StStarLogger/logging/StDbFieldIIterator.h"
+#include "StStarLogger/logging/StUcmTasks.h"
+#include "StStarLogger/logging/StUcmJobs.h"
+#include "StStarLogger/logging/StUcmEvents.h"
 
 #include <stdlib.h>
 #include <iostream>

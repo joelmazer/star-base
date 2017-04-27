@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StSigmaZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StSigmaZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StSigmaZero::StSigmaZero(const string  &  aName,  
 			 double           mass,     

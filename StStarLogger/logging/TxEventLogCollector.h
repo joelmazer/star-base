@@ -11,7 +11,7 @@
 #ifndef TX_EVENT_LOG_COLLECTOR_H
 #define TX_EVENT_LOG_COLLECTOR_H
 
-#include "TxEventLogFile.h"
+#include "StStarLogger/logging/TxEventLogFile.h"
 namespace TxLogging {
 class TxUCMCollector;
 }

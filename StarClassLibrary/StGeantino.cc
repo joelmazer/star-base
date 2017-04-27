@@ -26,8 +26,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StGeantino.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StGeantino.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StGeantino::StGeantino(const string  &  aName,  
 		 double           mass,     

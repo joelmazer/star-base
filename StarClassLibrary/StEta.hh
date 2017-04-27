@@ -21,7 +21,7 @@
 #ifndef StEta_hh
 #define StEta_hh
 
-#include "StMeson.hh"
+#include "StarClassLibrary/StMeson.hh"
 
 class StEta : public StMeson {
 public:

@@ -21,8 +21,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StPsi2s.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StPsi2s.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StPsi2s::StPsi2s(const string  &  aName,  
 	       double           mass,     

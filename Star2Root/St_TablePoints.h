@@ -22,7 +22,7 @@
 // * purpose.  It is provided "as is" without express or implied warranty.
 // ************************************************************************
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TTablePoints.h>
 
 //____________________________________________________________________________

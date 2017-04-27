@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiLambda.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiLambda.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiLambda::StAntiLambda(const string  &  aName,  
 			   double           mass,     

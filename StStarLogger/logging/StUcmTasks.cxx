@@ -1,5 +1,5 @@
-#include "StUcmTasks.h"
-#include "StRecordIterator.h"
+#include "StStarLogger/logging/StUcmTasks.h"
+#include "StStarLogger/logging/StRecordIterator.h"
 using namespace TxLogging;
 StUcmTasks::StUcmTasks()  {;}
 StUcmTasks::~StUcmTasks() {;}

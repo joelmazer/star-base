@@ -8,7 +8,7 @@
 #include <numeric>
 static int gMyId=0,gMyInst=0;
 
-#include "StMultiKeyMap.h"
+#include "StarRoot/StMultiKeyMap.h"
 #ifndef MAX
 #define MAX(a,b) ((a) > (b) ? (a) : (b))
 #define MIN(a,b) ((a) < (b) ? (a) : (b))

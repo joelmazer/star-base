@@ -51,15 +51,15 @@
 #ifndef HepRandomEngine_h
 #define HepRandomEngine_h 1
 
-#include <Stiostream.h>
-#include "Stiostream.h"
+#include <St_base/Stiostream.h>
+#include "St_base/Stiostream.h"
 #include <math.h>
 #include <vector>
 #if !defined(ST_NO_NAMESPACES)
 using std::vector;
 #endif
 
-#include "StGlobals.hh"
+#include "StarClassLibrary/StGlobals.hh"
 
 class HepRandomEngine {
 

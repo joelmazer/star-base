@@ -2,7 +2,7 @@
 // Author: Victor Perev   05/08/03
 
 
-#include "TNumDeriv.h"
+#include "StarRoot/TNumDeriv.h"
 
 #ifndef __CINT__
 #include <stdio.h>

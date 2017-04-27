@@ -21,7 +21,7 @@
 #ifndef StProton_hh
 #define StProton_hh
 
-#include "StBaryon.hh"
+#include "StarClassLibrary/StBaryon.hh"
 
 class StProton : public StBaryon {
 public:

@@ -25,10 +25,10 @@
 //////////////////////////////////////////////////////////////////////////
 
 #ifndef StMaker_H
-#include "StMaker.h"
+#include "StChain/StMaker.h"
 #endif
-#include "StIOInterFace.h"
-#include "StTree.h"
+#include "StChain/StIOInterFace.h"
+#include "St_base/StTree.h"
 #include "TTable.h"
 #include "Ttypes.h"
 struct dst_bfc_status_st  {

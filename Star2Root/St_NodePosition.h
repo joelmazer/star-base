@@ -68,7 +68,7 @@
 #ifndef ROOT_St_NodePosition
 #define ROOT_St_NodePosition
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TVolumePosition.h>
 
 #endif

@@ -26,8 +26,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StGlobals.hh"
-#include "StLorentzVector.hh"
+#include "StarClassLibrary/StGlobals.hh"
+#include "StarClassLibrary/StLorentzVector.hh"
 
 int main()
 {

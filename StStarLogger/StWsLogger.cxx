@@ -1,4 +1,4 @@
-#include "StWsLogger.h"
+#include "StStarLogger/StWsLogger.h"
 
 #include <curl/curl.h>
 

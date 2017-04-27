@@ -41,7 +41,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RandFlat.h"
+#include "StarClassLibrary/RandFlat.h"
 
 const HepInt RandFlat::MSBBits= 15;
 const unsigned long RandFlat::MSB= 1ul<<RandFlat::MSBBits;

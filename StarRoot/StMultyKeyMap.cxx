@@ -5,7 +5,7 @@
 #include <assert.h>
 static int gMyId=0;
 
-#include "StMultyKeyMap.h"
+#include "StarRoot/StMultyKeyMap.h"
 #ifndef MAX
 #define MAX(a,b) ((a) > (b) ? (a) : (b))
 #define MIN(a,b) ((a) < (b) ? (a) : (b))

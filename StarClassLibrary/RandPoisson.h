@@ -32,7 +32,7 @@
 #ifndef RandPoisson_h
 #define RandPoisson_h 1
 
-#include "Random.h"
+#include "StarClassLibrary/Random.h"
 
 class RandPoisson : public HepRandom {
 

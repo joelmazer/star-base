@@ -20,13 +20,13 @@
  * Initial Revision
  *
  **************************************************************************/
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 #include <math.h>
-#include "StGlobals.hh"
-#include "StLorentzVector.hh"
-#include "SystemOfUnits.h"
-#include "PhysicalConstants.h"
-#include "Randomize.h"
+#include "StarClassLibrary/StGlobals.hh"
+#include "StarClassLibrary/StLorentzVector.hh"
+#include "StarClassLibrary/SystemOfUnits.h"
+#include "StarClassLibrary/PhysicalConstants.h"
+#include "StarClassLibrary/Randomize.h"
 
 int main() 
 {

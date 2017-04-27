@@ -13,7 +13,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <assert.h>
-#include "TAttr.h"
+#include "StarRoot/TAttr.h"
 #include "TClass.h"
 Int_t TAttr::_debug = 0;
 ClassImp(TAttr)

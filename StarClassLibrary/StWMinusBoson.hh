@@ -23,7 +23,7 @@
 #ifndef StWMinusBoson_hh
 #define StWMinusBoson_hh
 
-#include "StBoson.hh"
+#include "StarClassLibrary/StBoson.hh"
 
 class StWMinusBoson : public StBoson {
 public:

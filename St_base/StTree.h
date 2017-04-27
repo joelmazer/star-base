@@ -8,9 +8,9 @@
 #include "TFile.h"
 #include "TList.h"
 #include "TDataSet.h"
-#include "St_ObjectSet.h"
+#include "Star2Root/St_ObjectSet.h"
 #include "TDataSetIter.h"
-#include "StFileI.h"
+#include "St_base/StFileI.h"
 
 
 

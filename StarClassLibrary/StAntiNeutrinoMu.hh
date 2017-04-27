@@ -21,7 +21,7 @@
 #ifndef StAntiNeutrinoMu_hh
 #define StAntiNeutrinoMu_hh
 
-#include "StLepton.hh"
+#include "StarClassLibrary/StLepton.hh"
 
 class StAntiNeutrinoMu : public StLepton {
 public:

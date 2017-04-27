@@ -13,7 +13,7 @@
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TTable.h>
 
 // $Log: St_Table.h,v $

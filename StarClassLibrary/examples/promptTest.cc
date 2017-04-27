@@ -23,8 +23,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StPrompt.hh"
-#include "StThreeVector.hh"
+#include "StarClassLibrary/StPrompt.hh"
+#include "StarClassLibrary/StThreeVector.hh"
 #include <string>
 #if !defined(ST_NO_NAMESPACES)
 using std::string;

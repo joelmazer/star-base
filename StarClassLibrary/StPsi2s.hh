@@ -24,7 +24,7 @@
 #ifndef StPsi2s_hh
 #define StPsi2s_hh
 
-#include "StMeson.hh"
+#include "StarClassLibrary/StMeson.hh"
 
 class StPsi2s : public StMeson {
 public:

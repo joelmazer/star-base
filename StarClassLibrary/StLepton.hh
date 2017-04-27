@@ -24,7 +24,7 @@
 #ifndef StLepton_hh
 #define StLepton_hh
 
-#include "StParticleDefinition.hh"
+#include "StarClassLibrary/StParticleDefinition.hh"
 
 class StLepton : public StParticleDefinition {
 public:

@@ -16,7 +16,7 @@
 //____________________________________________________________________________
 
 
-#include "KFVertex.h"
+#include "StarRoot/KFVertex.h"
 
 ClassImp(KFVertex)
 

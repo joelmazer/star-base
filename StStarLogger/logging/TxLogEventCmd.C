@@ -1,5 +1,5 @@
-#include "TxEventLog.h"
-#include "TxEventLogFactory.h"
+#include "StStarLogger/logging/TxEventLog.h"
+#include "StStarLogger/logging/TxEventLogFactory.h"
 
 #include <stdio.h>
 #include <stdlib.h>

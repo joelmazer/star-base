@@ -13,7 +13,7 @@
 #include <string.h>
 #include <math.h>
 #include <assert.h>
-#include "TRandomVector.h"
+#include "StarRoot/TRandomVector.h"
 #include "TCernLib.h"
 ClassImp(TRandomVector)
 //______________________________________________________________________________

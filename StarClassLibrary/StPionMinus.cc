@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StPionMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StPionMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StPionMinus::StPionMinus(const string  &  aName,  
 			 double           mass,     

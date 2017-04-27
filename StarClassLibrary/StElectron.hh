@@ -21,7 +21,7 @@
 #ifndef StElectron_hh
 #define StElectron_hh
 
-#include "StLepton.hh"
+#include "StarClassLibrary/StLepton.hh"
 
 class StElectron : public StLepton {
 public:

@@ -19,8 +19,8 @@
  * 
  *
  **************************************************************************/
-#include "StH0Strangelet.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StH0Strangelet.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StH0Strangelet::StH0Strangelet(const string  &  aName,  
 		   double           mass,     

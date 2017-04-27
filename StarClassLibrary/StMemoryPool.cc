@@ -14,7 +14,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StMemoryPool.hh"
+#include "StarClassLibrary/StMemoryPool.hh"
 
 
 StMemoryPool::StMemoryPool(unsigned int sz)

@@ -29,7 +29,7 @@
 #ifndef StCerenkov_hh
 #define StCerenkov_hh
 
-#include "StBoson.hh"
+#include "StarClassLibrary/StBoson.hh"
 
 class StCerenkov : public StBoson {
 public:

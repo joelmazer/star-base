@@ -15,9 +15,9 @@
 #ifndef ClassStMessageManager
 #define ClassStMessageManager
 
-#include "StMessage.h"
-#include "StMessTypeList.h"
-#include "StMessageCounter.h"
+#include "StUtilities/StMessage.h"
+#include "StUtilities/StMessTypeList.h"
+#include "StUtilities/StMessageCounter.h"
 
 #ifndef ClassMessVec
 #define ClassMessVec
@@ -26,7 +26,7 @@ typedef StVector(StMessage*)::iterator messVecIter;
 typedef StVector(messVec*) messTypeVec;
 #endif
 
-#include "StMessMgr.h"
+#include "St_base/StMessMgr.h"
 
 class StMessageManager : public StMessMgr {
 

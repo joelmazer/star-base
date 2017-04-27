@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StLambda.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StLambda.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StLambda::StLambda(const string  &  aName,  
 		   double           mass,     

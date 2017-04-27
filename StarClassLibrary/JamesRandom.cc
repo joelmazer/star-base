@@ -49,7 +49,7 @@
  *
  **************************************************************************/
 
-#include "JamesRandom.h"
+#include "StarClassLibrary/JamesRandom.h"
 
 HepJamesRandom::HepJamesRandom(long seed)
 {

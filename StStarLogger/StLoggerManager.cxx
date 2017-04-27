@@ -38,7 +38,7 @@
 #define COLOR_BLUE   "\033[34m"
 #define COLOR_PINK   "\033[35m"
 
-#include "StLoggerManager.h"
+#include "StStarLogger/StLoggerManager.h"
 bool StLoggerManager::mColorEnabled = kFALSE;
 
 #include <log4cxx/basicconfigurator.h>

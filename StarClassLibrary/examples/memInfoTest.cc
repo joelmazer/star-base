@@ -1,4 +1,4 @@
-#include "StMemoryInfo.hh"
+#include "StarClassLibrary/StMemoryInfo.hh"
 
 int main()
 {

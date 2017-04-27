@@ -29,7 +29,7 @@
 #ifndef StDalitz_hh
 #define StDalitz_hh
 
-#include "StMeson.hh"
+#include "StarClassLibrary/StMeson.hh"
 
 class StDalitz : public StMeson {
 public:

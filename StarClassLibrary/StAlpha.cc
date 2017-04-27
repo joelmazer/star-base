@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAlpha.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAlpha.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAlpha::StAlpha(const string  &  aName,  
 		 double           mass,     

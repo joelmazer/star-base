@@ -25,13 +25,13 @@
 
 #ifdef ST_SOLVE_TEMPLATES
 
-#include "StThreeVector.hh"
+#include "StarClassLibrary/StThreeVector.hh"
 static	StThreeVector<float>		dummy1;
 static	StThreeVector<double>		dummy2;
-#include "StLorentzVector.hh"
+#include "StarClassLibrary/StLorentzVector.hh"
 static	StLorentzVector<float>		dummy4;
 static	StLorentzVector<double>		dummy5;
-#include "StMatrix.hh"
+#include "StarClassLibrary/StMatrix.hh"
 static	StMatrix<float>			dummy7;
 static	StMatrix<double>		dummy8;
 

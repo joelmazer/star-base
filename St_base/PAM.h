@@ -33,10 +33,10 @@ typedef long STAFCV_T;
 #endif
 /*-------------------------------------------- GLOBALS              --*/
 /*#include "idl_types.h"*/
-#include "table_header.h"
+#include "St_base/table_header.h"
 /*#include "amiLib.h" */
 
-#include "StarCallf77.h"
+#include "St_base/StarCallf77.h"
 
 #ifndef EXTERN
 #define EXTERN extern                                                  /*! \def EXTERN */

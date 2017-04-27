@@ -1,7 +1,7 @@
 #ifndef STUCMTASKS_H
 #define STUCMTASKS_H
 
-#include "StUcmTask.h"
+#include "StStarLogger/logging/StUcmTask.h"
 namespace TxLogging {
 class Iterator;
 class StUcmTasks : public StUcmTask{

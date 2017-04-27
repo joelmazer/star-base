@@ -21,7 +21,7 @@
 #ifndef StKaonZeroLong_hh
 #define StKaonZeroLong_hh
 
-#include "StMeson.hh"
+#include "StarClassLibrary/StMeson.hh"
 
 class StKaonZeroLong : public StMeson {
 public:

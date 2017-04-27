@@ -71,9 +71,9 @@
  * Update the test macro
  *
  **************************************************************************/
-#include "StRTSBaseMaker.h"
+#include "StChain/StRTSBaseMaker.h"
 
-#include "StRtsTable.h"
+#include "StChain/StRtsTable.h"
 
 const char *StRTSBaseMaker::fRTSRootDataset="RTS/"; // The name of the Root dataset
 

@@ -7,7 +7,7 @@
 #else
 #include "TCernLib.h"
 #endif
-#include "TPolinom.h"
+#include "StarRoot/TPolinom.h"
 #include <cassert>
 
 ClassImp(TPolinom)

@@ -25,8 +25,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "JamesRandom.h"
-#include "Random.h"
+#include "StarClassLibrary/JamesRandom.h"
+#include "StarClassLibrary/Random.h"
 
 // -----------------------------
 // Static members initialisation

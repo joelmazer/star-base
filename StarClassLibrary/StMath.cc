@@ -26,7 +26,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include "StMath.hh"
+#include "StarClassLibrary/StMath.hh"
 //_____________________________________________________________________________
 int StMath::Finite(const double &f)
 {return ::finite(f);}

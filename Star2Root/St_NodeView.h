@@ -67,7 +67,7 @@
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TVolumeView.h>
 
 #endif

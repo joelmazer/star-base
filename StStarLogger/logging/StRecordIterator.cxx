@@ -1,5 +1,5 @@
-#include "StRecordIterator.h"
-#include "StRecord.h"
+#include "StStarLogger/logging/StRecordIterator.h"
+#include "StStarLogger/logging/StRecord.h"
 #include <cassert>
 
 using namespace TxLogging;

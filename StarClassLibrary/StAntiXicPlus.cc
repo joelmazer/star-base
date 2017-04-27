@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiXicPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiXicPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiXicPlus::StAntiXicPlus(const string  &  aName,  
 			     double           mass,     

@@ -11,9 +11,9 @@
 #ifndef ClassStMessageCounter
 #define ClassStMessageCounter
 
-#include "StMessTypeList.h"
-#include <Stsstream.h>
-#include <Stiostream.h>
+#include "StUtilities/StMessTypeList.h"
+#include <St_base/Stsstream.h>
+#include <St_base/Stiostream.h>
 
 typedef StVector(char*) messCharVec;
 typedef StVector(char*)::iterator messCharVecIter;

@@ -1,6 +1,6 @@
 #include <iomanip>
-#include "TRVector.h"
-#include "TRDiagMatrix.h"
+#include "StarRoot/TRVector.h"
+#include "StarRoot/TRDiagMatrix.h"
 #include "TError.h"
 ClassImp(TRDiagMatrix);
 //________________________________________________________________________________

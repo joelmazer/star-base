@@ -13,7 +13,7 @@
 #include <math.h>
 #include <malloc.h>
 #include <unistd.h>
-#include "StMemStat.h"
+#include "StarRoot/StMemStat.h"
 #include "TList.h"
 #include "TError.h"
 #include <cassert>

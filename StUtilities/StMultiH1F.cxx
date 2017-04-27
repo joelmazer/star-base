@@ -6,11 +6,11 @@
 //////////////////////////////////////////////////////////////////////////
 
 #ifdef __HP_aCC
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 #else
-#include "Stiostream.h"
+#include "St_base/Stiostream.h"
 #endif
-#include "StMultiH1F.h"
+#include "StUtilities/StMultiH1F.h"
 #include "TString.h"
 #include "TLegend.h"
 #include "TPad.h"

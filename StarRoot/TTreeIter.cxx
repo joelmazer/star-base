@@ -59,14 +59,14 @@
 #include "TLeaf.h"
 #include "TStreamerInfo.h"
 #include "TStreamerElement.h"
-#include "TTreeIter.h"
+#include "StarRoot/TTreeIter.h"
 #include "TList.h"
 #include "TObjArray.h"
 #include "TNamed.h"
 #include "TSystem.h"
 #include "TRegexp.h"
 #include "TError.h"
-#include "TDirIter.h"
+#include "StarRoot/TDirIter.h"
 
 enum ETTI { kUnknown=0
      ,kChar   =  1,  kShort   =  2,  kInt     =  3,  kLong    =  4,  kFloat = 5, kDouble  =  8,kDouble32 = 9

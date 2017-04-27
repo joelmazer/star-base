@@ -15,7 +15,7 @@
 #define _TX_DATA_EXCEPTION_H_
 
 #include <string>
-#include "StUCMException.h"
+#include "StStarLogger/logging/StUCMException.h"
 
 /**
  * The exception class for all exceptions thrown by the 'base' component

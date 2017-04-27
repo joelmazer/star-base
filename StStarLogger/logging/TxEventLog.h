@@ -13,7 +13,7 @@
 
 #include <string>
 
-#include "TxUCMConstants.h"
+#include "StStarLogger/logging/TxUCMConstants.h"
 
 namespace TxLogging {
 class StUcmTasks;

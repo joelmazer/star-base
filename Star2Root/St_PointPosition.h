@@ -1,6 +1,6 @@
 #ifndef STAF_St_PointPosition
 #define STAF_St_PointPosition
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TPoint3_Table.h>
 
 inline void St_PointPosition::Print(Int_t n){ St_Table::Print(0,n);}

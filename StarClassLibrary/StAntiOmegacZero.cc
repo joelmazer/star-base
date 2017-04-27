@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiOmegacZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiOmegacZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiOmegacZero::StAntiOmegacZero(const string  &  aName,  
 				   double           mass,     

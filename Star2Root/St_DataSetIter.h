@@ -20,7 +20,7 @@
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
  
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TDataSetIter.h>
 //__________________________________________________
 // $Log: St_DataSetIter.h,v $

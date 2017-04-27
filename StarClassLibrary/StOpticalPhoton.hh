@@ -21,7 +21,7 @@
 #ifndef StOpticalPhoton_hh
 #define StOpticalPhoton_hh
 
-#include "StBoson.hh"
+#include "StarClassLibrary/StBoson.hh"
 
 class StOpticalPhoton : public StBoson {
 public:

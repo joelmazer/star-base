@@ -7,11 +7,11 @@
  * Please see TxEventLogFile.h for more documentation.
  *****************************************************************/
 
-#include "TxEventLogCollector.h"
-#include "TxUCMCollector.h"
-#include "StUcmTasks.h"
-#include "StUcmJobs.h"
-#include "StUcmEvents.h"
+#include "StStarLogger/logging/TxEventLogCollector.h"
+#include "StStarLogger/logging/TxUCMCollector.h"
+#include "StStarLogger/logging/StUcmTasks.h"
+#include "StStarLogger/logging/StUcmJobs.h"
+#include "StStarLogger/logging/StUcmEvents.h"
 
 #include <iostream>
 

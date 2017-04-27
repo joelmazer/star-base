@@ -25,7 +25,7 @@
 #ifndef StUpsilon_hh
 #define StUpsilon_hh
 
-#include "StMeson.hh"
+#include "StarClassLibrary/StMeson.hh"
 
 class StUpsilon : public StMeson {
 public:

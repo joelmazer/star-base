@@ -7,7 +7,7 @@
  ***************************************************************************/
 #include <cstdlib>
 #include <cassert>
-#include "StUCMAppender.h"
+#include "StStarLogger/StUCMAppender.h"
 #include "TSystem.h"
 #include "TString.h"
 #include "TObjString.h"

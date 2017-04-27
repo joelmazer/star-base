@@ -15,9 +15,9 @@
 //////////////////////////////////////////////////////////////////////////
 
 #include "TObject.h"
-#include "StHelixD.hh"
-#include "StPhysicalHelixD.hh"
-#include "StHelixD.hh"
+#include "StarClassLibrary/StHelixD.hh"
+#include "StarClassLibrary/StPhysicalHelixD.hh"
+#include "StarClassLibrary/StHelixD.hh"
 
 class THelixTrack;
 class StPhysicalHelix;

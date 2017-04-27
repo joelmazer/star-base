@@ -36,7 +36,7 @@
 #ifndef RandGauss_h
 #define RandGauss_h 1
 
-#include "Random.h"
+#include "StarClassLibrary/Random.h"
 
 class RandGauss : public HepRandom {
 

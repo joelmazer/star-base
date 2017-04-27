@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StOmegacZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StOmegacZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StOmegacZero::StOmegacZero(const string  &  aName,  
 			   double           mass,     

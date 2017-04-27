@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiXicZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiXicZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiXicZero::StAntiXicZero(const string  &  aName,  
 			     double           mass,     

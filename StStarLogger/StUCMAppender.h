@@ -17,7 +17,7 @@
 #ifndef _LOG4CXX_UCM_APPENDER_H
 #define _LOG4CXX_UCM_APPENDER_H
 #ifdef   _UCMLOGGER_
-#include "StLoggerConfig.h"
+#include "StStarLogger/StLoggerConfig.h"
 
 #include <log4cxx/helpers/exception.h>
 #include <log4cxx/appenderskeleton.h>

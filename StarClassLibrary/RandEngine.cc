@@ -44,7 +44,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RandEngine.h"
+#include "StarClassLibrary/RandEngine.h"
 #include <stdlib.h>     // for RAND_MAX, tu
 
 

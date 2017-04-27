@@ -21,7 +21,7 @@
 #ifndef StGamma_hh
 #define StGamma_hh
 
-#include "StBoson.hh"
+#include "StarClassLibrary/StBoson.hh"
 
 class StGamma : public StBoson {
 public:

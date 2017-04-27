@@ -12,7 +12,7 @@
 #include "TBrowser.h"
 #include "TMemberInspector.h"
 #include "TError.h"
-#include "StAutoBrowse.h"
+#include "St_base/StAutoBrowse.h"
 
 class StAutoInspector : public TMemberInspector {
 public:

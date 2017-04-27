@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StDsMesonMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StDsMesonMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StDsMesonMinus::StDsMesonMinus(const string  &  aName,  
 			       double           mass,     

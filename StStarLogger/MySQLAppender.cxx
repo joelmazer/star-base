@@ -17,7 +17,7 @@
 #include <windows.h>
 #endif
 
-#include "MySQLAppender.h"
+#include "StStarLogger/MySQLAppender.h"
 #include "TSystem.h"
 #include "TString.h"
 

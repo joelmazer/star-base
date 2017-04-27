@@ -1,7 +1,7 @@
 #ifndef STUCMJOBS_H
 #define STUCMJOBS_H
 
-#include "StUcmJob.h"
+#include "StStarLogger/logging/StUcmJob.h"
 namespace TxLogging {
 class Iterator;
 class StUcmJobs : public StUcmJob {

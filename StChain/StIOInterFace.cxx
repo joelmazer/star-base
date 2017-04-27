@@ -1,4 +1,4 @@
-#include "StIOInterFace.h"
+#include "StChain/StIOInterFace.h"
 //_____________________________________________________________________________
 ClassImp(StIOInterFace)
 

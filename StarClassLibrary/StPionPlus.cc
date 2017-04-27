@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StPionPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StPionPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StPionPlus::StPionPlus(const string  &  aName,  
 		       double           mass,     

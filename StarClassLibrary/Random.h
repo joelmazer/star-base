@@ -43,7 +43,7 @@
 
 #include <vector>
 
-#include "RandomEngine.h"
+#include "StarClassLibrary/RandomEngine.h"
 
 class HepRandom {
 

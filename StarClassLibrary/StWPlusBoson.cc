@@ -22,8 +22,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StWPlusBoson.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StWPlusBoson.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StWPlusBoson::StWPlusBoson(const string  &  aName,  
 		 double           mass,     

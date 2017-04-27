@@ -22,8 +22,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StUpsilon.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StUpsilon.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StUpsilon::StUpsilon(const string  &  aName,  
 	       double           mass,     

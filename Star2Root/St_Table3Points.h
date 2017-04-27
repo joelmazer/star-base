@@ -14,7 +14,7 @@
 #ifndef STAR_St_Table3Points
 #define STAR_St_Table3Points
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TTable3Points.h>
  
 #endif

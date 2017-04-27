@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StTauMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StTauMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StTauMinus::StTauMinus(const string  &  aName,  
 		       double           mass,     

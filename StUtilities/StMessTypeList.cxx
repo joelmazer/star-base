@@ -6,8 +6,8 @@
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
 
-#include "StMessTypeList.h"
-#include "StMessageStream.h"
+#include "StUtilities/StMessTypeList.h"
+#include "StUtilities/StMessageStream.h"
 #include <ctype.h>
 using namespace std;
 StMessTypePair::StMessTypePair(const char* ty, const char* te) :

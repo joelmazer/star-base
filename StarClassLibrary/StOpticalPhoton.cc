@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StOpticalPhoton.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StOpticalPhoton.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StOpticalPhoton::StOpticalPhoton(const string  &  aName,  
 				 double           mass,     

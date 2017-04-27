@@ -13,7 +13,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include "TH1Helper.h"
+#include "StarRoot/TH1Helper.h"
 #include "TMath.h"
 
 //ClassImp(TH1Helper)

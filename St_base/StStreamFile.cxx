@@ -21,7 +21,7 @@
  * Description: Trigger Data file (run*.*.dat) reader
  **************************************************************************/
 
-#include "StStreamFile.h"
+#include "St_base/StStreamFile.h"
 #include <iostream>
 
 //__________________________________________________________________________

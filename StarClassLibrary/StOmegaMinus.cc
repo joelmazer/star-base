@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StOmegaMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StOmegaMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StOmegaMinus::StOmegaMinus(const string  &  aName,  
 			   double           mass,     

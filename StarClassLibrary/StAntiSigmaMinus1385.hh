@@ -24,7 +24,7 @@
 #ifndef StAntiSigmaMinus1385_hh
 #define StAntiSigmaMinus1385_hh
 
-#include "StBaryon.hh"
+#include "StarClassLibrary/StBaryon.hh"
 
 class StAntiSigmaMinus1385 : public StBaryon {
 public:

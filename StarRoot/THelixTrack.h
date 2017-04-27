@@ -2,7 +2,7 @@
 #define THELIXTRACK_H
 #include "TObject.h"
 #include "TArrayD.h"
-#include "TPolinom.h"
+#include "StarRoot/TPolinom.h"
 //..............................................................................
 class TCEmx_t
 { 

@@ -16,7 +16,7 @@
 #include "TObjArray.h"
 #include "TError.h"
 
-#include "TDirIter.h"
+#include "StarRoot/TDirIter.h"
 
 
 //ClassImp(TDirIter)

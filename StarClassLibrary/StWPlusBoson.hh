@@ -23,7 +23,7 @@
 #ifndef StWPlusBoson_hh
 #define StWPlusBoson_hh
 
-#include "StBoson.hh"
+#include "StarClassLibrary/StBoson.hh"
 
 class StWPlusBoson : public StBoson {
 public:

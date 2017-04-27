@@ -22,8 +22,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StDStarMesonPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StDStarMesonPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StDStarMesonPlus::StDStarMesonPlus(const string  &  aName,  
 			   double           mass,     

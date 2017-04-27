@@ -1,10 +1,10 @@
 
-#include "StWsAppender.h"
+#include "StStarLogger/StWsAppender.h"
 #include "TSystem.h"
 #include "TString.h"
 
-#include "StWsLogger.h"
-#include "picojson.h"
+#include "StStarLogger/StWsLogger.h"
+#include "StDbLib/picojson.h"
 
 #include <log4cxx/helpers/loglog.h>
 #include <log4cxx/helpers/optionconverter.h>

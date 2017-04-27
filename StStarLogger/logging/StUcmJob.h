@@ -1,7 +1,7 @@
 #ifndef STUCMJOB_H
 #define STUCMJOB_H
 
-#include "StRecord.h"
+#include "StStarLogger/logging/StRecord.h"
 namespace TxLogging {
 class StUcmJob : public StRecord {
 public: 

@@ -5,9 +5,9 @@
 #define STAR_StIOMaker
 
 
-#include "StMaker.h"
-#include "StTree.h"
-#include "StIOInterFace.h"
+#include "StChain/StMaker.h"
+#include "St_base/StTree.h"
+#include "StChain/StIOInterFace.h"
 
 //class St_io_Maker;
 //class St_xdfin_Maker;

@@ -3,7 +3,7 @@
 #ifndef STAR_St_tableDescriptor
 #define STAR_St_tableDescriptor
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include "TTableDescriptor.h"
 
 //______________________________________________________________________________

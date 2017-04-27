@@ -18,8 +18,8 @@
 #ifndef ALIKFVERTEX_H
 #define ALIKFVERTEX_H
 
-#include "KFParticle.h"
-#include "VVertex.h"
+#include "StarRoot/KFParticle.h"
+#include "StarRoot/VVertex.h"
 
 class KFVertex : public KFParticle
 {

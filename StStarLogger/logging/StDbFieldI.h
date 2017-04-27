@@ -38,8 +38,8 @@
 #include <map>
 #include <typeinfo>
 
-#include "StDataException.h"
-#include "FieldList.h"
+#include "StStarLogger/logging/StDataException.h"
+#include "StStarLogger/logging/FieldList.h"
 
 /**
  * Abstraction for the field in memory.

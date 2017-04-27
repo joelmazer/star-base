@@ -22,7 +22,7 @@
 #ifndef StBoson_hh
 #define StBoson_hh
 
-#include "StParticleDefinition.hh"
+#include "StarClassLibrary/StParticleDefinition.hh"
 
 class StBoson : public StParticleDefinition {
 public:

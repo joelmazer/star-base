@@ -20,11 +20,11 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StGlobals.hh"
+#include "StarClassLibrary/StGlobals.hh"
 
 #define MATRIX_BOUND_CHECK
 #define WITH_ST_THREEVECTOR
-#include "StMatrix.hh"
+#include "StarClassLibrary/StMatrix.hh"
 
 #define SYMMETRIC
 #ifndef SYMMETRIC

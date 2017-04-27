@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StJPsi.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StJPsi.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StJPsi::StJPsi(const string  &  aName,  
 	       double           mass,     

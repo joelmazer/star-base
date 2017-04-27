@@ -21,8 +21,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StHelix.hh"
-#include "SystemOfUnits.h"
+#include "StarClassLibrary/StHelix.hh"
+#include "StarClassLibrary/SystemOfUnits.h"
 
 #ifndef ST_NO_NAMESPACES
 using namespace units;

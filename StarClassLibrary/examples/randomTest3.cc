@@ -20,22 +20,22 @@
  * Initial Revision
  *
  **************************************************************************/
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 #include <vector>
 
-#include "StGlobals.hh"
-#include "Random.h"
+#include "StarClassLibrary/StGlobals.hh"
+#include "StarClassLibrary/Random.h"
 
 // the random engines
-#include "JamesRandom.h"
-#include "RanluxEngine.h"
+#include "StarClassLibrary/JamesRandom.h"
+#include "StarClassLibrary/RanluxEngine.h"
 
 // the different distributions
-#include "RandFlat.h"
-#include "RandPoisson.h"
-#include "RandExponential.h"
-#include "RandGauss.h"
-#include "RandBreitWigner.h"
+#include "StarClassLibrary/RandFlat.h"
+#include "StarClassLibrary/RandPoisson.h"
+#include "StarClassLibrary/RandExponential.h"
+#include "StarClassLibrary/RandGauss.h"
+#include "StarClassLibrary/RandBreitWigner.h"
 
 #ifndef ST_NO_TEMPLATE_DEF_ARGS
 void printArray(vector<double>& vec)

@@ -14,7 +14,7 @@
 
 #ifndef ClassStLoggerManager
 #define ClassStLoggerManager
-#include "StMessMgr.h"
+#include "St_base/StMessMgr.h"
 
 #ifndef __CINT__
 # include <log4cxx/logger.h>
@@ -24,9 +24,9 @@
 #endif
 
 
-//#include "StMessage.h"
-//#include "StMessTypeList.h"
-//#include "StMessageCounter.h"
+//#include "StUtilities/StMessage.h"
+//#include "StUtilities/StMessTypeList.h"
+//#include "StUtilities/StMessageCounter.h"
 
 class StMessTypeList;
 class StMessageCounter;

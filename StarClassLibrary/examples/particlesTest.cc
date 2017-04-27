@@ -18,10 +18,10 @@
  * Initial Revision
  *
  **************************************************************************/
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 #include <typeinfo>
-#include "StParticleTable.hh"
-#include "StParticleTypes.hh"
+#include "StarClassLibrary/StParticleTable.hh"
+#include "StarClassLibrary/StParticleTypes.hh"
 
 int main()
 {

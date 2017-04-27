@@ -7,12 +7,12 @@
 #include <assert.h>
 #include <math.h>
 #include "TError.h"
-#include "TCFit.h"
-#include "TNumDeriv.h"
+#include "StarRoot/TCFit.h"
+#include "StarRoot/TNumDeriv.h"
 #include "TVector3.h"
 #include "TRandom.h"
 #include "TLorentzVector.h"
-#include "THelixTrack.h"
+#include "StarRoot/THelixTrack.h"
 #if ROOT_VERSION_CODE < 331013
 #include "TCL.h"
 #else

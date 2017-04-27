@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "TF1Fitter.h"
+#include "StarRoot/TF1Fitter.h"
 
 //static Color_t gMyColors[] = {kRed,kBlue,kGreen,kMagenta,kCyan};
 //_____________________________________________________________________________

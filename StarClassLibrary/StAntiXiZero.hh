@@ -21,7 +21,7 @@
 #ifndef StAntiXiZero_hh
 #define StAntiXiZero_hh
 
-#include "StBaryon.hh"
+#include "StarClassLibrary/StBaryon.hh"
 
 class StAntiXiZero : public StBaryon {
 public:

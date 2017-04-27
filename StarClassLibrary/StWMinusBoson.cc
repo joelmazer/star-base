@@ -22,8 +22,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StWMinusBoson.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StWMinusBoson.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StWMinusBoson::StWMinusBoson(const string  &  aName,  
 		 double           mass,     

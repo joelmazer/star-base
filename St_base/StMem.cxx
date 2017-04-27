@@ -14,7 +14,7 @@
 #include <malloc.h>
 #endif
 #include <unistd.h>
-#include "StMem.h"
+#include "St_base/StMem.h"
 double  StMem::fUsed=0;
 double StMem::Used()
 {

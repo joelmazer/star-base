@@ -25,7 +25,7 @@
 #ifndef StKaonZeroMode0809_hh
 #define StKaonZeroMode0809_hh
 
-#include "StMeson.hh"
+#include "StarClassLibrary/StMeson.hh"
 
 class StKaonZeroMode0809 : public StMeson {
 public:

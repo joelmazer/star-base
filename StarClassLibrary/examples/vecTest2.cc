@@ -20,9 +20,9 @@
  * Initial Revision
  *
  **************************************************************************/
-#include <Stiostream.h>
-#include "StGlobals.hh"
-#include "StThreeVector.hh"
+#include <St_base/Stiostream.h>
+#include "StarClassLibrary/StGlobals.hh"
+#include "StarClassLibrary/StThreeVector.hh"
 
 int main()
 {

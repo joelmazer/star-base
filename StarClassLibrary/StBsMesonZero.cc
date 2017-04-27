@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StBsMesonZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StBsMesonZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StBsMesonZero::StBsMesonZero(const string  &  aName,  
 			     double           mass,     

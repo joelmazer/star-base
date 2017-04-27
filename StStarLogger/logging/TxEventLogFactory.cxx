@@ -4,9 +4,9 @@
 #include <regex.h>
 #include <cstring>
 
-#include "TxEventLogFactory.h"
-#include "TxEventLogWeb.h"
-#include "TxEventLogCollector.h"
+#include "StStarLogger/logging/TxEventLogFactory.h"
+#include "StStarLogger/logging/TxEventLogWeb.h"
+#include "StStarLogger/logging/TxEventLogCollector.h"
 
 using namespace TxLogging;
 

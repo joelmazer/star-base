@@ -1,4 +1,4 @@
-#include "StCloseFileOnTerminate.h"
+#include "StarRoot/StCloseFileOnTerminate.h"
 
 #include "TROOT.h"
 #include "TSystem.h"

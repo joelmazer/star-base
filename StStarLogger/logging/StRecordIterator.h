@@ -2,7 +2,7 @@
 #define StRecordITERATOR_H
 
 #include <iterator>
-#include "RecordList.h"
+#include "StStarLogger/logging/RecordList.h"
 
 namespace TxLogging {
    class Iterator : public std::iterator<std::input_iterator_tag, RecordIterator>

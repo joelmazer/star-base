@@ -1,7 +1,7 @@
 #ifndef _LOG4CXX_ST_WS_APPENDER_H
 #define _LOG4CXX_ST_WS_APPENDER_H
 
-#include "StLoggerConfig.h"
+#include "StStarLogger/StLoggerConfig.h"
  
 #include <log4cxx/helpers/exception.h>
 #include <log4cxx/appenderskeleton.h>

@@ -65,7 +65,7 @@
 #ifndef ROOT_St_Node
 #define ROOT_St_Node
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TVolume.h>
 
 #endif

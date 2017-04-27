@@ -1,5 +1,5 @@
-#include "StUcmJobs.h"
-#include "StRecordIterator.h"
+#include "StStarLogger/logging/StUcmJobs.h"
+#include "StStarLogger/logging/StRecordIterator.h"
 using namespace TxLogging;
 //__________________________________________________
 StUcmJobs::StUcmJobs()  {;}

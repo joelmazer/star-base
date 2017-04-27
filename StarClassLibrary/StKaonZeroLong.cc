@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StKaonZeroLong.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StKaonZeroLong.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StKaonZeroLong::StKaonZeroLong(const string  &  aName,  
 			       double           mass,     

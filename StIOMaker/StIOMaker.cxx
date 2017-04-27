@@ -3,11 +3,11 @@
 // StIOMaker class for Makers                                           //
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 #include "TClass.h"
 #include "TROOT.h"
-#include "StMaker.h"
-#include "StIOMaker.h"
+#include "StChain/StMaker.h"
+#include "StIOMaker/StIOMaker.h"
 #include "StTreeMaker/StTreeMaker.h"
 //#include "St_io_Maker/St_io_Maker.h"
 //#include "St_xdfin_Maker/St_xdfin_Maker.h"

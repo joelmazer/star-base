@@ -6,7 +6,7 @@
 
 #include "TTable.h"
 
-#include "table_header.h"
+#include "St_base/table_header.h"
 
 extern "C" {
    void *ReAllocate(table_head_st *h, Int_t newsize);

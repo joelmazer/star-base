@@ -33,7 +33,7 @@
 #ifndef RandEngine_h
 #define RandEngine_h 1
 
-#include "RandomEngine.h"
+#include "StarClassLibrary/RandomEngine.h"
 
 class RandEngine : public HepRandomEngine {
 

@@ -1,6 +1,6 @@
 #ifndef STAR_STBITREEITER
 #define STAR_STBITREEITER
-#include <StBiTree.h>
+#include <StarRoot/StBiTree.h>
 #include <iterator>
 // using namespace std;
 

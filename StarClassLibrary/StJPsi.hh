@@ -21,7 +21,7 @@
 #ifndef StJPsi_hh
 #define StJPsi_hh
 
-#include "StMeson.hh"
+#include "StarClassLibrary/StMeson.hh"
 
 class StJPsi : public StMeson {
 public:

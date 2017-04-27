@@ -19,7 +19,7 @@
 // * representations about the suitability of this software for any
 // * purpose.  It is provided "as is" without express or implied warranty.
 // ************************************************************************
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TPolyLineShape.h>
 //______________________________________________________________________________
 // $Log: St_PolyLineShape.h,v $

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StSigmaMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StSigmaMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StSigmaMinus::StSigmaMinus(const string  &  aName,  
 			   double           mass,     

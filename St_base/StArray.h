@@ -11,7 +11,7 @@
 #include <assert.h>
 #include "TString.h"
 #include "TObject.h"
-#include "StObject.h"
+#include "St_base/StObject.h"
 //#ifndef __CINT__
 class TObject;
 #include <vector>

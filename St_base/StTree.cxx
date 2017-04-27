@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "Stypes.h"
-#include "StTree.h"
+#include "St_base/Stypes.h"
+#include "St_base/StTree.h"
 #include "TRegexp.h"
-#include "TDirIter.h"
+#include "StarRoot/TDirIter.h"
 #include "TKey.h"
 #include "TError.h"
 #include <stdlib.h>

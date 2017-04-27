@@ -57,10 +57,10 @@
 #ifndef ST_GET_CONFIG_VALUE_HH
 #define ST_GET_CONFIG_VALUE_HH
 
-#include "Stiostream.h"
-#include <Stsstream.h>
+#include "St_base/Stiostream.h"
+#include <St_base/Stsstream.h>
 #include <string>
-#include "StGlobals.hh"
+#include "StarClassLibrary/StGlobals.hh"
 #if !defined(ST_NO_NAMESPACES)
 using std::string;
 #endif

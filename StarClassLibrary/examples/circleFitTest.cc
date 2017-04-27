@@ -17,8 +17,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StFastCircleFitter.hh"
-#include <Stiostream.h>
+#include "StarClassLibrary/StFastCircleFitter.hh"
+#include <St_base/Stiostream.h>
 #include <cstdlib>
 
 int main()

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StDeuteron.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StDeuteron.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StDeuteron::StDeuteron(const string  &  aName,  
 		       double           mass,     

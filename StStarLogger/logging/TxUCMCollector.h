@@ -19,8 +19,8 @@
 #include "mysql.h"
 #include <log4cxx/logger.h>
 
-#include "StDbFieldI.h"
-#include "TxEventLog.h"
+#include "StStarLogger/logging/StDbFieldI.h"
+#include "StStarLogger/logging/TxEventLog.h"
 
 typedef bool boolean;
 typedef std::string Options;

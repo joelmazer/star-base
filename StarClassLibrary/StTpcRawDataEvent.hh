@@ -34,6 +34,6 @@
  **************************************************************************/
 #ifndef ST_TPC_RAW_DATA_EVENT_HH
 #define ST_TPC_RAW_DATA_EVENT_HH
-#include "StTpcRawData.h"
+#include "StEvent/StTpcRawData.h"
 typedef StTpcRawData StTpcRawDataEvent;
 #endif

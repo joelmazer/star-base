@@ -18,7 +18,7 @@
 #ifndef KFParticle_H
 #define KFParticle_H
 
-#include "KFParticleBase.h"
+#include "StarRoot/KFParticleBase.h"
 #include "TMath.h"
 
 class MTrack;

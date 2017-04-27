@@ -1,4 +1,4 @@
-#include "TPolynomial.h"
+#include "StarRoot/TPolynomial.h"
 using namespace std;
 //________________________________________________________________________________
 void TPolynomial::MakePolySeries(Double_t x, Int_t type, Int_t Np, Double_t *P) {

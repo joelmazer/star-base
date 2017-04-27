@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiSigmacPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiSigmacPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiSigmacPlus::StAntiSigmacPlus(const string  &  aName,  
 				   double           mass,     

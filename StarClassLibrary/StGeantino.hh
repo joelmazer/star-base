@@ -29,7 +29,7 @@
 #ifndef StGeantino_hh
 #define StGeantino_hh
 
-#include "StIon.hh"
+#include "StarClassLibrary/StIon.hh"
 
 class StGeantino : public StIon {
 public:

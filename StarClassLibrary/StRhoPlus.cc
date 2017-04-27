@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StRhoPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StRhoPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StRhoPlus::StRhoPlus(const string  &  aName,  
 		     double           mass,     

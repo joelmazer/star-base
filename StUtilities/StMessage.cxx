@@ -14,10 +14,10 @@
 #include <assert.h>
 #include <ctype.h>
 #include <string.h>
-#include "StMessage.h"
-#include "StMessageCounter.h"
-#include "Stsstream.h"
-#include "StMessageStream.h"
+#include "StUtilities/StMessage.h"
+#include "StUtilities/StMessageCounter.h"
+#include "St_base/Stsstream.h"
+#include "StUtilities/StMessageStream.h"
 using namespace std;
 static StMessageCounter* messCounter = StMessageCounter::Instance();
 

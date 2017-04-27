@@ -18,8 +18,8 @@
  *                                                                     
  */
 #define STAR_LOGGER 1
-#include "StMaker.h"
-#include "Stiostream.h"
+#include "StChain/StMaker.h"
+#include "St_base/Stiostream.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -38,18 +38,18 @@
 #include "TClonesArray.h"
 #include "TBrowser.h"
 
-#include "StChainOpt.h"
+#include "StChain/StChainOpt.h"
 #include "TObjectSet.h"
-#include "StChain.h"
+#include "StChain/StChain.h"
 #include "TTable.h"
 #ifdef TMEMSTATinSTAR
 #include "TMemStat.h"
 #else
-#include "StMemStat.h"
+#include "StarRoot/StMemStat.h"
 #endif
-#include "TAttr.h"
-#include "StMkDeb.h"
-#include "StMessMgr.h"
+#include "StarRoot/TAttr.h"
+#include "StChain/StMkDeb.h"
+#include "St_base/StMessMgr.h"
 
 StMaker     *StMaker::fgTopChain    = 0;
 StMaker     *StMaker::fgStChain     = 0;
@@ -179,7 +179,7 @@ old version of db tags
   ry2008,   y2008, 
 
 */
-#include "GeometryDbAliases.h"
+#include "StChain/GeometryDbAliases.h"
 // Turn the logger of the current maker
 #define TURN_LOGGER(maker)                                        \
         if (!fLogger) fLogger = StMessMgr::Instance(ClassName()); \

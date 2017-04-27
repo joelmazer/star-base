@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StPhysicalHelix.hh"
-#include "SystemOfUnits.h"
+#include "StarClassLibrary/StPhysicalHelix.hh"
+#include "StarClassLibrary/SystemOfUnits.h"
 
 #ifndef ST_NO_NAMESPACES
 using namespace units;

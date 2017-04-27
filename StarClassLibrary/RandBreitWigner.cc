@@ -47,7 +47,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RandBreitWigner.h"
+#include "StarClassLibrary/RandBreitWigner.h"
 #include <algorithm>        // for max(), tu
 #if !defined(ST_NO_NAMESPACES)
 using std::max;

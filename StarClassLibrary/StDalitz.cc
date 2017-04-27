@@ -26,8 +26,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StDalitz.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StDalitz.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StDalitz::StDalitz(const string  &  aName,  
 		       double           mass,     
@@ -61,7 +61,7 @@ StDalitz::StDalitz(const string  &  aName,
 //               type    lepton number  baryon number   PDG encoding
 //             stable         lifetime   
 //
-#include "StarPDGEncoding.hh" 
+#include "StarClassLibrary/StarPDGEncoding.hh" 
 StDalitz StDalitz::mDalitz(
 		"dalitz",   0.1349764*GeV,       0.0*MeV,         0.0, 
 		    0,              -1,            +1,          

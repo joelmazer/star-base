@@ -26,10 +26,10 @@
  * Initial Revision
  *
  **************************************************************************/
-#include <Stiostream.h>
-#include "StGlobals.hh"
-#include "StGetConfigValue.hh"
-#include "StThreeVector.hh"
+#include <St_base/Stiostream.h>
+#include "StarClassLibrary/StGlobals.hh"
+#include "StarClassLibrary/StGetConfigValue.hh"
+#include "StarClassLibrary/StThreeVector.hh"
 #include <vector>
 #include <unistd.h>
 #if !defined(ST_NO_NAMESPACES)

@@ -21,7 +21,7 @@
 #ifndef StAntiDMesonZero_hh
 #define StAntiDMesonZero_hh
 
-#include "StMeson.hh"
+#include "StarClassLibrary/StMeson.hh"
 
 class StAntiDMesonZero : public StMeson {
 public:

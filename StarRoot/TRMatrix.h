@@ -1,9 +1,9 @@
 #ifndef ROOT_TRMatrix
 #define ROOT_TRMatrix
 #include "TError.h"
-#include "TRArray.h"
+#include "StarRoot/TRArray.h"
 class TRSymMatrix;
-#include "TRSymMatrix.h"
+#include "StarRoot/TRSymMatrix.h"
 class TRMatrix : public TRArray {
  public:
   TRMatrix(Int_t nrows=0,Int_t ncols=0) : TRArray(nrows*ncols), fNrows(nrows), fNcols(ncols) {}

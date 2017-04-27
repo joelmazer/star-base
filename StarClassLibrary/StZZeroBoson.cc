@@ -22,8 +22,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StZZeroBoson.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StZZeroBoson.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StZZeroBoson::StZZeroBoson(const string  &  aName,  
 		 double           mass,     

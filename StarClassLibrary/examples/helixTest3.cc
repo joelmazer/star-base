@@ -18,10 +18,10 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StGlobals.hh"
-#include "StHelix.hh"
-#include "SystemOfUnits.h"
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StGlobals.hh"
+#include "StarClassLibrary/StHelix.hh"
+#include "StarClassLibrary/SystemOfUnits.h"
+#include "StarClassLibrary/PhysicalConstants.h"
 
 #ifndef ST_NO_NAMESPACES
 using namespace units;

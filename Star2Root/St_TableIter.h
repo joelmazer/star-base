@@ -10,7 +10,7 @@
 // St_TableIter - class iterator to loop over sorted St_Table's         //
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include <TTableIter.h>
 // $Log: St_TableIter.h,v $
 // Revision 1.1  2000/02/25 00:48:08  fine

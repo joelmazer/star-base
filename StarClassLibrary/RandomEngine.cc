@@ -25,13 +25,13 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RandomEngine.h"
+#include "StarClassLibrary/RandomEngine.h"
 
 // -----------------------------
 // Static members initialisation
 // -----------------------------
 
-#include "SeedTable.h"
+#include "StarClassLibrary/SeedTable.h"
 
 //------------------------- HepRandomEngine ------------------------------
 

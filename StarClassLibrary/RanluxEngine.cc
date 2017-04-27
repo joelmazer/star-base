@@ -51,7 +51,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RanluxEngine.h"
+#include "StarClassLibrary/RanluxEngine.h"
 
 RanluxEngine::RanluxEngine(long seed, HepInt lux)
 : int_modulus(0x1000000),

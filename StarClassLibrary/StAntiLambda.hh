@@ -21,7 +21,7 @@
 #ifndef StAntiLambda_hh
 #define StAntiLambda_hh
 
-#include "StBaryon.hh"
+#include "StarClassLibrary/StBaryon.hh"
 
 class StAntiLambda : public StBaryon {
 public:

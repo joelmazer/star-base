@@ -22,8 +22,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StDStarMesonZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StDStarMesonZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StDStarMesonZero::StDStarMesonZero(const string  &  aName,  
 			   double           mass,     

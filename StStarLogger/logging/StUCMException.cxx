@@ -9,7 +9,7 @@
 
 #include <string>
  
-#include "StUCMException.h"
+#include "StStarLogger/logging/StUCMException.h"
 //using namespace TxLogging;
 StUCMException::StUCMException(const std::string& description,
 			       Severity severity)

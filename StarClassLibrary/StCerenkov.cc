@@ -26,8 +26,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StCerenkov.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StCerenkov.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StCerenkov::StCerenkov(const string  &  aName,  
 		 double           mass,     

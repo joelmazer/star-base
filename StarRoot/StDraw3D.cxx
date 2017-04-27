@@ -1,6 +1,6 @@
 // $Id: StDraw3D.cxx,v 1.105 2013/11/12 17:50:22 perev Exp $
 //*-- Author :    Valery Fine(fine@bnl.gov)   27/04/2008
-#include "StDraw3D.h"
+#include "StarRoot/StDraw3D.h"
 #include "TCanvas.h"
 #include "TTRAP.h"
 #include "TGeometry.h"
@@ -14,7 +14,7 @@
 // #include "TROOT.h"
 #include "TColor.h"
 #include "TEnv.h"
-#include "StCheckQtEnv.h"
+#include "StarRoot/StCheckQtEnv.h"
 #include "TStyle.h"
 #include "TVirtualViewer3D.h"
 #include <cassert>

@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StLambdacPlus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StLambdacPlus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StLambdacPlus::StLambdacPlus(const string  &  aName,  
 			     double           mass,     

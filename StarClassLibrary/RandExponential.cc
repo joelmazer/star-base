@@ -41,7 +41,7 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "RandExponential.h"
+#include "StarClassLibrary/RandExponential.h"
 
 RandExponential::~RandExponential() {
   if ( deleteEngine ) delete localEngine;

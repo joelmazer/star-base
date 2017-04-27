@@ -17,9 +17,9 @@
  * Initial Revision
  *
  **************************************************************************/
-#include <Stiostream.h>
-#include "StRandom.hh"
-#include "StGlobals.hh"
+#include <St_base/Stiostream.h>
+#include "StarClassLibrary/StRandom.hh"
+#include "StarClassLibrary/StGlobals.hh"
 
 int main()
 {

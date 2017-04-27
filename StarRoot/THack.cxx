@@ -13,7 +13,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include "THack.h"
+#include "StarRoot/THack.h"
 #include "TClonesArray.h"
 #include "TDirectory.h"
 #include "TPad.h"

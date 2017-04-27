@@ -33,7 +33,7 @@
 //                                                                      //
 //////////////////////////////////////////////////////////////////////////
  
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include "TDataSet.h"
 
 

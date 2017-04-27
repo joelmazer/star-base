@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StNeutrinoE.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StNeutrinoE.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StNeutrinoE::StNeutrinoE(const string  &  aName,  
 			 double           mass,     

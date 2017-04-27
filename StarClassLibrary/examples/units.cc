@@ -20,11 +20,11 @@
  * Initial Revision
  *
  **************************************************************************/
-#include <Stiostream.h>
-#include "StGlobals.hh"
+#include <St_base/Stiostream.h>
+#include "StarClassLibrary/StGlobals.hh"
 
 #define ST_ADD_OLD_CLHEP_SYSTEM_OF_UNITS
-#include "SystemOfUnits.h"
+#include "StarClassLibrary/SystemOfUnits.h"
 
 #ifndef ST_NO_NAMESPACES
 using namespace units;

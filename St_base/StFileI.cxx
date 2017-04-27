@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "StFileI.h"
+#include "St_base/StFileI.h"
 
 ClassImp(StFileI)
 //______________________________________________________________________________

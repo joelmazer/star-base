@@ -8,9 +8,9 @@
 //////////////////////////////////////////////////////////////////////////
 
 #ifndef STAR_StRTSBaseMaker_H
-#include "StRTSBaseMaker.h"
+#include "StChain/StRTSBaseMaker.h"
 #endif
-#include "StTree.h"
+#include "St_base/StTree.h"
 class StUKey;
 
 class StIOInterFace : public  StRTSBaseMaker {

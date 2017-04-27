@@ -9,11 +9,11 @@
 ****************************************************************************/
 #ifndef ST_MATRIX_F_HH
 #define ST_MATRIX_F_HH
-#include "Stiostream.h"
-#include "StThreeVectorF.hh"
-#include "StLorentzVectorF.hh"
-#include "StThreeVectorD.hh"
-#include "StLorentzVectorD.hh"
-#include "StMatrix.hh"
+#include "St_base/Stiostream.h"
+#include "StarClassLibrary/StThreeVectorF.hh"
+#include "StarClassLibrary/StLorentzVectorF.hh"
+#include "StarClassLibrary/StThreeVectorD.hh"
+#include "StarClassLibrary/StLorentzVectorD.hh"
+#include "StarClassLibrary/StMatrix.hh"
 typedef  StMatrix<float> StMatrixF;
 #endif

@@ -35,7 +35,7 @@
 #ifndef HepJamesRandom_h
 #define HepJamesRandom_h 1
 
-#include "RandomEngine.h"
+#include "StarClassLibrary/RandomEngine.h"
 
 class HepJamesRandom: public HepRandomEngine {
 

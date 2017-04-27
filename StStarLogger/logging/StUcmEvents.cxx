@@ -1,5 +1,5 @@
-#include "StUcmEvents.h"
-#include "StRecordIterator.h"
+#include "StStarLogger/logging/StUcmEvents.h"
+#include "StStarLogger/logging/StRecordIterator.h"
 using namespace TxLogging;
 StUcmEvents::StUcmEvents()  {;}
 StUcmEvents::~StUcmEvents() {;}

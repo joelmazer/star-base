@@ -4,7 +4,7 @@
 #include "TNamed.h"
 #include "TObjArray.h"
 #include "TString.h"
-#include "StMkDeb.h"
+#include "StChain/StMkDeb.h"
 
 int StMkDeb::fgCurr  = -2003;
 int StMkDeb::fgStage = 0;

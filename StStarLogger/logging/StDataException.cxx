@@ -9,7 +9,7 @@
 
 #include <string>
  
-#include "StDataException.h"
+#include "StStarLogger/logging/StDataException.h"
 // using namespace TxLogging;
 
 StDataException::StDataException( const std::string& description,

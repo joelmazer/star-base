@@ -21,7 +21,7 @@
 #ifndef StDeuteron_hh
 #define StDeuteron_hh
 
-#include "StIon.hh"
+#include "StarClassLibrary/StIon.hh"
 
 class StDeuteron : public StIon {
 public:

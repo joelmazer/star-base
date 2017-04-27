@@ -47,7 +47,7 @@
 
 
 #include "Rtypes.h"
-#include "St_table_header_Table.h" 
+#include "St_base/St_table_header_Table.h" 
 #include "TObjArray.h"
 
 // Copyright (C) FineSoft 1998 Valeri Fine (Faine) E-mail: fine@bnl.gov

@@ -22,7 +22,7 @@
 #ifndef StH0Strangelet_hh
 #define StH0Strangelet_hh
 
-#include "StBaryon.hh"
+#include "StarClassLibrary/StBaryon.hh"
 
 class StH0Strangelet : public StBaryon {
 public:

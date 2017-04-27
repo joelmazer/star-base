@@ -11,7 +11,7 @@
 #ifndef STAR_St_NodeViewIter
 #define STAR_St_NodeViewIter
 
-#include "StTypeDefs.h"
+#include "Star2Root/StTypeDefs.h"
 #include "TVolumeViewIter.h"
 
 #endif 

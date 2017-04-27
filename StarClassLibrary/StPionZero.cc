@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StPionZero.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StPionZero.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StPionZero::StPionZero(const string  &  aName,  
 		       double           mass,     

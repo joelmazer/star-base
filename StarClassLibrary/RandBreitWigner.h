@@ -33,7 +33,7 @@
 #ifndef RandBreitWigner_h
 #define RandBreitWigner_h 1
 
-#include "RandFlat.h"
+#include "StarClassLibrary/RandFlat.h"
 
 class RandBreitWigner : public HepRandom {
 

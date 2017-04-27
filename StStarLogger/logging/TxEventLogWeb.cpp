@@ -7,7 +7,7 @@
  * Please see TxEventLogFile.h for more documentation.
  *****************************************************************/
 
-#include "TxEventLogWeb.h"
+#include "StStarLogger/logging/TxEventLogWeb.h"
 
 #include <string>
 #include <ctime>

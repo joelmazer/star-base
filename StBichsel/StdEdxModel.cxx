@@ -16,8 +16,8 @@
 #include "TLegend.h"
 #include "TRandom.h"
 #include "TMultiDimFit.h"
-#include "StdEdxModel.h"
-#include "StMessMgr.h" 
+#include "StBichsel/StdEdxModel.h"
+#include "St_base/StMessMgr.h" 
 using namespace std;
 ClassImp(StdEdxModel)
 StdEdxModel  *StdEdxModel::fgStdEdxModel = 0;

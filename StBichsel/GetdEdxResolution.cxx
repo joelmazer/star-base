@@ -1,6 +1,6 @@
-#include "Bichsel.h"
+#include "StBichsel/Bichsel.h"
 #include "TMath.h"
-#include "tpcCorrection.h"
+#include "tables/tpcCorrection.h"
 struct Sigma_t {
   tpcCorrection_st params;
   Int_t utime, date, time;

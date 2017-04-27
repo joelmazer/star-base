@@ -14,12 +14,12 @@
 #include "TVector3.h"
 #include "TRandom.h"
 #include "TRandom2.h"
-#include "TRandomVector.h"
+#include "StarRoot/TRandomVector.h"
 #include "TError.h"
 #include "TMatrixD.h"
 
-#include "THelixTrack.h"
-#include "StMatrixD.hh"
+#include "StarRoot/THelixTrack.h"
+#include "StarClassLibrary/StMatrixD.hh"
 #include "TComplex.h"
 #include "TH1.h"
 #include <cassert>

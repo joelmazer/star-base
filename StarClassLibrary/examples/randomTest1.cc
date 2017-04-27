@@ -20,25 +20,25 @@
  * Initial Revision
  *
  **************************************************************************/
-#include <Stiostream.h>
+#include <St_base/Stiostream.h>
 #include <string>
-#include "StGlobals.hh"
-#include "StPrompt.hh"
-#include "Random.h"
+#include "StarClassLibrary/StGlobals.hh"
+#include "StarClassLibrary/StPrompt.hh"
+#include "StarClassLibrary/Random.h"
 
 // the random engines
-#include "JamesRandom.h"
-#include "RanecuEngine.h"
-#include "RanluxEngine.h"
-#include "DRand48Engine.h"
-#include "RandEngine.h"
+#include "StarClassLibrary/JamesRandom.h"
+#include "StarClassLibrary/RanecuEngine.h"
+#include "StarClassLibrary/RanluxEngine.h"
+#include "StarClassLibrary/DRand48Engine.h"
+#include "StarClassLibrary/RandEngine.h"
 
 // the different distributions
-#include "RandFlat.h"
-#include "RandPoisson.h"
-#include "RandExponential.h"
-#include "RandGauss.h"
-#include "RandBreitWigner.h"
+#include "StarClassLibrary/RandFlat.h"
+#include "StarClassLibrary/RandPoisson.h"
+#include "StarClassLibrary/RandExponential.h"
+#include "StarClassLibrary/RandGauss.h"
+#include "StarClassLibrary/RandBreitWigner.h"
 
 //         --------------------- MAIN --------------------------       //
 int main()

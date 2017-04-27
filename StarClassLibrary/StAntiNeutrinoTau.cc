@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StAntiNeutrinoTau.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StAntiNeutrinoTau.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StAntiNeutrinoTau::StAntiNeutrinoTau(const string  &  aName,  
 				     double           mass,     

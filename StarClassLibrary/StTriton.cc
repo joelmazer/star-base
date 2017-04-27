@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StTriton.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StTriton.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StTriton::StTriton(const string  &  aName,  
 		   double           mass,     

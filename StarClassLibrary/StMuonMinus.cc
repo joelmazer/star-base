@@ -18,8 +18,8 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StMuonMinus.hh" 
-#include "PhysicalConstants.h"
+#include "StarClassLibrary/StMuonMinus.hh" 
+#include "StarClassLibrary/PhysicalConstants.h"
 
 StMuonMinus::StMuonMinus(const string  &  aName,  
 			 double           mass,     

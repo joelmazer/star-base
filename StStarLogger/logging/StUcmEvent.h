@@ -1,7 +1,7 @@
 #ifndef STUCMEVENT_H
 #define STUCMEVENT_H
 
-#include "StRecord.h"
+#include "StStarLogger/logging/StRecord.h"
 
 namespace TxLogging {
 class StUcmEvent : public StRecord {

@@ -6,7 +6,7 @@
 #include "TTree.h"
 #include "TH1.h"
 #include "TCanvas.h"
-#include "TTreeIter.h"
+#include "StarRoot/TTreeIter.h"
 #endif
 
 TBranch *tb=0;

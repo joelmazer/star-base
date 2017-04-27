@@ -126,10 +126,10 @@
  * Initial Revision
  *
  **************************************************************************/
-#include "StParticleTable.hh"
-#include "StParticleDefinition.hh"
+#include "StarClassLibrary/StParticleTable.hh"
+#include "StarClassLibrary/StParticleDefinition.hh"
 
-#include "StarPDGEncoding.hh"
+#include "StarClassLibrary/StarPDGEncoding.hh"
 #define kUndefined _undefined_particle_id++
 long _undefined_particle_id = 2000000000; /* Unique PDG ID for each undefined particle */
 
@@ -137,13 +137,13 @@ long _undefined_particle_id = 2000000000; /* Unique PDG ID for each undefined pa
 #include <ospace/stl/src/treeaux.cpp> // CC4.2 with ObjectSpace only
 #endif
 
-#include "StAntiDeuteron.hh"
-#include "StAntiTriton.hh"
-#include "StAntiAlpha.hh"
-#include "StAntiHelium3.hh"
-#include "StAntiHyperTriton.hh"
-#include "StHyperTriton.hh"
-#include "StHDibaryon.hh"
+#include "StarClassLibrary/StAntiDeuteron.hh"
+#include "StarClassLibrary/StAntiTriton.hh"
+#include "StarClassLibrary/StAntiAlpha.hh"
+#include "StarClassLibrary/StAntiHelium3.hh"
+#include "StarClassLibrary/StAntiHyperTriton.hh"
+#include "StarClassLibrary/StHyperTriton.hh"
+#include "StarClassLibrary/StHDibaryon.hh"
 
 
 StParticleTable* StParticleTable::mParticleTable = 0;
