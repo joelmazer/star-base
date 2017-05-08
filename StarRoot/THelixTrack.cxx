@@ -360,6 +360,25 @@ enum {kXX
    err[kTP] = fEmx->mCL/(      fCosL*fCosL);
    err[kTT] = fEmx->mLL/(      fCosL*fCosL*fCosL*fCosL);
 }
+
+
+/**
+ * Converts vector of helix parameters (x, y, z, nx, ny, nz) to (x, y, z, phi,
+ * 1/pt, tanL).
+ */
+void THelixTrack::StiParams(double params[6], const double mom_mag) const
+{
+  StThreeVectorD mom(fP[0], fP[1], fP[2]);
+  mom *= mom_mag;
+
+  params[0] = fX[0];
+  params[1] = fX[1];
+  params[2] = fX[2];
+  params[3] = mom.phi();
+  params[4] = 1./mom.perp();
+  params[5] = mom.z()/mom.perp();
+}
+
 //_____________________________________________________________________________
 void THelixTrack::Set(double rho,double drho)
 {
