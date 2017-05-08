@@ -3,6 +3,8 @@
 #include "TObject.h"
 #include "TArrayD.h"
 #include "StarRoot/TPolinom.h"
+#include "StarClassLibrary/StThreeVectorD.hh"
+
 //..............................................................................
 class TCEmx_t
 { 
@@ -230,6 +232,13 @@ THelixTrack &operator=(const THelixTrack &from);
 	void SetEmx(const double*  err=0);
     THEmx_t *Emx() const			{return fEmx;}
 	void StiEmx(double emx[21]) const;
+
+	/// Fills `params` with current helix parameters calculated in the basis
+	/// used in Sti tracking (x, y, z, phi, 1/pt, tanL), the helix
+	/// "direction" can be scaled by the optional scale factor `mom_mag`.
+	/// See StiNodePars for details.
+	void StiParams(double params[6], const double mom_mag=1.) const;
+
         void GetSpot(const double axis[3][3],double emx[3]) const;
 	void Fill  (TCircle &circ) const;
 ///		Change direction
